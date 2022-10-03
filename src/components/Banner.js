@@ -5,6 +5,10 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { NavLink } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -61,7 +65,7 @@ export const Banner = () => {
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7}>
+          <Col xs={12} md={6} xl={7} data-aos='fade-right'>
             <div>
               <span className="tagline">Bem vindo ao meu portfólio!</span>
               <h1>

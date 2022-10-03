@@ -5,38 +5,120 @@ import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import "animate.css";
-import TrackVisibility from "react-on-screen";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 export const Projects = () => {
+  /* DESIGN */
   const projects = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Design-1",
+      description: "Design & Desenvolvimento",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Design-2",
+      description: "Design & Desenvolvimento",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Design-3",
+      description: "Design & Desenvolvimento",
       imgUrl: projImg3,
     },
+  ];
+  const projects_bottom = [
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Design-4",
+      description: "Design & Desenvolvimento",
       imgUrl: projImg1,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Design-5",
+      description: "Design & Desenvolvimento",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Design-6",
+      description: "Design & Desenvolvimento",
+      imgUrl: projImg3,
+    },
+  ];
+
+  /* 3D */
+
+  const projects2 = [
+    {
+      title: "3D-1",
+      description: "Criação 3D",
+      imgUrl: projImg1,
+    },
+    {
+      title: "3D-2",
+      description: "Criação 3D",
+      imgUrl: projImg2,
+    },
+    {
+      title: "3D-3",
+      description: "Criação 3D",
+      imgUrl: projImg3,
+    },
+  ];
+
+  const projects_bottom2 = [
+    {
+      title: "3D-4",
+      description: "Criação 3D",
+      imgUrl: projImg1,
+    },
+    {
+      title: "3D-5",
+      description: "Criação 3D",
+      imgUrl: projImg2,
+    },
+    {
+      title: "3D-6",
+      description: "Criação 3D",
+      imgUrl: projImg3,
+    },
+  ];
+
+  /* WEB */
+
+  const projects3 = [
+    {
+      title: "Web-1",
+      description: "Desenvolvimento Web",
+      imgUrl: projImg1,
+    },
+    {
+      title: "Web-2",
+      description: "Desenvolvimento Web",
+      imgUrl: projImg2,
+    },
+    {
+      title: "Web-3",
+      description: "Desenvolvimento Web",
+      imgUrl: projImg3,
+    },
+  ];
+
+  const projects_bottom3 = [
+    {
+      title: "Web-4",
+      description: "Desenvolvimento Web",
+      imgUrl: projImg1,
+    },
+    {
+      title: "Web-5",
+      description: "Desenvolvimento Web",
+      imgUrl: projImg2,
+    },
+    {
+      title: "Web-6",
+      description: "Desenvolvimento Web",
       imgUrl: projImg3,
     },
   ];
@@ -55,37 +137,48 @@ export const Projects = () => {
                   id="pills-tab"
                 >
                   <Nav.Item>
-                    <Nav.Link eventKey="first">Design gráfico</Nav.Link>
+                    <Nav.Link eventKey="first">Design Gráfico</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="second">
-                      Desenvolvimento Front-End
-                    </Nav.Link>
+                    <Nav.Link eventKey="second">Criação 3D</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">
-                      Desenvolvimento Back-End
-                    </Nav.Link>
+                    <Nav.Link eventKey="third">Desenvolvimento Web</Nav.Link>
                   </Nav.Item>
                 </Nav>
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
-                    <Row>
+                    <Row data-aos="fade-right">
                       {projects.map((project, index) => {
+                        return <ProjectCard key={index} {...project} />;
+                      })}
+                    </Row>
+                    <Row data-aos="fade-left">
+                      {projects_bottom.map((project, index) => {
                         return <ProjectCard key={index} {...project} />;
                       })}
                     </Row>
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
-                    <Row>
-                      {projects.map((project, index) => {
+                    <Row data-aos="fade-right">
+                      {projects2.map((project, index) => {
+                        return <ProjectCard key={index} {...project} />;
+                      })}
+                    </Row>
+                    <Row data-aos="fade-left">
+                      {projects_bottom2.map((project, index) => {
                         return <ProjectCard key={index} {...project} />;
                       })}
                     </Row>
                   </Tab.Pane>
                   <Tab.Pane eventKey="third">
-                    <Row>
-                      {projects.map((project, index) => {
+                    <Row data-aos="fade-left">
+                      {projects3.map((project, index) => {
+                        return <ProjectCard key={index} {...project} />;
+                      })}
+                    </Row>
+                    <Row data-aos="fade-right">
+                      {projects_bottom3.map((project, index) => {
                         return <ProjectCard key={index} {...project} />;
                       })}
                     </Row>

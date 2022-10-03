@@ -24,26 +24,26 @@ body {
 }
 
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
-    scrollbar-width: none;
-    scrollbar-color: #616161 #000000;
-  }
+/* Firefox */
+* {
+  scrollbar-width: none;
+  scrollbar-color: #616161 #000000;
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 10px;
-  }
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
 
-  *::-webkit-scrollbar-track {
-    background: #000000;
-  }
+*::-webkit-scrollbar-track {
+  background: #000000;
+}
 
-  *::-webkit-scrollbar-thumb {
-    background-color: #616161;
-    border-radius: 10px;
-    border: 3px solid #000000;
-  }
+*::-webkit-scrollbar-thumb {
+  background-color: #616161;
+  border-radius: 10px;
+  border: 3px solid #000000;
+}
 
 h1,
 h2,
@@ -113,7 +113,8 @@ nav.navbar {
 }
 nav.navbar.scrolled {
   padding: 0px 0;
-  background-color: #000000b4;
+  background-color: #00000077;
+  backdrop-filter: blur(5px);
 }
 nav.navbar a.navbar-brand {
   width: 20%;
@@ -136,7 +137,7 @@ span.navbar-text {
 }
 .social-icon {
   display: inline-block;
-  margin-left: 14px;
+  margin-left: 1rem;
 }
 .social-icon a {
   width: 42px;
@@ -386,7 +387,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .skill-slider .item img {
-  width: 50%;
+  width: 70%;
   margin: 0 auto;
 }
 .background-image-left {
@@ -397,7 +398,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/* Projects */
+
 .project {
   padding: 5rem 0;
   position: relative;
@@ -450,25 +452,20 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -10;
   transition: 0.3s ease-in-out;
 }
 .project .nav.nav-pills .nav-link.active::before {
   width: 100% !important;
 }
-.project .nav.nav-pills .nav-link.active {
-  border: 1px solid rgba(255, 255, 255, 1);
-}
+
 .nav-link#projects-tabs-tab-first {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 55px 0px 0px 55px;
-}
-.nav-link#projects-tabs-tab-second {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  z-index: 10;
 }
 .nav-link#projects-tabs-tab-third {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 0 55px 55px 0;
 }
 .proj-imgbx {
@@ -524,7 +521,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-/************ Projects Css ************/
+/************ Contact Css ************/
 .contact {
   background-image: url(./assets/img/bg-2.png);
   background-size: cover;
