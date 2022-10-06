@@ -29,7 +29,7 @@ export const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Enviando...");
-    let response = await fetch("http://localhost:3002/contact", {
+    let response = await fetch("http://localhost:3000/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -54,10 +54,10 @@ export const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
-            <img data-AOS='fade-up' src={contactImg} alt="Contact Us" />
+            <img data-aos='fade-up' src={contactImg} alt="Contact Us" />
           </Col>
           <Col size={12} md={6}>
-            <div data-AOS="fade-down">
+            <div data-aos="fade-down">
               <h2>Entre Em Contato</h2>
               <form onSubmit={handleSubmit}>
                 <Row>
@@ -67,7 +67,7 @@ export const Contact = () => {
                       value={formDetails.firstName}
                       placeholder="Nome"
                       onChange={(e) =>
-                        onFormUpdate("firstName", e.target.value)
+                        onFormUpdate("Nome", e.target.value)
                       }
                     />
                   </Col>
@@ -76,7 +76,7 @@ export const Contact = () => {
                       type="text"
                       value={formDetails.lasttName}
                       placeholder="Sobrenome"
-                      onChange={(e) => onFormUpdate("lastName", e.target.value)}
+                      onChange={(e) => onFormUpdate("Sobrenome", e.target.value)}
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
@@ -84,7 +84,7 @@ export const Contact = () => {
                       type="email"
                       value={formDetails.email}
                       placeholder="Endereço de Email"
-                      onChange={(e) => onFormUpdate("email", e.target.value)}
+                      onChange={(e) => onFormUpdate("Endereço de Email", e.target.value)}
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
@@ -92,7 +92,7 @@ export const Contact = () => {
                       type="tel"
                       value={formDetails.phone}
                       placeholder="Telefone"
-                      onChange={(e) => onFormUpdate("phone", e.target.value)}
+                      onChange={(e) => onFormUpdate("Telefone", e.target.value)}
                     />
                   </Col>
                   <Col size={12} className="px-1">
@@ -100,7 +100,7 @@ export const Contact = () => {
                       rows="6"
                       value={formDetails.message}
                       placeholder="Mensagem"
-                      onChange={(e) => onFormUpdate("message", e.target.value)}
+                      onChange={(e) => onFormUpdate("Mensagem", e.target.value)}
                     ></textarea>
                     <button type="submit">
                       <span>{buttonText}</span>

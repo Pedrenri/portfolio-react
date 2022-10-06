@@ -70,6 +70,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: white;
 }
 
 img {
@@ -351,7 +352,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 0 0 50px 0;
   position: relative;
-  background-color: #000;
+  background-color: #080808;
 }
 .skill-bx {
   background: #151515;
@@ -403,8 +404,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project {
   padding: 5rem 0;
   position: relative;
-  background-color: #000;
+  background-color: #080808;
 }
+
+.project a{
+  color: white;
+}
+
+.project a:hover{
+  color: white;
+}
+
 .project h2 {
   font-size: 45px;
   font-weight: 700;
@@ -674,4 +684,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .footer img {
   width: 17rem;
+}
+
+/* MODAL */
+
+#modal {
+  color: black;
+  font-size: 2rem;
+}
+
+.modal-backdrop {
+  background-color: green;
 }
