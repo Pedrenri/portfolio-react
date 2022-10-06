@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import headerImg from "../assets/img/astro_p_transp.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import "animate.css";
 import TrackVisibility from "react-on-screen";
 import { NavLink } from "react-router-dom";
 import AOS from "aos";

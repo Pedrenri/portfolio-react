@@ -10,7 +10,6 @@ import design12 from '../assets/img/design1-2.png'
 import design13 from '../assets/img/design1-3.png'
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import "animate.css";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
@@ -176,11 +175,11 @@ export const Projects = () => {
                       })}
                     </Row>
 
-                    <Row data-aos="fade-up">
+                    {/* <Row data-aos="fade-up">
                       {projects_bottom.map((project, index) => {
                         return <ProjectCard key={index} {...project} />;
                       })}
-                    </Row>
+                    </Row> */}
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
                     <Row data-aos="fade-up">

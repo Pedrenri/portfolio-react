@@ -1,52 +1,53 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/astro_laptop.png";
-import "animate.css";
+import emailjs from "emailjs-com";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+
 // ..
 AOS.init();
 
+let Result = "";
+
 export const Contact = () => {
-  const formInitialDetails = {
+  const [buttonText, setButtonText] = useState("Enviar");
+  const [toReset, setToRes] = useState({
     firstName: "",
     lastName: "",
     email: "",
     phone: "",
     message: "",
-  };
-  const [formDetails, setFormDetails] = useState(formInitialDetails);
-  const [buttonText, setButtonText] = useState("Enviar");
-  const [status, setStatus] = useState({});
+  });
 
-  const onFormUpdate = (category, value) => {
-    setFormDetails({
-      ...formDetails,
-      [category]: value,
-    });
-  };
+  const [toSend, setToSend] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-  const handleSubmit = async (e) => {
+  const formSubmit = (e) => {
     e.preventDefault();
     setButtonText("Enviando...");
-    let response = await fetch("http://localhost:3000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Enviar");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: "Mensagem enviada!" });
-    } else {
-      setStatus({
-        succes: false,
-        message: "Algo deu errado. Tente novamente mais tarde.",
+
+    emailjs
+      .send("service_8jxbx9x", "template_xlxhazk", toSend, "ysp9nvzNcXa5v9dqh")
+      .then((response) => {
+        console.log("SUCCESS!", response.status, response.text);
+        setButtonText("Enviar");
+        setToSend(toReset);
+        window.alert("Mensagem Enviada!");
+      })
+      .catch((err) => {
+        console.log("FAILED...", err);
+        window.alert("Algo deu errado. Tente novamente mais tarde.");
       });
-    }
+  };
+
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value });
   };
 
   return (
@@ -54,69 +55,64 @@ export const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6}>
-            <img data-aos='fade-up' src={contactImg} alt="Contact Us" />
+            <img data-aos="fade-right" src={contactImg} alt="Contact Us" />
           </Col>
           <Col size={12} md={6}>
-            <div data-aos="fade-down">
-              <h2>Entre Em Contato</h2>
-              <form onSubmit={handleSubmit}>
+            <div>
+              <h2>Entre em contato</h2>
+              <form data-aos="fade-left" onSubmit={formSubmit}>
                 <Row>
                   <Col size={12} sm={6} className="px-1">
                     <input
                       type="text"
-                      value={formDetails.firstName}
                       placeholder="Nome"
-                      onChange={(e) =>
-                        onFormUpdate("Nome", e.target.value)
-                      }
+                      name="firstName"
+                      value={toSend.firstName}
+                      onChange={handleChange}
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
                     <input
                       type="text"
-                      value={formDetails.lasttName}
                       placeholder="Sobrenome"
-                      onChange={(e) => onFormUpdate("Sobrenome", e.target.value)}
+                      name="lastName"
+                      value={toSend.lastName}
+                      onChange={handleChange}
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
                     <input
                       type="email"
-                      value={formDetails.email}
                       placeholder="Endereço de Email"
-                      onChange={(e) => onFormUpdate("Endereço de Email", e.target.value)}
+                      name="email"
+                      value={toSend.email}
+                      onChange={handleChange}
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
                     <input
                       type="tel"
-                      value={formDetails.phone}
-                      placeholder="Telefone"
-                      onChange={(e) => onFormUpdate("Telefone", e.target.value)}
+                      placeholder="No. de Telefone"
+                      name="phone"
+                      value={toSend.phone}
+                      onChange={handleChange}
                     />
                   </Col>
                   <Col size={12} className="px-1">
                     <textarea
                       rows="6"
-                      value={formDetails.message}
                       placeholder="Mensagem"
-                      onChange={(e) => onFormUpdate("Mensagem", e.target.value)}
+                      name="message"
+                      value={toSend.message}
+                      onChange={handleChange}
                     ></textarea>
-                    <button type="submit">
-                      <span>{buttonText}</span>
-                    </button>
+                    <div id="status">
+                      <button type="submit">
+                        <span>{buttonText}</span>
+                      </button>
+                      <p>{Result}</p>
+                    </div>
                   </Col>
-                  {status.message && (
-                    <Col>
-                      <p
-                        className={
-                          status.success === false ? "danger" : "success"
-                        }
-                      >
-                        {status.message}
-                      </p>
-                    </Col>
-                  )}
                 </Row>
               </form>
             </div>
