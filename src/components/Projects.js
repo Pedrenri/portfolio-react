@@ -162,7 +162,7 @@ export const Projects = () => {
                     <Nav.Link eventKey="second">Criação 3D</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">Desenvolvimento Web</Nav.Link>
+                    <Nav.Link eventKey="third">WebDev</Nav.Link>
                   </Nav.Item>
                 </Nav>
                 <Tab.Content>
@@ -187,11 +187,11 @@ export const Projects = () => {
                         return <ProjectCard key={index} {...project} />;
                       })}
                     </Row>
-                    <Row data-aos="fade-up">
+                    {/* <Row data-aos="fade-up">
                       {projects_bottom2.map((project, index) => {
                         return <ProjectCard key={index} {...project} />;
                       })}
-                    </Row>
+                    </Row> */}
                   </Tab.Pane>
                   <Tab.Pane eventKey="third">
                     <Row data-aos="fade-up">
@@ -199,11 +199,11 @@ export const Projects = () => {
                         return <ProjectCard key={index} {...project} />;
                       })}
                     </Row>
-                    <Row data-aos="fade-up">
+                    {/* <Row data-aos="fade-up">
                       {projects_bottom3.map((project, index) => {
                         return <ProjectCard key={index} {...project} />;
                       })}
-                    </Row>
+                    </Row> */}
                   </Tab.Pane>
                 </Tab.Content>
               </Tab.Container>

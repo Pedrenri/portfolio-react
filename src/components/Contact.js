@@ -38,11 +38,11 @@ export const Contact = () => {
         console.log("SUCCESS!", response.status, response.text);
         setButtonText("Enviar");
         setToSend(toReset);
-        window.alert("Mensagem Enviada!");
+        Result = 'Mensagem enviada!'
       })
       .catch((err) => {
         console.log("FAILED...", err);
-        window.alert("Algo deu errado. Tente novamente mais tarde.");
+        Result = 'Algo deu errado. Tente novamente mais tarde.'
       });
   };
 
@@ -54,13 +54,13 @@ export const Contact = () => {
     <section className="contact" id="connect">
       <Container>
         <Row className="align-items-center">
-          <Col size={12} md={6}>
-            <img data-aos="fade-right" src={contactImg} alt="Contact Us" />
+          <Col size={12} md={6} className='d-flex justify-content-center'>
+            <img data-aos="fade-down" src={contactImg} alt="Contact Us" />
           </Col>
           <Col size={12} md={6}>
             <div>
               <h2>Entre em contato</h2>
-              <form data-aos="fade-left" onSubmit={formSubmit}>
+              <form data-aos="fade-down" onSubmit={formSubmit}>
                 <Row>
                   <Col size={12} sm={6} className="px-1">
                     <input
