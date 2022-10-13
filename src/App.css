@@ -21,6 +21,7 @@ body {
   background-color: #000000 !important;
   color: #fff !important;
   font-family: "Roboto", sans-serif !important;
+  overflow-x: hidden;
 }
 
 /* ===== Scrollbar CSS ===== */
