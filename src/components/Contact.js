@@ -2,11 +2,13 @@ import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/astro_laptop.png";
 import emailjs from "emailjs-com";
+import { motion } from 'framer-motion'
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 
 // ..
 AOS.init();
+
 
 let Result = "";
 
@@ -55,7 +57,15 @@ export const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6} className='d-flex justify-content-center'>
-            <img data-aos="fade-down" src={contactImg} alt="Contact Us" />
+            <motion.img src={contactImg} alt="Contact Us" animate={{
+              y:[50,-50,50],
+              rotate:[10,-10,10]
+            }}
+            transition={{
+              ease: "linear",
+              repeat: Infinity,
+              duration:30
+            }} />
           </Col>
           <Col size={12} md={6}>
             <div>
@@ -69,6 +79,7 @@ export const Contact = () => {
                       name="firstName"
                       value={toSend.firstName}
                       onChange={handleChange}
+                      required
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
@@ -78,6 +89,7 @@ export const Contact = () => {
                       name="lastName"
                       value={toSend.lastName}
                       onChange={handleChange}
+                      required
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
@@ -87,12 +99,13 @@ export const Contact = () => {
                       name="email"
                       value={toSend.email}
                       onChange={handleChange}
+                      required
                     />
                   </Col>
                   <Col size={12} sm={6} className="px-1">
                     <input
                       type="tel"
-                      placeholder="No. de Telefone"
+                      placeholder="No. de Telefone (Opcional)"
                       name="phone"
                       value={toSend.phone}
                       onChange={handleChange}
@@ -105,6 +118,7 @@ export const Contact = () => {
                       name="message"
                       value={toSend.message}
                       onChange={handleChange}
+                      required
                     ></textarea>
                     <div id="status">
                       <button type="submit">

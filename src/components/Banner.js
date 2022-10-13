@@ -3,10 +3,10 @@ import { Container, Row, Col, Nav } from "react-bootstrap";
 import headerImg from "../assets/img/astro_p_transp.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import TrackVisibility from "react-on-screen";
-import { NavLink } from "react-router-dom";
 import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
+import "aos/dist/aos.css";
+import { motion } from "framer-motion";
+
 AOS.init();
 
 export const Banner = () => {
@@ -60,14 +60,35 @@ export const Banner = () => {
     }
   };
 
+  let arrayNum = [
+    -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20,
+    20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20,
+    -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20,
+    20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20,
+    -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20,
+    20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20,
+    -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20, 20, -20,
+    20, -20, 20, -20, 20, -20, 20, -20,
+  ];
+
   return (
     <section className="banner" id="home">
       <Container>
         <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7} data-aos='fade-right'>
+          <Col xs={12} md={6} xl={7} data-aos="fade-right">
             <div>
-              <span className="tagline">Bem vindo ao meu portfólio!</span>
-              <h1>
+              <motion.span
+                className="tagline"
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+              >
+                Bem vindo ao meu portfólio!
+              </motion.span>
+              <motion.h1
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{delay:0.1}}
+              >
                 <span
                   className="txt-rotate"
                   dataperiod="1000"
@@ -77,32 +98,53 @@ export const Banner = () => {
                 >
                   <span className="wrap">{text}</span>
                 </span>
-              </h1>
-              <p>
+              </motion.h1>
+              <motion.p
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                transition={{delay:0.25}}
+              >
                 Meu nome é Pedro Henri. Sou um programador/designer com foco em
                 desenvolvimento Web. Atualmente, estou cursando o Ensino Médio
                 Técnico no COTEMIG. Sou centrado, focado, e sempre busco dar o
                 meu melhor para atingir o resultado máximo esperado pelo
                 cliente/contratante. Minhas habilidades incluem HTML, CSS, JS,
                 C#, SQL, Design Gráfico, Desenvolvimento 3D e Design UI/UX.
-              </p>
-              <a href="#connect">
+              </motion.p>
+              <motion.a
+                href="#connect"
+                initial={{ x: -50, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+              >
                 <button onClick={() => console.log("connect")}>
                   Fale Comigo! <ArrowRightCircle size={25} />
                 </button>
-              </a>
+              </motion.a>
             </div>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
-              <div>
+              <motion.div
+                animate={{
+                  /* rotate: 360, */
+                  /* x: [50, 50, -50, -50, 50],*/
+                  y: { arrayNum },
+                  scale: [1, 0.5, 1],
+                  rotate: [50, -50, 50],
+                }}
+                transition={{
+                  duration: 300,
+                  ease: "linear",
+                  delay: 2,
+                  repeat: Infinity,
+                }}
+              >
                 <img src={headerImg} alt="Header Img" />
-              </div>
+              </motion.div>
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
     </section>
-    
   );
 };

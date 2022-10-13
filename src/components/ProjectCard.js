@@ -2,8 +2,17 @@ import { Col } from "react-bootstrap";
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Carousel from "react-bootstrap/Carousel";
+import { motion } from "framer-motion";
 
-export const ProjectCard = ({ title, description, imgUrl, Car1, Car2, Car3 }) => {
+export const ProjectCard = ({
+  title,
+  description,
+  imgUrl,
+  Car1,
+  Car2,
+  Car3,
+  hrefURL,
+}) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -29,17 +38,24 @@ export const ProjectCard = ({ title, description, imgUrl, Car1, Car2, Car3 }) =>
           <Modal.Body style={{ background: "#150c21" }}>
             <Carousel>
               <Carousel.Item>
-                <img className="d-block w-100" src={Car1} alt="First slide" />
+                <a className="carousel-item-img" href={hrefURL}>
+                  <img className="d-block w-100" src={Car1} alt="First slide" />
+                </a>
+              </Carousel.Item>
+
+              <Carousel.Item>
+                <a className="carousel-item-img" href={hrefURL}>
+                  <img
+                    className="d-block w-100"
+                    src={Car2}
+                    alt="Second slide"
+                  />
+                </a>
               </Carousel.Item>
               <Carousel.Item>
-                <img
-                  className="d-block w-100"
-                  src={Car2}
-                  alt="Second slide"
-                />
-              </Carousel.Item>
-              <Carousel.Item>
-                <img className="d-block w-100" src={Car3} alt="Third slide" />
+                <a className="carousel-item-img" href={hrefURL}>
+                  <img className="d-block w-100" src={Car3} alt="Third slide" />
+                </a>
               </Carousel.Item>
             </Carousel>
           </Modal.Body>
