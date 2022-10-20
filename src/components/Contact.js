@@ -133,6 +133,7 @@ export const Contact = () => {
           </Col>
         </Row>
       </Container>
+      
     </section>
   );
 };

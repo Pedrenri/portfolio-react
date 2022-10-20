@@ -4,7 +4,7 @@ export const Intro = () => {
   return (
     <motion.div
       className="intro"
-      animate={{ opacity: 1, y: -1000 }}
+      animate={{ opacity: 1, y: -10000 }}
       transition={{ delay: 1.5, duration: 0.2 }}
     >
       <h1 className="logo-header  ">

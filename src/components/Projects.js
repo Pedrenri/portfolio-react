@@ -19,7 +19,7 @@ import design31 from '../assets/img/design3-1.png'
 import design32 from '../assets/img/design3-2.png'
 import design33 from '../assets/img/design3-3.png'
 
-import colorSharp2 from "../assets/img/color-sharp2.png";
+/* import colorSharp2 from "../assets/img/color-sharp2.png"; */
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
@@ -228,7 +228,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      {/* <img className="background-image-right" src={colorSharp2}></img> */}
     </section>
   );
 };

@@ -18,7 +18,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #000000 !important;
+  background-color: #fff !important;
   color: #fff !important;
   font-family: "Roboto", sans-serif !important;
   overflow-x: hidden;
@@ -33,11 +33,11 @@ body {
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 10px;
+  width: 7px;
 }
 
 *::-webkit-scrollbar-track {
-  background: #000000;
+  background: #00000000;
 }
 
 *::-webkit-scrollbar-thumb {
@@ -238,9 +238,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
 
-/************ Banner Css ************/
+/************ Css ************/
 .banner {
   margin-top: 0;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -248,7 +249,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 10rem 0;
+  padding: 12rem 0;
 }
 .banner a {
   text-decoration: none;
@@ -319,6 +320,26 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid rgb(156, 156, 156);
 }
 
+.custom-shape-divider-bottom-1666304608 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1666304608 svg {
+  position: relative;
+  display: block;
+  width: calc(300% + 1.3px);
+  height: 107px;
+}
+
+.custom-shape-divider-bottom-1666304608 .shape-fill {
+  fill: #fff;
+}
 /************ About Css ************/
 
 .about {
@@ -351,7 +372,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-  padding: 0 0 50px 0;
+  padding: 5rem 0;
   position: relative;
 }
 .skill-bx {
@@ -359,10 +380,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 65px;
   text-align: center;
   padding: 60px 3rem;
-  margin-top: -60px;
-  -webkit-box-shadow: 0px 0px 73px 2px #8400ff;
+  /* -webkit-box-shadow: 0px 0px 73px 2px #8400ff;
   -moz-box-shadow: 0px 0px 73px 2px #8400ff;
-  box-shadow: 0px 0px 100px 1px #8400ff;
+  box-shadow: 0px 0px 100px 1px #8400ff; */
 }
 .skill h2 {
   font-size: 45px;
