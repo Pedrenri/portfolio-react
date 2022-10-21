@@ -18,7 +18,7 @@ body {
   font-weight: 400;
   overflow-x: hidden;
   position: relative;
-  background-color: #fff !important;
+  background-color: #000 !important;
   color: #fff !important;
   font-family: "Roboto", sans-serif !important;
   overflow-x: hidden;
@@ -301,20 +301,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button:hover svg {
   margin-left: 25px;
 }
-.banner img {
-  animation: updown 3s linear infinite;
-}
-/* @keyframes updown {
-  0% {
-    transform: translateY(-20px);
-  }
-  50% {
-    transform: translateY(20px);
-  }
-  100% {
-    transform: translateY(-20px);
-  }
-} */
 
 .txt-rotate > .wrap {
   border-right: 0.08em solid rgb(156, 156, 156);
@@ -328,6 +314,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
+  margin-bottom: -1px;
 }
 
 .custom-shape-divider-bottom-1666304608 svg {
@@ -338,7 +325,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .custom-shape-divider-bottom-1666304608 .shape-fill {
-  fill: #fff;
+  fill: #fafafa;
 }
 /************ About Css ************/
 
@@ -372,17 +359,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Skills Css ************/
 .skill {
-  padding: 5rem 0;
+  padding: 5rem 0 12rem 0;
   position: relative;
+  background-color: #fafafa;
 }
 .skill-bx {
   background: #151515;
   border-radius: 65px;
   text-align: center;
-  padding: 60px 3rem;
-  /* -webkit-box-shadow: 0px 0px 73px 2px #8400ff;
-  -moz-box-shadow: 0px 0px 73px 2px #8400ff;
-  box-shadow: 0px 0px 100px 1px #8400ff; */
+  padding: 2.5rem 3rem;
+  -webkit-box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 1);
+  -moz-box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 1);
+  box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 1);
 }
 .skill h2 {
   font-size: 45px;
@@ -419,14 +407,38 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
+.custom-shape-divider-bottom-1666361393 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  margin-bottom: -1px;
+}
+
+.custom-shape-divider-bottom-1666361393 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 78px;
+}
+
+.custom-shape-divider-bottom-1666361393 .shape-fill {
+  fill: #000000;
+}
+
 /* Projects */
 
 .project {
-  padding: 5rem 0;
+  padding: 10rem 0;
   position: relative;
+  color: #ffffff;
 }
 
-.project a {
+.project h4,
+span {
   color: white;
 }
 
@@ -435,8 +447,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project h2 {
-  font-size: 45px;
-  font-weight: 700;
+  font-size: 60px;
+  font-weight: 900;
   text-align: center;
   padding-bottom: 2rem;
 }
@@ -453,8 +465,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 72%;
   margin: 0 auto;
   border-radius: 50px;
-  background-color: rgb(255 255 255 / 10%);
+  background-color: #ffffff1f;
   overflow: hidden;
+  -webkit-box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 1);
+  -moz-box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 1);
+  box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 1);
 }
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
@@ -488,17 +503,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -10;
   transition: 0.3s ease-in-out;
 }
+
+.project .nav.nav-pills .nav-link.active {
+  color: white;
+}
+
 .project .nav.nav-pills .nav-link.active::before {
   width: 100% !important;
 }
 
 .nav-link#projects-tabs-tab-first {
-  border-right: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid #818181;
   border-radius: 55px 0px 0px 55px;
   z-index: 10;
 }
 .nav-link#projects-tabs-tab-third {
-  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid #818181;
   border-radius: 0 55px 55px 0;
 }
 .proj-imgbx {
@@ -516,10 +536,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-imgbx img {
   transition: all 0.3s;
-}
-
-.proj-imgbx img:hover {
-  filter: brightness(0.6);
+  filter: brightness(.7);
 }
 /* .proj-imgbx::before {
   content: "";
@@ -743,6 +760,18 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 #modal {
   color: black;
   font-size: 2rem;
+}
+
+.modal-content  {
+  -webkit-border-radius: 20px !important;
+  -moz-border-radius: 20px !important;
+  border-radius: 20px !important;
+  background-color: #150c21 !important;
+}
+
+.carousel-item {
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .test {

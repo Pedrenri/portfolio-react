@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
 
+
 AOS.init();
 
 export const Banner = () => {
@@ -59,17 +60,6 @@ export const Banner = () => {
       setIndex((prevIndex) => prevIndex + 1);
     }
   };
-
-  let arrayNum = [
-    -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50,
-    -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50,
-    50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, -50,
-    50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50,
-    -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, -50, 50,
-    -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50,
-    50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, -50, 50, -50,
-    50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50, -50, 50,
-  ];
 
   return (
     <section className="banner" id="home">
@@ -125,10 +115,8 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               <motion.div
-                animate={{
-                  /* rotate: 360, */
-                  /* x: [50, 50, -50, -50, 50],*/
-                  y: [-50, 40, -50],
+              animate={{
+              y: [-50, 40, -50],
                   rotate: [0, -5, 0],
                 }}
                 transition={{
@@ -139,8 +127,10 @@ export const Banner = () => {
                 }}
               >
                 <img src={headerImg} alt="Header Img" />
+                
               </motion.div>
             </TrackVisibility>
+            
           </Col>
         </Row>
       </Container>

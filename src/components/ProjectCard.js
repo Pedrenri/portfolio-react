@@ -28,14 +28,13 @@ export const ProjectCard = ({
         </div>
 
         <Modal
-          style={{ borderRadius: "20px" }}
           show={show}
           onHide={handleClose}
           size="lg"
           aria-labelledby="contained-modal-title-vcenter"
           centered
         >
-          <Modal.Body style={{ background: "#150c21" }}>
+          <Modal.Body>
             <Carousel>
               <Carousel.Item>
                 <a className="carousel-item-img" href={hrefURL}>
