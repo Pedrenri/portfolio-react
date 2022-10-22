@@ -304,10 +304,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .banner-text {
   padding: 0 0 1rem 2rem;
-  border-left: solid 5px ;
-  border-image: linear-gradient(45deg, purple, blue) 1
+  border-left: solid 5px;
+  border-image: linear-gradient(45deg, purple, blue) 1;
 }
-
 
 .txt-rotate > .wrap {
   border-right: 0.08em solid rgb(156, 156, 156);
@@ -444,8 +443,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #ffffff;
 }
 
-.project h4
- {
+.project h4 {
   color: white;
 }
 
@@ -540,7 +538,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .proj-imgbx img {
   transition: all 0.3s;
-  filter: brightness(.7);
+  filter: brightness(0.7);
 }
 /* .proj-imgbx::before {
   content: "";
@@ -677,7 +675,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   color: #fff;
 }
 
-
 .contact form button::before {
   content: "";
   background: #000;
@@ -767,13 +764,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 2rem;
 }
 
-.modal-content  {
+.modal-content {
   -webkit-border-radius: 20px !important;
   -moz-border-radius: 20px !important;
   border-radius: 20px !important;
   background: none !important;
 }
-.carousel-inner{
+.carousel-inner {
   border-radius: 20px;
 }
 .carousel-item {
@@ -859,35 +856,46 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /* 3D */
 
-.spline{
-transform: scale(.7);
+.spline {
+  transform: scale(0.7);
   /* // XX-Large devices (larger desktops, 1400px and up) */
-/*   @media (min-width: 1400px) { }
- */}
- @media (min-width: 300px) { 
-  .greek { display: none !important;}
+  /*   @media (min-width: 1400px) { }
+ */
 }
- 
- @media (min-width: 576px) { 
-  .spline {transform: scale(.8)}
-  .greek { display: block !important;}
+@media (min-width: 300px) {
+  .spline {
+    display: none !important;
+  }
+}
+
+@media (min-width: 576px) {
+  .spline {
+    transform: scale(0.8);
+    display: block !important;
+  }
+  .header-img{
+    display: none;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-  .spline {transform: scale(.82)}
-  .greek { display: block !important;}
-} 
+@media (min-width: 768px) {
+  .spline {
+    transform: scale(0.82);
+    display: block !important;
+  }
+  .header-img{
+    display: none;
+  }
+}
 
-  /* // Large devices (desktops, 992px and up) */
+/* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .spline {transform: scale(1)}
-  .greek { display: block !important;}
- }
-
-  /* // X-Large devices (large desktops, 1200px and up) */
-/* @media (min-width: 1400px) { 
-  .spline {transform: scale(1)}
-} */
-
- 
+  .spline {
+    transform: scale(1);
+    display: block !important;
+  }
+  .header-img{
+    display: none;
+  }
+}

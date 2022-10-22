@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
+import headerImg from "../assets/img/astro_p_transp.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -113,7 +114,7 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={5} className='d-flex justify-content-center align-items-center'>
             
             <Spline scene="https://prod.spline.design/CNWSNQG6-u8RtxdU/scene.splinecode" className="spline"/>
-              {/* <motion.div
+              <motion.div className="header-img"
                 animate={{
                   y: [-50, 40, -50],
                   rotate: [0, -5, 0],
@@ -127,7 +128,7 @@ export const Banner = () => {
               >
                 <img src={headerImg} alt="Header Img" />
                 
-              </motion.div> */}
+              </motion.div>
             
           </Col>
         </Row>
