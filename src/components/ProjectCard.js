@@ -2,9 +2,7 @@ import { Col } from "react-bootstrap";
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Carousel from "react-bootstrap/Carousel";
-import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { motion } from "framer-motion";
+
 
 export const ProjectCard = ({
   title,
@@ -22,7 +20,7 @@ export const ProjectCard = ({
     <>
       <Col size={12} sm={6} md={4}>
         <div onClick={handleShow} className="proj-imgbx" >
-          <img src={imgUrl} />
+          <img src={imgUrl} alt='project' />
           <div className="proj-txtx">
             <h4>{title}</h4>
             <span>{description}</span>

@@ -19,7 +19,7 @@ import design31 from "../assets/img/design3-1.png";
 import design32 from "../assets/img/design3-2.png";
 import design33 from "../assets/img/design3-3.png";
 
-import colorSharp from "../assets/img/color-sharp.png";
+/* import colorSharp from "../assets/img/color-sharp.png"; */
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
@@ -56,7 +56,7 @@ export const Projects = () => {
       Car3: design33,
     },
   ];
-  const projects_bottom = [
+  /* const projects_bottom = [
     {
       title: "Design-4",
       description: "Design & Desenvolvimento",
@@ -72,7 +72,7 @@ export const Projects = () => {
       description: "Design & Desenvolvimento",
       imgUrl: projImg3,
     },
-  ];
+  ]; */
 
   /* 3D */
 
@@ -94,7 +94,7 @@ export const Projects = () => {
     },
   ];
 
-  const projects_bottom2 = [
+  /* const projects_bottom2 = [
     {
       title: "3D-4",
       description: "Criação 3D",
@@ -110,7 +110,7 @@ export const Projects = () => {
       description: "Criação 3D",
       imgUrl: projImg3,
     },
-  ];
+  ]; */
 
   /* WEB */
 
@@ -132,7 +132,7 @@ export const Projects = () => {
     },
   ];
 
-  const projects_bottom3 = [
+  /* const projects_bottom3 = [
     {
       title: "Web-4",
       description: "Desenvolvimento Web",
@@ -148,7 +148,7 @@ export const Projects = () => {
       description: "Desenvolvimento Web",
       imgUrl: projImg3,
     },
-  ];
+  ]; */
 
   return (
     <section className="project" id="projects">
@@ -217,7 +217,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2}></img>
+      <img className="background-image-right" src={colorSharp2} alt='bg-img'></img>
       <div class="custom-shape-divider-bottom-1666449565">
         <svg
           data-name="Layer 1"

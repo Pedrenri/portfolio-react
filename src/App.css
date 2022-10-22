@@ -693,7 +693,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
 }
 
-
 #status {
   display: flex;
   justify-content: space-between;
@@ -865,19 +864,25 @@ transform: scale(.7);
   /* // XX-Large devices (larger desktops, 1400px and up) */
 /*   @media (min-width: 1400px) { }
  */}
+ @media (min-width: 300px) { 
+  .greek { display: none !important;}
+}
  
  @media (min-width: 576px) { 
   .spline {transform: scale(.8)}
+  .greek { display: block !important;}
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) { 
   .spline {transform: scale(.82)}
+  .greek { display: block !important;}
 } 
 
   /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
   .spline {transform: scale(1)}
+  .greek { display: block !important;}
  }
 
   /* // X-Large devices (large desktops, 1200px and up) */

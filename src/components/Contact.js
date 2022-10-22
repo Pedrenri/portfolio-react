@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import emailjs from "emailjs-com";
-import { motion } from 'framer-motion'
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Spline from '@splinetool/react-spline';
@@ -14,7 +13,7 @@ let Result = "";
 
 export const Contact = () => {
   const [buttonText, setButtonText] = useState("Enviar");
-  const [toReset, setToRes] = useState({
+  const [toReset ] = useState({
     firstName: "",
     lastName: "",
     email: "",
@@ -57,7 +56,7 @@ export const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6} className='d-flex justify-content-center '>
-            <Spline className="spline" scene="https://prod.spline.design/zPAY4mT7EzNNgRJf/scene.splinecode" />
+            <Spline className="spline greek" scene="https://prod.spline.design/zPAY4mT7EzNNgRJf/scene.splinecode" />
           </Col>
 
           <Col size={12} md={6}>
