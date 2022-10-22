@@ -5,6 +5,7 @@
   "dependencies": {
     "@react-three/drei": "^9.36.0",
     "@react-three/fiber": "^8.8.10",
+    "@splinetool/react-spline": "^2.2.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",

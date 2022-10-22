@@ -1,12 +1,10 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
-import headerImg from "../assets/img/astro_p_transp.png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import TrackVisibility from "react-on-screen";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
-
+import Spline from '@splinetool/react-spline';
 
 AOS.init();
 
@@ -66,7 +64,7 @@ export const Banner = () => {
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7} data-aos="fade-right">
-            <div>
+            <div className="banner-text">
               <motion.span
                 className="tagline"
                 initial={{ x: -50, opacity: 0 }}
@@ -112,11 +110,12 @@ export const Banner = () => {
               </motion.a>
             </div>
           </Col>
-          <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              <motion.div
-              animate={{
-              y: [-50, 40, -50],
+          <Col xs={12} md={6} xl={5} className='d-flex justify-content-center align-items-center'>
+            
+            <Spline scene="https://prod.spline.design/CNWSNQG6-u8RtxdU/scene.splinecode" className="spline"/>
+              {/* <motion.div
+                animate={{
+                  y: [-50, 40, -50],
                   rotate: [0, -5, 0],
                 }}
                 transition={{
@@ -128,11 +127,11 @@ export const Banner = () => {
               >
                 <img src={headerImg} alt="Header Img" />
                 
-              </motion.div>
-            </TrackVisibility>
+              </motion.div> */}
             
           </Col>
         </Row>
+        
       </Container>
       <div class="custom-shape-divider-bottom-1666304608">
         <svg

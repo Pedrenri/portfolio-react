@@ -2,7 +2,8 @@ import { Col } from "react-bootstrap";
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import Carousel from "react-bootstrap/Carousel";
-import { motion } from "framer-motion";
+import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 export const ProjectCard = ({
   title,

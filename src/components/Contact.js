@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import contactImg from "../assets/img/astro_laptop.png";
 import emailjs from "emailjs-com";
 import { motion } from 'framer-motion'
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import Spline from '@splinetool/react-spline';
 
 // ..
 AOS.init();
@@ -57,7 +57,7 @@ export const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6} className='d-flex justify-content-center'>
-            <motion.img src={contactImg} alt="Contact Us" animate={{
+            {/* <motion.img src={contactImg} alt="Contact Us" animate={{
               y:[50,-50,50],
               rotate:[10,-10,10]
             }}
@@ -65,10 +65,12 @@ export const Contact = () => {
               ease: "linear",
               repeat: Infinity,
               duration:30
-            }} />
+            }} /> */}
+            <Spline className="spline" scene="https://prod.spline.design/zPAY4mT7EzNNgRJf/scene.splinecode" />
           </Col>
+
           <Col size={12} md={6}>
-            <div>
+            <div data-aos="fade-down">
               <h2>Entre em contato</h2>
               <form data-aos="fade-down" onSubmit={formSubmit}>
                 <Row>

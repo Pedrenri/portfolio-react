@@ -1,28 +1,5 @@
-/************ Custom Font ************/
+/* Custom Font */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
-/************ Default Css ************/
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 75px;
-}
-
-body {
-  font-weight: 400;
-  overflow-x: hidden;
-  position: relative;
-  background-color: #000 !important;
-  color: #fff !important;
-  font-family: "Roboto", sans-serif !important;
-  overflow-x: hidden;
-}
 
 /* ===== Scrollbar CSS ===== */
 /* Firefox */
@@ -46,13 +23,35 @@ body {
   border: 2px solid #000000;
 }
 
+/* Default Css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #050505 !important;
+  color: #fff !important;
+  font-family: "Roboto", sans-serif !important;
+  overflow-x: hidden;
+}
+
 h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0;
+  margin: 0 !important;
   padding: 0;
   line-height: normal;
 }
@@ -270,7 +269,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .banner h1 {
   font-size: 65px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.8px;
   line-height: 1;
   margin-bottom: 20px;
@@ -282,6 +281,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 90%;
+  margin-top: 2rem;
 }
 .banner button {
   color: #fff;
@@ -301,6 +301,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner button:hover svg {
   margin-left: 25px;
 }
+
+.banner-text {
+  padding: 0 0 1rem 2rem;
+  border-left: solid 5px ;
+  border-image: linear-gradient(45deg, purple, blue) 1
+}
+
 
 .txt-rotate > .wrap {
   border-right: 0.08em solid rgb(156, 156, 156);
@@ -426,19 +433,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .custom-shape-divider-bottom-1666361393 .shape-fill {
-  fill: #000000;
+  fill: #050505;
 }
 
 /* Projects */
 
 .project {
-  padding: 10rem 0;
+  padding: 10rem 0 15rem 0;
   position: relative;
   color: #ffffff;
 }
 
-.project h4,
-span {
+.project h4
+ {
   color: white;
 }
 
@@ -450,7 +457,7 @@ span {
   font-size: 60px;
   font-weight: 900;
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 }
 .project p {
   color: #b8b8b8;
@@ -467,9 +474,6 @@ span {
   border-radius: 50px;
   background-color: #ffffff1f;
   overflow: hidden;
-  -webkit-box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 1);
-  -moz-box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 1);
-  box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 1);
 }
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
@@ -586,18 +590,37 @@ span {
   z-index: -4;
 }
 
+.custom-shape-divider-bottom-1666449565 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  margin-bottom: -1px;
+}
+
+.custom-shape-divider-bottom-1666449565 svg {
+  position: relative;
+  display: block;
+  width: calc(134% + 1.3px);
+  height: 140px;
+}
+
+.custom-shape-divider-bottom-1666449565 .shape-fill {
+  fill: #fafafa;
+}
+
 /************ Contact Css ************/
 .contact {
-  background-image: url(./assets/img/bg-2.png);
+  /* background-image: url(./assets/img/bg-2.png); */
+  background-color: #fafafa;
   background-size: cover;
   background-position: top center;
   /* background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%); */
-  padding: 60px 0 200px 0;
-}
-.contact img {
-  width: 92%;
-  margin: 0 auto;
-  animation: updown 5s linear infinite;
+  padding: 5rem 0 10rem 0;
+  color: #000;
 }
 
 .contact h2 {
@@ -608,27 +631,27 @@ span {
 .contact form input,
 .contact form textarea {
   width: 100%;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid #ffffff80;
   border-radius: 20px;
-  color: #fff;
-  margin: 0 0 8px 0;
-  padding: 18px 26px;
+  margin: 0 0 0.5rem 0;
+  padding: 1rem 2rem;
   font-weight: 500;
   font-size: 18px;
   letter-spacing: 0.8px;
   transition: 0.3s ease-in-out;
+  -webkit-box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 0.2);
+  -moz-box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 0.2);
+  box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 0.2);
 }
 .contact form input:focus,
 .contact form textarea:focus {
-  background: rgba(255, 255, 255, 1);
   color: #121212;
 }
 .contact form input::placeholder,
 .contact form textarea::placeholder {
   font-size: 16px;
   font-weight: 400;
-  color: #fff;
+  color: rgb(73, 73, 73);
 }
 .contact form input:focus::placeholder,
 .contact form textarea:focus::placeholder {
@@ -637,8 +660,8 @@ span {
 }
 .contact form button {
   font-weight: 700;
-  color: #fff;
-  border: solid 1px #b4b4b4;
+  color: #929292;
+  border: solid 1px rgb(212, 212, 212);
   padding: 14px 48px;
   font-size: 18px;
   border-radius: 0;
@@ -650,12 +673,14 @@ span {
   position: relative;
 }
 .contact form button:hover {
-  color: rgb(0, 0, 0);
   border-color: white;
+  color: #fff;
 }
+
+
 .contact form button::before {
   content: "";
-  background: #ffffff;
+  background: #000;
   width: 0;
   height: 100%;
   position: absolute;
@@ -673,6 +698,7 @@ span {
   justify-content: space-between;
   align-items: center;
   padding: 1.6rem 5px;
+  color: 000;
 }
 
 #status p {
@@ -680,7 +706,7 @@ span {
   transition: all 0.5s;
 }
 
-/************ Footer Css ************/
+/* Footer */
 .footer {
   background-image: url("./assets/img/footer-bg.png");
   background-position: center center;
@@ -695,9 +721,12 @@ span {
   background: #ffffff;
   border-radius: 55px;
   color: #121212;
-  padding: 85px 125px;
+  padding: 3rem 1rem;
   margin-bottom: 80px;
-  margin-top: -122px;
+  margin-top: -7.5rem;
+  -webkit-box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 0.2);
+  -moz-box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 0.2);
+  box-shadow: 0px 0px 59px -16px rgba(54, 54, 54, 0.2);
 }
 .newsletter-bx h3 {
   font-weight: 700;
@@ -706,51 +735,27 @@ span {
 }
 .new-email-bx {
   background: #fff;
-  padding: 5px;
   border-radius: 20px;
   position: relative;
   z-index: 0;
   display: flex;
   align-items: center;
 }
-.new-email-bx::before {
-  content: "";
+
+.new-email-bx a {
   background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
-  border-radius: 20px;
-  position: absolute;
-  z-index: -1;
-  top: -1px;
-  left: -1px;
-  bottom: -1px;
-  right: -1px;
-}
-.new-email-bx::after {
-  content: "";
-  background: #fff;
-  border-radius: 20px;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-}
-.new-email-bx input {
-  width: 100%;
-  color: #121212;
-  font-weight: 500;
-  background: transparent;
-  border: 0;
-  padding: 0 15px;
-}
-.new-email-bx button {
-  background: linear-gradient(90.21deg, #aa367c -5.91%, #4a2fbd 111.58%);
-  padding: 20px 65px;
+  padding: 1.5rem 3rem;
   color: #fff;
   font-weight: 500;
   letter-spacing: 0.5px;
   border-radius: 18px;
+  text-decoration: none;
 }
+
+.new-email-bx a:hover {
+  color: white;
+}
+
 .footer img {
   width: 17rem;
 }
@@ -849,3 +854,32 @@ span {
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
   animation: bg 2s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
+/* 3D */
+
+.spline{
+transform: scale(.7);
+  /* // XX-Large devices (larger desktops, 1400px and up) */
+/*   @media (min-width: 1400px) { }
+ */}
+ 
+ @media (min-width: 576px) { 
+  .spline {transform: scale(.8)}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .spline {transform: scale(.82)}
+} 
+
+  /* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .spline {transform: scale(1)}
+ }
+
+  /* // X-Large devices (large desktops, 1200px and up) */
+/* @media (min-width: 1400px) { 
+  .spline {transform: scale(1)}
+} */
+
+ 

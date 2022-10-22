@@ -4,23 +4,23 @@ import projImg1 from "../assets/img/project-img1.png";
 import projImg2 from "../assets/img/project-img2.png";
 import projImg3 from "../assets/img/project-img3.png";
 
-import CoverD1 from '../assets/img/coverD1.png'
-import design11 from '../assets/img/design1-1.png'
-import design12 from '../assets/img/design1-2.png'
-import design13 from '../assets/img/design1-3.png'
+import CoverD1 from "../assets/img/coverD1.png";
+import design11 from "../assets/img/design1-1.png";
+import design12 from "../assets/img/design1-2.png";
+import design13 from "../assets/img/design1-3.png";
 
-import CoverD2 from '../assets/img/coverD2.png'
-import design21 from '../assets/img/design2-1.png'
-import design22 from '../assets/img/design2-2.png'
-import design23 from '../assets/img/design2-3.jpeg'
+import CoverD2 from "../assets/img/coverD2.png";
+import design21 from "../assets/img/design2-1.png";
+import design22 from "../assets/img/design2-2.png";
+import design23 from "../assets/img/design2-3.jpeg";
 
-import CoverD3 from '../assets/img/coverD3.png'
-import design31 from '../assets/img/design3-1.png'
-import design32 from '../assets/img/design3-2.png'
-import design33 from '../assets/img/design3-3.png'
+import CoverD3 from "../assets/img/coverD3.png";
+import design31 from "../assets/img/design3-1.png";
+import design32 from "../assets/img/design3-2.png";
+import design33 from "../assets/img/design3-3.png";
 
-import colorSharp from "../assets/img/color-sharp.png"; 
-import colorSharp2 from "../assets/img/color-sharp2.png"; 
+import colorSharp from "../assets/img/color-sharp.png";
+import colorSharp2 from "../assets/img/color-sharp2.png";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 // ..
@@ -35,26 +35,26 @@ export const Projects = () => {
       description: "Empresa de Cuidados Financeiros",
       imgUrl: CoverD1,
       Car1: design11,
-      Car2:design12,
-      Car3:design13,
+      Car2: design12,
+      Car3: design13,
     },
     {
       title: "Henri's",
       description: "Empresa de Venda de Produtos Esportivos",
       imgUrl: CoverD2,
       Car1: design21,
-      Car2:design22,
-      Car3:design23,
-      hrefURL: 'https://henrisgym.netlify.app'
+      Car2: design22,
+      Car3: design23,
+      hrefURL: "https://henrisgym.netlify.app",
     },
     {
       title: "Moda-Bela",
       description: "Site Para Dicas de Moda e Cuidados Pessoais",
       imgUrl: CoverD3,
       Car1: design31,
-      Car2:design32,
-      Car3:design33,
-    }
+      Car2: design32,
+      Car3: design33,
+    },
   ];
   const projects_bottom = [
     {
@@ -71,7 +71,7 @@ export const Projects = () => {
       title: "Design-6",
       description: "Design & Desenvolvimento",
       imgUrl: projImg3,
-    }
+    },
   ];
 
   /* 3D */
@@ -91,8 +91,7 @@ export const Projects = () => {
       title: "3D-3",
       description: "Criação 3D",
       imgUrl: projImg3,
-      
-    }
+    },
   ];
 
   const projects_bottom2 = [
@@ -100,19 +99,16 @@ export const Projects = () => {
       title: "3D-4",
       description: "Criação 3D",
       imgUrl: projImg1,
-      
     },
     {
       title: "3D-5",
       description: "Criação 3D",
       imgUrl: projImg2,
-      
     },
     {
       title: "3D-6",
       description: "Criação 3D",
       imgUrl: projImg3,
-     
     },
   ];
 
@@ -123,19 +119,16 @@ export const Projects = () => {
       title: "Desenhos",
       description: "Feitos no papel",
       imgUrl: projImg1,
-      
     },
     {
       title: "Arte Digital",
       description: "Photoshop",
       imgUrl: projImg2,
-      
     },
     {
       title: "Esculturas 3D",
       description: "Blender",
       imgUrl: projImg3,
-      
     },
   ];
 
@@ -144,19 +137,16 @@ export const Projects = () => {
       title: "Web-4",
       description: "Desenvolvimento Web",
       imgUrl: projImg1,
-      
     },
     {
       title: "Web-5",
       description: "Desenvolvimento Web",
       imgUrl: projImg2,
-      
     },
     {
       title: "Web-6",
       description: "Desenvolvimento Web",
       imgUrl: projImg3,
-      
     },
   ];
 
@@ -187,9 +177,7 @@ export const Projects = () => {
                   <Tab.Pane eventKey="first">
                     <Row data-aos="fade-up">
                       {projects.map((project, index) => {
-                        return (
-                            <ProjectCard key={index} {...project} />
-                        );
+                        return <ProjectCard key={index} {...project} />;
                       })}
                     </Row>
 
@@ -230,6 +218,19 @@ export const Projects = () => {
         </Row>
       </Container>
       <img className="background-image-right" src={colorSharp2}></img>
+      <div class="custom-shape-divider-bottom-1666449565">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
     </section>
   );
 };
