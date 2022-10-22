@@ -156,7 +156,7 @@ export const Projects = () => {
         <Row>
           <Col size={12}>
             <div>
-              <h2>Projetos</h2>
+              <h2>Projetos carai</h2>
               <Tab.Container id="projects-tabs" defaultActiveKey="first">
                 <Nav
                   variant="pills"
