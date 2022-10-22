@@ -4,6 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import Carousel from "react-bootstrap/Carousel";
 import { AnimateSharedLayout, AnimatePresence } from "framer-motion";
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export const ProjectCard = ({
   title,
@@ -20,7 +21,7 @@ export const ProjectCard = ({
   return (
     <>
       <Col size={12} sm={6} md={4}>
-        <div onClick={handleShow} className="proj-imgbx">
+        <div onClick={handleShow} className="proj-imgbx" >
           <img src={imgUrl} />
           <div className="proj-txtx">
             <h4>{title}</h4>
@@ -39,7 +40,12 @@ export const ProjectCard = ({
             <Carousel>
               <Carousel.Item>
                 <a className="carousel-item-img" href={hrefURL}>
-                  <img className="d-block w-100" src={Car1} alt="First slide" />
+                  <img
+                    className="d-block w-100"
+                    src={Car1}
+                    alt="First slide"
+                    
+                  />
                 </a>
               </Carousel.Item>
 
@@ -54,7 +60,11 @@ export const ProjectCard = ({
               </Carousel.Item>
               <Carousel.Item>
                 <a className="carousel-item-img" href={hrefURL}>
-                  <img className="d-block w-100" src={Car3} alt="Third slide" />
+                  <img
+                    className="d-block w-100"
+                    src={Car3}
+                    alt="Third slide"
+                  />
                 </a>
               </Carousel.Item>
             </Carousel>

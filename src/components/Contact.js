@@ -56,23 +56,14 @@ export const Contact = () => {
     <section className="contact" id="connect">
       <Container>
         <Row className="align-items-center">
-          <Col size={12} md={6} className='d-flex justify-content-center'>
-            {/* <motion.img src={contactImg} alt="Contact Us" animate={{
-              y:[50,-50,50],
-              rotate:[10,-10,10]
-            }}
-            transition={{
-              ease: "linear",
-              repeat: Infinity,
-              duration:30
-            }} /> */}
+          <Col size={12} md={6} className='d-flex justify-content-center '>
             <Spline className="spline" scene="https://prod.spline.design/zPAY4mT7EzNNgRJf/scene.splinecode" />
           </Col>
 
           <Col size={12} md={6}>
-            <div data-aos="fade-down">
+            <div data-aos="fade-down" >
               <h2>Entre em contato</h2>
-              <form data-aos="fade-down" onSubmit={formSubmit}>
+              <form data-aos="fade-down"  onSubmit={formSubmit}>
                 <Row>
                   <Col size={12} sm={6} className="px-1">
                     <input

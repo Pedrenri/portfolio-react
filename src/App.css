@@ -693,6 +693,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
 }
 
+
 #status {
   display: flex;
   justify-content: space-between;
@@ -771,9 +772,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   -webkit-border-radius: 20px !important;
   -moz-border-radius: 20px !important;
   border-radius: 20px !important;
-  background-color: #150c21 !important;
+  background: none !important;
 }
-
+.carousel-inner{
+  border-radius: 20px;
+}
 .carousel-item {
   border-radius: 20px;
   overflow: hidden;
