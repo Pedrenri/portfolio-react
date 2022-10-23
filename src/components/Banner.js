@@ -60,11 +60,6 @@ export const Banner = () => {
     }
   };
 
-  if (document.body.clientWidth < 500) {
-    let obj = document.getElementById("3d");
-    obj.classList.add('hidden');
-  }
-
 
   return (
     <section className="banner" id="home">
