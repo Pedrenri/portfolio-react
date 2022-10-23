@@ -5,7 +5,7 @@ import { ArrowRightCircle } from "react-bootstrap-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
-import Spline from '@splinetool/react-spline';
+import Spline from "@splinetool/react-spline";
 
 AOS.init();
 
@@ -60,6 +60,12 @@ export const Banner = () => {
     }
   };
 
+  if (document.body.clientWidth < 500) {
+    let obj = document.getElementById("3d");
+    obj.classList.add('hidden');
+  }
+
+
   return (
     <section className="banner" id="home">
       <Container>
@@ -111,28 +117,34 @@ export const Banner = () => {
               </motion.a>
             </div>
           </Col>
-          <Col xs={12} md={6} xl={5} className='d-flex justify-content-center align-items-center'>
-            
-            <Spline scene="https://prod.spline.design/CNWSNQG6-u8RtxdU/scene.splinecode" className="spline"/>
-              <motion.div className="header-img"
-                animate={{
-                  y: [-50, 40, -50],
-                  rotate: [0, -5, 0],
-                }}
-                transition={{
-                  duration: 15,
-                  ease: "linear",
-                  delay: 2,
-                  repeat: Infinity,
-                }}
-              >
-                <img src={headerImg} alt="Header Img" />
-                
-              </motion.div>
-            
+          <Col
+            xs={12}
+            md={6}
+            xl={5}
+            className="d-flex justify-content-center align-items-center"
+          >
+            <Spline
+              scene="https://prod.spline.design/CNWSNQG6-u8RtxdU/scene.splinecode"
+              className="spline"
+              id="3d"
+            />
+            <motion.div
+              className="header-img"
+              animate={{
+                y: [-50, 40, -50],
+                rotate: [0, -5, 0],
+              }}
+              transition={{
+                duration: 15,
+                ease: "linear",
+                delay: 2,
+                repeat: Infinity,
+              }}
+            >
+              <img src={headerImg} alt="Header Img" />
+            </motion.div>
           </Col>
         </Row>
-        
       </Container>
       <div class="custom-shape-divider-bottom-1666304608">
         <svg

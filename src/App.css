@@ -863,8 +863,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
  */
 }
 @media (min-width: 300px) {
-  .spline {
+  .hidden {
     display: none !important;
+    transform: scale(0);
   }
 }
 
