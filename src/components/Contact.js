@@ -1,21 +1,20 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import emailjs from "emailjs-com";
-import contImg from '../assets/img/skullgif.gif'
+import contImg from "../assets/img/astro_p_transp.png";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-import Spline from '@splinetool/react-spline';
+import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
 
 // ..
 AOS.init();
 
-
 let Result = "";
 
 export const Contact = () => {
   const [buttonText, setButtonText] = useState("Enviar");
-  const [toReset ] = useState({
+  const [toReset] = useState({
     firstName: "",
     lastName: "",
     email: "",
@@ -41,11 +40,11 @@ export const Contact = () => {
         console.log("SUCCESS!", response.status, response.text);
         setButtonText("Enviar");
         setToSend(toReset);
-        Result = 'Mensagem enviada!'
+        Result = "Mensagem enviada!";
       })
       .catch((err) => {
         console.log("FAILED...", err);
-        Result = 'Algo deu errado. Tente novamente mais tarde.'
+        Result = "Algo deu errado. Tente novamente mais tarde.";
       });
   };
 
@@ -56,16 +55,27 @@ export const Contact = () => {
   return (
     <section className="contact" id="connect">
       <Container>
-        <Row className="align-items-center">
-          <Col size={12} md={6} className='d-flex justify-content-center '>
+        <Row className="align-items-center cont_container">
+          <Col size={12} md={6} className="d-flex justify-content-center ">
             {/* <Spline className="spline greek" scene="https://prod.spline.design/zPAY4mT7EzNNgRJf/scene.splinecode" /> */}
-            <img className='contImg' src={contImg} alt='contact'/>
+            <motion.img
+              className="contImg"
+              src={contImg}
+              alt="contact"
+              animate={{ y: [-50, 50, -50]}}
+              transition={{
+                duration: 30,
+                ease: "linear",
+                delay: 2,
+                repeat: Infinity,
+              }}
+            />
           </Col>
 
           <Col size={12} md={6}>
-            <div data-aos="fade-down" >
+            <div data-aos="fade-down">
               <h2>Entre em contato</h2>
-              <form data-aos="fade-down"  onSubmit={formSubmit}>
+              <form data-aos="fade-down" onSubmit={formSubmit}>
                 <Row>
                   <Col size={12} sm={6} className="px-1">
                     <input
@@ -116,7 +126,7 @@ export const Contact = () => {
                       required
                     ></textarea>
                     <div id="status">
-                      <motion.button type="submit" whileHover={{scale:1.05}}>
+                      <motion.button type="submit" whileHover={{ scale: 1.05 }}>
                         <span>{buttonText}</span>
                       </motion.button>
                       <p>{Result}</p>
@@ -128,7 +138,6 @@ export const Contact = () => {
           </Col>
         </Row>
       </Container>
-      
     </section>
   );
 };

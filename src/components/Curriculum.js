@@ -13,7 +13,7 @@ export const Curriculum = () => {
         <h3>Baixe meu currículo!</h3>
 
         <div className="new-email-bx">
-          <motion.a href={Curriculo} download="Curriculo" whileHover={{scale:1.05}}>
+          <motion.a href={Curriculo} download="Curriculo" whileHover={{scale:1.05}} >
             Baixar
           </motion.a>
         </div>
