@@ -56,7 +56,7 @@ export const Contact = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} md={6} className='d-flex justify-content-center '>
-            <Spline className="spline greek" scene="https://prod.spline.design/zPAY4mT7EzNNgRJf/scene.splinecode" />
+            {/* <Spline className="spline greek" scene="https://prod.spline.design/zPAY4mT7EzNNgRJf/scene.splinecode" /> */}
           </Col>
 
           <Col size={12} md={6}>
