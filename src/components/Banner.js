@@ -118,11 +118,11 @@ export const Banner = () => {
             xl={5}
             className="d-flex justify-content-center align-items-center"
           >
-            <Spline
+            {/* <Spline
               scene="https://prod.spline.design/CNWSNQG6-u8RtxdU/scene.splinecode"
               className="spline"
               id="3d"
-            />
+            /> */}
             <motion.div
               className="header-img"
               animate={{
