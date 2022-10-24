@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import emailjs from "emailjs-com";
-import contImg from "../assets/img/astro_p_transp.png";
+import contImg from "../assets/img/cont-abst.png";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Spline from "@splinetool/react-spline";
@@ -62,13 +62,7 @@ export const Contact = () => {
               className="contImg"
               src={contImg}
               alt="contact"
-              animate={{ y: [-50, 50, -50]}}
-              transition={{
-                duration: 30,
-                ease: "linear",
-                delay: 2,
-                repeat: Infinity,
-              }}
+              
             />
           </Col>
 
