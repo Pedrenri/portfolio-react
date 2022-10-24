@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import emailjs from "emailjs-com";
+import contImg from '../assets/img/skullgif.gif'
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Spline from '@splinetool/react-spline';
+import { motion } from "framer-motion";
 
 // ..
 AOS.init();
@@ -57,6 +59,7 @@ export const Contact = () => {
         <Row className="align-items-center">
           <Col size={12} md={6} className='d-flex justify-content-center '>
             {/* <Spline className="spline greek" scene="https://prod.spline.design/zPAY4mT7EzNNgRJf/scene.splinecode" /> */}
+            <img className='contImg' src={contImg} alt='contact'/>
           </Col>
 
           <Col size={12} md={6}>
@@ -113,9 +116,9 @@ export const Contact = () => {
                       required
                     ></textarea>
                     <div id="status">
-                      <button type="submit">
+                      <motion.button type="submit" whileHover={{scale:1.05}}>
                         <span>{buttonText}</span>
-                      </button>
+                      </motion.button>
                       <p>{Result}</p>
                     </div>
                   </Col>
