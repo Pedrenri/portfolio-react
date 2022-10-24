@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
-import headerImg from "../assets/img/astro_p_transp.png";
+import headerImg from "../assets/img/gif.gif";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -123,7 +123,7 @@ export const Banner = () => {
               className="spline"
               id="3d"
             /> */}
-            <motion.div
+            {/* <motion.div
               className="header-img"
               animate={{
                 y: [-50, 40, -50],
@@ -135,9 +135,9 @@ export const Banner = () => {
                 delay: 2,
                 repeat: Infinity,
               }}
-            >
+            > */}
               <img src={headerImg} alt="Header Img" />
-            </motion.div>
+            {/* </motion.div> */}
           </Col>
         </Row>
       </Container>

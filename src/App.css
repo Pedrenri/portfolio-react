@@ -874,9 +874,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     transform: scale(0.8);
     display: block !important;
   }
-  .header-img{
+  /* .header-img{
     display: none;
-  }
+  } */
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -885,9 +885,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     transform: scale(0.82);
     display: block !important;
   }
-  .header-img{
+  /* .header-img{
     display: none;
-  }
+  } */
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -896,7 +896,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     transform: scale(1);
     display: block !important;
   }
-  .header-img{
+  /* .header-img{
     display: none;
-  }
+  } */
 }
