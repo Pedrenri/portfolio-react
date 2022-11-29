@@ -19,6 +19,11 @@ import design31 from "../assets/img/design3-1.png";
 import design32 from "../assets/img/design3-2.png";
 import design33 from "../assets/img/design3-3.png";
 
+import CoverW1 from "../assets/img/CoverW1.png"
+import webd11 from "../assets/img/webdev1-1.png";
+import webd12 from "../assets/img/webdev1-2.png";
+import webd13 from "../assets/img/webdev1-3.png";
+
 /* import colorSharp from "../assets/img/color-sharp.png"; */
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import AOS from "aos";
@@ -56,31 +61,18 @@ export const Projects = () => {
       Car3: design33,
     },
   ];
-  /* const projects_bottom = [
-    {
-      title: "Design-4",
-      description: "Design & Desenvolvimento",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Design-5",
-      description: "Design & Desenvolvimento",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Design-6",
-      description: "Design & Desenvolvimento",
-      imgUrl: projImg3,
-    },
-  ]; */
 
   /* 3D */
 
   const projects2 = [
     {
-      title: "3D-1",
-      description: "Criação 3D",
-      imgUrl: projImg1,
+      title: "Sigma",
+      description: "Empresa de Fabricação e Venda de produtos de Hardware.",
+      Car1: webd11,
+      Car2: webd12,
+      Car3: webd13,
+      imgUrl: CoverW1,
+      hrefURL: 'https://sigmahardware.netlify.app'
     },
     {
       title: "3D-2",
@@ -93,24 +85,6 @@ export const Projects = () => {
       imgUrl: projImg3,
     },
   ];
-
-  /* const projects_bottom2 = [
-    {
-      title: "3D-4",
-      description: "Criação 3D",
-      imgUrl: projImg1,
-    },
-    {
-      title: "3D-5",
-      description: "Criação 3D",
-      imgUrl: projImg2,
-    },
-    {
-      title: "3D-6",
-      description: "Criação 3D",
-      imgUrl: projImg3,
-    },
-  ]; */
 
   /* WEB */
 
@@ -132,23 +106,6 @@ export const Projects = () => {
     },
   ];
 
-  /* const projects_bottom3 = [
-    {
-      title: "Web-4",
-      description: "Desenvolvimento Web",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Web-5",
-      description: "Desenvolvimento Web",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Web-6",
-      description: "Desenvolvimento Web",
-      imgUrl: projImg3,
-    },
-  ]; */
 
   return (
     <section className="project" id="projects">
@@ -180,12 +137,6 @@ export const Projects = () => {
                         return <ProjectCard key={index} {...project} />;
                       })}
                     </Row>
-
-                    {/* <Row data-aos="fade-up">
-                      {projects_bottom.map((project, index) => {
-                        return <ProjectCard key={index} {...project} />;
-                      })}
-                    </Row> */}
                   </Tab.Pane>
                   <Tab.Pane eventKey="second">
                     <Row data-aos="fade-up">
@@ -193,11 +144,6 @@ export const Projects = () => {
                         return <ProjectCard key={index} {...project} />;
                       })}
                     </Row>
-                    {/* <Row data-aos="fade-up">
-                      {projects_bottom2.map((project, index) => {
-                        return <ProjectCard key={index} {...project} />;
-                      })}
-                    </Row> */}
                   </Tab.Pane>
                   <Tab.Pane eventKey="third">
                     <Row data-aos="fade-up">
@@ -205,11 +151,6 @@ export const Projects = () => {
                         return <ProjectCard key={index} {...project} />;
                       })}
                     </Row>
-                    {/* <Row data-aos="fade-up">
-                      {projects_bottom3.map((project, index) => {
-                        return <ProjectCard key={index} {...project} />;
-                      })}
-                    </Row> */}
                   </Tab.Pane>
                 </Tab.Content>
               </Tab.Container>
