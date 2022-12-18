@@ -12,7 +12,7 @@ import design13 from "../assets/img/design1-3.png";
 import CoverD2 from "../assets/img/coverD2.png";
 import design21 from "../assets/img/design2-1.png";
 import design22 from "../assets/img/design2-2.png";
-import design23 from "../assets/img/design2-3.jpeg";
+import design23 from "../assets/img/design2-3.png";
 
 import CoverD3 from "../assets/img/coverD3.png";
 import design31 from "../assets/img/design3-1.png";
@@ -23,6 +23,11 @@ import CoverW1 from "../assets/img/CoverW1.png"
 import webd11 from "../assets/img/webdev1-1.png";
 import webd12 from "../assets/img/webdev1-2.png";
 import webd13 from "../assets/img/webdev1-3.png";
+
+import CoverW2 from "../assets/img/coverW2.png"
+import webd21 from "../assets/img/webdev2-1.png";
+import webd22 from "../assets/img/webdev2-2.png";
+import webd23 from "../assets/img/webdev2-3.png";
 
 /* import colorSharp from "../assets/img/color-sharp.png"; */
 import colorSharp2 from "../assets/img/color-sharp2.png";
@@ -50,7 +55,7 @@ export const Projects = () => {
       Car1: design21,
       Car2: design22,
       Car3: design23,
-      hrefURL: "https://henrisgym.netlify.app",
+      
     },
     {
       title: "Moda-Bela",
@@ -75,9 +80,13 @@ export const Projects = () => {
       hrefURL: 'https://sigmahardware.netlify.app'
     },
     {
-      title: "3D-2",
-      description: "Criação 3D",
-      imgUrl: projImg2,
+      title: "Henri's",
+      description: "Site pronto da empresa de equipamentos esportivos",
+      Car1: webd21,
+      Car2: webd22,
+      Car3: webd23,
+      imgUrl: CoverW2,
+      hrefURL: 'https://henrisgym.netlify.app',
     },
     {
       title: "3D-3",
