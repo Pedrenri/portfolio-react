@@ -103,6 +103,18 @@ p.danger {
   color: red;
 }
 /************ Navbar Css ************/
+
+.navbar h1 {
+  color: white;
+  font-weight: 300;
+  letter-spacing: .1rem;
+  font-size: 2rem;
+}
+
+.navbar h1 b {
+  font-weight: 600;
+}
+
 nav.navbar {
   padding: 18px 0;
   position: fixed;
