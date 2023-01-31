@@ -112,12 +112,12 @@ export const Banner = () => {
               </motion.a>
             </div>
           </Col>
-          <Col
-            xs={12}
+          {/* <Col */}
+            {/* xs={12}
             md={6}
             xl={5}
             className="d-flex justify-content-center align-items-center"
-          >
+          > */}
             {/* <Spline
               scene="https://prod.spline.design/CNWSNQG6-u8RtxdU/scene.splinecode"
               className="spline"
@@ -136,9 +136,9 @@ export const Banner = () => {
                 repeat: Infinity,
               }}
             > */}
-              <img src={headerImg} alt="Header Img" />
+              {/* <img src={headerImg} alt="Header Img" /> */}
             {/* </motion.div> */}
-          </Col>
+          {/* </Col> */}
         </Row>
       </Container>
       <div class="custom-shape-divider-bottom-1666304608">
