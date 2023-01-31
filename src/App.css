@@ -290,7 +290,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-position: center;
+  background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
   padding: 12rem 0;
