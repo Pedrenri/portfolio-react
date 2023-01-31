@@ -14,7 +14,7 @@ export const Curriculum = () => {
 
         <div className="new-email-bx">
           <motion.a href={Curriculo} download="Curriculo" whileHover={{scale:1.05}} >
-            Baixar
+            Download
           </motion.a>
         </div>
       </motion.div>
