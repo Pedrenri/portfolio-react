@@ -38,7 +38,6 @@ html {
 
 body {
   font-weight: 400;
-  overflow-x: hidden;
   position: relative;
   background-color: #050505 !important;
   color: #fff !important;
@@ -265,24 +264,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
 
-/************ Css ************/
-@media (max-width: 768px) {
-  .banner {
-    background-image: url('./assets/img/banner-sm.png');
-  }
-}
 
-@media (min-width: 768px){
-  .banner {
-    background-image: url('./assets/img/banner-med.png');
-  }
-}
-
-@media (min-width: 1200px) {
-  .banner {
-    background-image: url('./assets/img/banner-bg.png');
-  }
-}
 
 .banner {
   margin-top: 0;
@@ -294,6 +276,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 12rem 0;
+  background-image: url("/src/assets/img/bannerbg.png");
 }
 .banner a {
   text-decoration: none;

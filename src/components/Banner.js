@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
-import headerImg from "../assets/img/gif.gif";
-import { ArrowRightCircle } from "react-bootstrap-icons";
+import headerImg from "../assets/img/astro.png";
+import { ArrowRightCircle, Display } from "react-bootstrap-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
@@ -64,8 +64,8 @@ export const Banner = () => {
   return (
     <section className="banner" id="home">
       <Container>
-        <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7} data-aos="fade-right">
+        <Row className="align-items-center">
+          <Col xs={12} md={7} xl={7} data-aos="fade-right">
             <div className="banner-text">
               <motion.span
                 className="tagline"
@@ -112,22 +112,22 @@ export const Banner = () => {
               </motion.a>
             </div>
           </Col>
-          {/* <Col */}
-            {/* xs={12}
-            md={6}
+          <Col
+             xs={8}
+            md={5}
             xl={5}
-            className="d-flex justify-content-center align-items-center"
-          > */}
-            {/* <Spline
-              scene="https://prod.spline.design/CNWSNQG6-u8RtxdU/scene.splinecode"
-              className="spline"
-              id="3d"
-            /> */}
-            {/* <motion.div
+            className="justify-content-center align-items-center d-none d-md-flex"
+          > 
+          
+            <motion.div
               className="header-img"
+              initial={{
+                scale: 1.5
+              }}
               animate={{
                 y: [-50, 40, -50],
                 rotate: [0, -5, 0],
+                
               }}
               transition={{
                 duration: 15,
@@ -135,10 +135,10 @@ export const Banner = () => {
                 delay: 2,
                 repeat: Infinity,
               }}
-            > */}
-              {/* <img src={headerImg} alt="Header Img" /> */}
-            {/* </motion.div> */}
-          {/* </Col> */}
+            > 
+              <img src={headerImg} alt="Header Img" />
+            </motion.div>
+          </Col>
         </Row>
       </Container>
       <div class="custom-shape-divider-bottom-1666304608">
