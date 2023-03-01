@@ -72,7 +72,7 @@ export const Banner = () => {
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
               >
-                Bem vindo ao meu portfólio!
+                Bem vindo ao meu site!
               </motion.span>
               <motion.h1
                 initial={{ x: -50, opacity: 0 }}
