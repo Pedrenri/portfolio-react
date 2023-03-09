@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import headerImg from "../assets/img/astro.png";
-import { ArrowRightCircle, Display } from "react-bootstrap-icons";
+import { ArrowDownCircle, Display } from "react-bootstrap-icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
@@ -16,7 +16,7 @@ export const Banner = () => {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
   const toRotate = [
-    "Olá! Sou o Pedro!",
+    "Pedro Henri!",
     "Web Developer.",
     "Designer UI/UX.",
     "Developer.cs",
@@ -62,17 +62,17 @@ export const Banner = () => {
 
 
   return (
-    <section className="banner" id="home">
+    <section className="banner py-5" id="home">
       <Container>
-        <Row className="align-items-center">
-          <Col xs={12} md={7} xl={7} data-aos="fade-right">
+        <Row className="align-items-center justify-content-center">
+          <Col xs={12} md={12} xl={12} data-aos="fade-right">
             <div className="banner-text">
               <motion.span
                 className="tagline"
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
               >
-                Bem vindo ao meu portfólio!
+                Olá! Eu sou
               </motion.span>
               <motion.h1
                 initial={{ x: -50, opacity: 0 }}
@@ -107,12 +107,12 @@ export const Banner = () => {
                 whileInView={{ x: 0, opacity: 1 }}
               >
                 <button onClick={() => console.log("connect")}>
-                  Fale Comigo! <ArrowRightCircle size={25} />
+                  Fale Comigo! <ArrowDownCircle size={25} />
                 </button>
               </motion.a>
             </div>
           </Col>
-          <Col
+          {/* <Col
              xs={8}
             md={5}
             xl={5}
@@ -138,7 +138,7 @@ export const Banner = () => {
             > 
               <img src={headerImg} alt="Header Img" />
             </motion.div>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
       <div class="custom-shape-divider-bottom-1666304608">
