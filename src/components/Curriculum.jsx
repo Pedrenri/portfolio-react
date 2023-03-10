@@ -8,7 +8,7 @@ export const Curriculum = () => {
       <motion.div
         initial={{ y: 90, opacity: 1 }}
         whileInView={{y:0, opacity:1}}
-        className="newsletter-bx d-flex align-items-center justify-content-around  "
+        className="newsletter-bx flex flex-col md:flex-row py-4 gap-y-4 align-items-center justify-content-around  "
       >
         <h3>Baixe meu currículo!</h3>
 
