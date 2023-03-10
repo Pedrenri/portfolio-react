@@ -16,7 +16,7 @@ export const Footer = () => {
             <img src={logo} alt="Logo" />
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end d-flex justify-content-center align-items-center" >
-            <div className="social-icon">
+            <div className="social-icon py-4 sm:py-0">
               <a
                 href="https://www.linkedin.com/in/pedro-henri-de-assis-50b612231/"
                 target="_blank"
