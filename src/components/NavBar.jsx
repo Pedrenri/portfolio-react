@@ -74,7 +74,7 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <HashLink to="#connect">
-                <button className="vvd">
+                <button className="vvd mx-0 mx-sm-4">
                   <span>Fale Comigo</span>
                 </button>
               </HashLink>
