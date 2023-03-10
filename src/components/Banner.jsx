@@ -77,7 +77,7 @@ export const Banner = () => {
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.1 }}
-                className="mb-80 text-5xl	md:text-9xl text-center"
+                className="mb-80 text-6xl	md:text-8xl xl:text-9xl text-center"
               >
                 <span className="txt-rotate" dataperiod="1000">
                   <span className="wrap">{text}</span>

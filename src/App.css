@@ -876,7 +876,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     linear-gradient(to bottom, #c9c9c9 100%, #c9c9c9 100%);
   background-size: 100% 2px, 2px 100%, 100% 2px, 2px 100%;
   background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-  animation: bg 2s cubic-bezier(0.19, 1, 0.22, 1);
+  animation: bg 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 /* 3D */

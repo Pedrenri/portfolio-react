@@ -5,14 +5,14 @@ export const Intro = () => {
     <motion.div
       className="intro"
       animate={{ opacity: 1, y: -10000 }}
-      transition={{ delay: 1.5, duration: 0.2 }}
+      transition={{ delay: 1, duration: 0.1 }}
     >
       <h1 className="logo-header  ">
         <motion.span
           className="logo logo-span "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: -17 }}
-          transition={{ delay: 0.1, duration: 0.5 }}
+          transition={{ delay: 0.1, duration: 0.3 }}
         >
           PEDRO{" "}
         </motion.span>
@@ -20,7 +20,7 @@ export const Intro = () => {
           className="logo logo-span-w "
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: -17 }}
-          transition={{ delay: 0.5, duration: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.3 }}
         >
           HENRI
         </motion.span>
