@@ -13,13 +13,13 @@ export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const [delta, setDelta] = useState(300 - Math.random() * 500);
   const [index, setIndex] = useState(1);
   const toRotate = [
-    "Pedro Henri!",
-    "Web Developer.",
-    "Designer UI/UX.",
-    "Developer.cs",
+    "PEDRO HENRI",
+    "WEB DEVELOPER",
+    "DESIGNER UI/UX",
+    "DEVELOPER CS",
   ];
   const period = 2000;
 
@@ -54,38 +54,32 @@ export const Banner = () => {
       setIsDeleting(false);
       setLoopNum(loopNum + 1);
       setIndex(1);
-      setDelta(200);
+      setDelta(100);
     } else {
       setIndex((prevIndex) => prevIndex + 1);
     }
   };
 
-
   return (
-    <section className="banner py-5" id="home">
+    <section className="banner py-56 md:py-80 " id="home">
       <Container>
-        <Row className="align-items-center justify-content-center">
+        <Row className="align-items-center">
           <Col xs={12} md={12} xl={12} data-aos="fade-right">
             <div className="banner-text">
-              <motion.span
+              {/* <motion.span
                 className="tagline"
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
               >
-                Olá! Eu sou
-              </motion.span>
+                Olá! Eu sou:
+              </motion.span> */}
               <motion.h1
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.1 }}
+                className="mb-80 text-5xl	md:text-9xl text-center"
               >
-                <span
-                  className="txt-rotate"
-                  dataperiod="1000"
-                  data-rotate='[ "Olá! Sou o Pedro!","Web Developer.",
-                      "Designer UI/UX.",
-                      "Desenvolvedor.cs.", ]'
-                >
+                <span className="txt-rotate" dataperiod="1000">
                   <span className="wrap">{text}</span>
                 </span>
               </motion.h1>
@@ -93,18 +87,14 @@ export const Banner = () => {
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.25 }}
+                className="text-xl text-center"
               >
-                Meu nome é Pedro Henri. Sou um programador/designer com foco em
-                desenvolvimento Web. Atualmente, estou cursando o Ensino Médio
-                Técnico no COTEMIG. Sou centrado, focado, e sempre busco dar o
-                meu melhor para atingir o resultado máximo esperado pelo
-                cliente/contratante. Minhas habilidades incluem HTML, CSS, JS,
-                C#, SQL, Design Gráfico, Desenvolvimento 3D e Design UI/UX.
+                FULLSTACK, DESIGNER & FOCADO EM EVOLUIR.
               </motion.p>
               <motion.a
                 href="#connect"
-                initial={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
+                initial={{ y: 50, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
               >
                 <button onClick={() => console.log("connect")}>
                   Fale Comigo! <ArrowDownCircle size={25} />
@@ -141,7 +131,7 @@ export const Banner = () => {
           </Col> */}
         </Row>
       </Container>
-      <div class="custom-shape-divider-bottom-1666304608">
+      <div className="custom-shape-divider-bottom-1666304608 z-20">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

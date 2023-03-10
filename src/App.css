@@ -36,6 +36,7 @@ html {
   scroll-padding-top: 75px;
 }
 
+
 body {
   font-weight: 400;
   position: relative;
@@ -264,8 +265,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-color: transparent;
 }
 
-
-
 .banner {
   margin-top: 0;
   position: relative;
@@ -275,7 +274,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("/src/assets/img/bannerbg.png");
+  background-image: url("/src/assets/img/bannerbg2.png");
 }
 .banner a {
   text-decoration: none;
@@ -283,35 +282,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
-  padding: 0.3rem 0.4rem;
-  /* background: linear-gradient(
-    90.21deg,
-    rgba(170, 54, 124, 0.5) -5.91%,
-    rgba(74, 47, 189, 0.5) 111.58%
-  );
-  border: 1px solid rgba(255, 255, 255, 0.5); */
-  font-size: 20px;
-  margin-bottom: 1rem;
+  font-size: 15px;
+  margin-bottom: 0.5rem;
   display: inline-block;
-  /* align-self: start; */
+  text-shadow: 0 0 2px #fff, 0 0 5px #4d68ff, 0 0 8px #4d77ff, 0 0 5px #4d50ff, 0 0 5px #4dc7ff, 0 0 5px #4dcdff, 0 0 7px #4db8ff;
 }
 .banner h1 {
-  font-size: 65px;
   font-weight: 800;
   letter-spacing: 0.8px;
   line-height: 1;
   margin-bottom: 20px;
   display: block;
-  /* align-self: start; */
 }
 .banner p {
-  color: #b8b8b8;
+  color: #ffffff;
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
-  width: 90%;
   margin-top: 2rem;
-  /* align-self: start; */
 }
 .banner button {
   color: #fff;
@@ -321,7 +309,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
-  
 }
 .banner button svg {
   font-size: 25px;
@@ -334,16 +321,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner-text {
-  padding: 0 0 1rem 2rem;
-  border-left: solid 5px;
-  border-image: linear-gradient(45deg, purple, blue) 1;
+  padding: 1rem;
+  /* border-left: solid 5px;
+  border-image: linear-gradient(45deg, purple, blue) 1; */
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+    align-items: center;
 }
 
 .txt-rotate > .wrap {
-  border-right: 0.08em solid rgb(156, 156, 156);
+  border-right: 0.03em solid rgb(156, 156, 156);
 }
 
 .custom-shape-divider-bottom-1666304608 {
