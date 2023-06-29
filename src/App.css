@@ -270,10 +270,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-position: right;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url("/src/assets/img/bannerbg2.png");
+  background-image: url("/src/assets/img/bannerbg3.jpg");
 }
 .banner a {
   text-decoration: none;
@@ -295,10 +295,10 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .banner p {
   color: #ffffff;
-  font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   margin-top: 2rem;
+  font-weight: bold;
 }
 .banner button {
   color: #fff;
@@ -320,19 +320,22 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .banner-text {
-  padding: 1rem;
-  /* border-left: solid 5px;
-  border-image: linear-gradient(45deg, purple, blue) 1; */
+  padding: 3rem;
   display: flex;
   flex-flow: column nowrap;
     align-items: center;
+}
+
+
+.banner-sub span {
+  color: #00E492;
 }
 
 .txt-rotate > .wrap {
   border-right: 0.03em solid rgb(156, 156, 156);
 }
 
-.custom-shape-divider-bottom-1666304608 {
+.custom-shape-divider-bottom-1687571069 {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -340,18 +343,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   overflow: hidden;
   line-height: 0;
   transform: rotate(180deg);
-  margin-bottom: -1px;
 }
 
-.custom-shape-divider-bottom-1666304608 svg {
+.custom-shape-divider-bottom-1687571069 svg {
   position: relative;
   display: block;
-  width: calc(300% + 1.3px);
-  height: 107px;
+  width: calc(100% + 1.3px);
+  height: 110px;
 }
 
-.custom-shape-divider-bottom-1666304608 .shape-fill {
-  fill: #fafafa;
+.custom-shape-divider-bottom-1687571069 .shape-fill {
+  fill: #25252B;
 }
 /************ About Css ************/
 
@@ -387,7 +389,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skill {
   padding: 5rem 0 12rem 0;
   position: relative;
-  background-color: #fafafa;
+  background-color: #25252B;
 }
 .skill-bx {
   background: #151515;
@@ -433,27 +435,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   z-index: -4;
 }
 
-.custom-shape-divider-bottom-1666361393 {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-  margin-bottom: -1px;
-}
-
-.custom-shape-divider-bottom-1666361393 svg {
-  position: relative;
-  display: block;
-  width: calc(100% + 1.3px);
-  height: 78px;
-}
-
-.custom-shape-divider-bottom-1666361393 .shape-fill {
-  fill: #050505;
-}
 
 /* Projects */
 
