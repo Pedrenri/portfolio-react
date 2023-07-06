@@ -55,17 +55,7 @@ export const Contact = () => {
   return (
     <section className="contact" id="connect">
       <Container>
-        <Row className="align-items-center cont_container">
-          <Col size={12} md={6} className="d-flex justify-content-center ">
-            {/* <Spline className="spline greek" scene="https://prod.spline.design/zPAY4mT7EzNNgRJf/scene.splinecode" /> */}
-            <motion.img
-              className="contImg"
-              src={contImg}
-              alt="contact"
-              
-            />
-          </Col>
-
+        <Row className="align-items-center cont_container justify-center">
           <Col size={12} md={6}>
             <div data-aos="fade-down">
               <h2>Entre em contato</h2>
