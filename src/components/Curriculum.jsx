@@ -1,5 +1,5 @@
 import { Col } from "react-bootstrap";
-import Curriculo from "../assets/pdf/Curriculo.pdf";
+import Curriculo from "../assets/pdf/Currículo - Pedro Henri.pdf";
 import { motion } from "framer-motion";
 
 export const Curriculum = () => {
