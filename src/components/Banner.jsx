@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
-import { Container, Row, Col, Nav } from "react-bootstrap";
-import headerImg from "../assets/img/astro.png";
-import { ArrowDownCircle, Display } from "react-bootstrap-icons";
+import { Container, Row, Col } from "react-bootstrap";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { motion } from "framer-motion";
-import Spline from "@splinetool/react-spline";
 
 AOS.init();
 
@@ -18,8 +15,8 @@ export const Banner = () => {
   const toRotate = [
     "PEDRO HENRI",
     "WEB DEVELOPER",
-    "DESIGNER UI/UX",
-    "DEVELOPER CS",
+    "DESIGNER",
+    "FULLSTACK",
   ];
   const period = 2000;
 
@@ -66,13 +63,6 @@ export const Banner = () => {
         <Row className="align-items-center">
           <Col xs={12} md={12} xl={12} data-aos="fade-right">
             <div className="banner-text">
-              {/* <motion.span
-                className="tagline"
-                initial={{ x: -50, opacity: 0 }}
-                whileInView={{ x: 0, opacity: 1 }}
-              >
-                Olá! Eu sou:
-              </motion.span> */}
               <motion.h1
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
@@ -96,39 +86,9 @@ export const Banner = () => {
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
               >
-               {/*  <button onClick={() => console.log("connect")}>
-                  Fale Comigo! <ArrowDownCircle size={25} />
-                </button> */}
               </motion.a>
             </div>
           </Col>
-          {/* <Col
-             xs={8}
-            md={5}
-            xl={5}
-            className="justify-content-center align-items-center d-none d-md-flex"
-          > 
-          
-            <motion.div
-              className="header-img"
-              initial={{
-                scale: 1.5
-              }}
-              animate={{
-                y: [-50, 40, -50],
-                rotate: [0, -5, 0],
-                
-              }}
-              transition={{
-                duration: 15,
-                ease: "linear",
-                delay: 2,
-                repeat: Infinity,
-              }}
-            > 
-              <img src={headerImg} alt="Header Img" />
-            </motion.div>
-          </Col> */}
         </Row>
       </Container>
       <div class="custom-shape-divider-bottom-1687571069">

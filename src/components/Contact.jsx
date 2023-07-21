@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import emailjs from "emailjs-com";
-import contImg from "../assets/img/cont-abst.png";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-import Spline from "@splinetool/react-spline";
 import { motion } from "framer-motion";
 
 // ..
