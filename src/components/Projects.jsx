@@ -42,7 +42,7 @@ export const Projects = () => {
   const projects = [
     {
       title: "DRACMA",
-      description: "Empresa de Cuidados Financeiros",
+      description: "Identidade visual (conceitual) para uma empresa de consultoria financeira.",
       imgUrl: CoverD1,
       Car1: design11,
       Car2: design12,
@@ -50,7 +50,7 @@ export const Projects = () => {
     },
     {
       title: "Henri's",
-      description: "Empresa de Venda de Produtos Esportivos",
+      description: "Identidade visual (conceitual) para uma empresa de produtos esportivos.",
       imgUrl: CoverD2,
       Car1: design21,
       Car2: design22,
@@ -59,7 +59,7 @@ export const Projects = () => {
     },
     {
       title: "Moda-Bela",
-      description: "Site Para Dicas de Moda e Cuidados Pessoais",
+      description: "Modelo conceitual para um site Para Dicas de Moda e Cuidados Pessoais",
       imgUrl: CoverD3,
       Car1: design31,
       Car2: design32,
@@ -72,7 +72,7 @@ export const Projects = () => {
   const projects2 = [
     {
       title: "Sigma",
-      description: "Empresa de Fabricação e Venda de produtos de Hardware.",
+      description: "Modelo conceitual de um site para uma empresa de fabricação e venda de produtos de hardware.",
       Car1: webd11,
       Car2: webd12,
       Car3: webd13,
@@ -81,7 +81,7 @@ export const Projects = () => {
     },
     {
       title: "Henri's",
-      description: "Site pronto da empresa de equipamentos esportivos",
+      description: "Modelo conceitual de um site para uma empresa de venda de produtos esportivos.",
       Car1: webd21,
       Car2: webd22,
       Car3: webd23,
@@ -130,14 +130,15 @@ export const Projects = () => {
                   id="pills-tab"
                 >
                   <Nav.Item>
-                    <Nav.Link eventKey="first">Design Gráfico</Nav.Link>
+                    <Nav.Link eventKey="first">Design</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
                     <Nav.Link eventKey="second">WebDev</Nav.Link>
                   </Nav.Item>
                   <Nav.Item>
-                    <Nav.Link eventKey="third">Outros</Nav.Link>
+                    <Nav.Link eventKey="third">Dashboards</Nav.Link>
                   </Nav.Item>
+                  
                 </Nav>
                 <Tab.Content>
                   <Tab.Pane eventKey="first">
