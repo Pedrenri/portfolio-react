@@ -571,30 +571,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 30px;
   overflow: hidden;
   margin-bottom: 24px;
-  filter: grayscale(1);
   transition: all 0.3s;
 }
 
-.proj-imgbx:hover {
-  filter: none;
+.proj-imgbx:hover img {
+  filter: brightness(.1);
 }
 
 .proj-imgbx img {
   transition: all 0.3s;
-  filter: brightness(0.7);
+  filter: brightness(0.9);
 }
-/* .proj-imgbx::before {
-  content: "";
-  background: linear-gradient(90.21deg, rgba(170, 54, 124, .7) -5.91%, rgba(74, 47, 189,.7) 111.58%);
-  opacity: 0.85;
-  position: absolute;
-  width: 100%;
-  height: 0;
-  transition: 0.4s ease-in-out;
-} */
-/* .proj-imgbx:hover::before {
-  height: 100%;
-} */
 
 .proj-txtx {
   position: absolute;
