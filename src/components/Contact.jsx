@@ -54,7 +54,7 @@ export const Contact = () => {
     <section className="contact" id="connect">
       <Container>
         <Row className="align-items-center cont_container justify-center">
-          <Col size={12} md={6}>
+          <Col size={12} md={10} sm={9}>
             <div data-aos="fade-down">
               <h2>Entre em contato</h2>
               <form data-aos="fade-down" onSubmit={formSubmit}>
@@ -82,7 +82,7 @@ export const Contact = () => {
                   <Col size={12} sm={6} className="px-1">
                     <input
                       type="email"
-                      placeholder="Endereço de Email"
+                      placeholder="Email"
                       name="email"
                       value={toSend.email}
                       onChange={handleChange}
