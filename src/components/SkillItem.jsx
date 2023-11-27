@@ -34,6 +34,7 @@ const SkillItem = ({ imgSrc, altText, skillName, fillPercentage }) => {
       onMouseLeave={() => handleHover(false)}
       style={{ overflow: 'hidden' }}
       whileHover={{scale:1.05}}
+      data-aos='fade-up'
     >
       <div className="img-holder">
         <img src={imgSrc} alt={altText} />
