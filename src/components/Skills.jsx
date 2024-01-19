@@ -18,21 +18,21 @@ import SkillItem from "./SkillItem";
 
 export const Skills = () => {
   const skillsData = [
-    { imgSrc: html, altText: "HTML", skillName: "HTML", fillPercentage: 100 },
-    { imgSrc: css, altText: "CSS", skillName: "CSS", fillPercentage: 100 },
-    { imgSrc: js, altText: "JavaScript", skillName: "JAVASCRIPT", fillPercentage: 95 },
-    { imgSrc: react, altText: "React JS", skillName: "REACT JS", fillPercentage: 90 },
-    { imgSrc: node, altText: "Node Js", skillName: "NODE JS", fillPercentage: 85 },
-    { imgSrc: cs, altText: "C#", skillName: "C#", fillPercentage: 60},
-    { imgSrc: php, altText: "PHP", skillName: "PHP", fillPercentage: 40 },
-    { imgSrc: python, altText: "python", skillName: "PYTHON", fillPercentage: 50 },
-    { imgSrc: mysql, altText: "mysql", skillName: "MYSQL", fillPercentage: 75 },
-    { imgSrc: mongodb, altText: "mongodb", skillName: "MONGODB", fillPercentage: 75 },
-    { imgSrc: powerbi, altText: "powerbi", skillName: "POWER BI", fillPercentage: 90 },
-    { imgSrc: ps, altText: "Photoshop", skillName: "PHOTOSHOP", fillPercentage: 90 },
-    { imgSrc: ai, altText: "Illustrator", skillName: "ILLUSTRATOR", fillPercentage: 70 },
-    { imgSrc: figma, altText: "Figma", skillName: "FIGMA", fillPercentage: 80 },
-    { imgSrc: blender, altText: "blender", skillName: "BLENDER", fillPercentage: 40 },
+    { imgSrc: html, altText: "HTML", skillName: "HTML", fillPercentage: 100, level: 'Avançado'},
+    { imgSrc: css, altText: "CSS", skillName: "CSS", fillPercentage: 100, level: 'Avançado' },
+    { imgSrc: js, altText: "JavaScript", skillName: "JAVASCRIPT", fillPercentage: 95, level: 'Avançado' },
+    { imgSrc: react, altText: "React JS", skillName: "REACT JS", fillPercentage: 90, level: 'Avançado' },
+    { imgSrc: node, altText: "Node Js", skillName: "NODE JS", fillPercentage: 85, level: 'Avançado' },
+    { imgSrc: cs, altText: "C#", skillName: "C#", fillPercentage: 60, level: 'Intermediário'},
+    { imgSrc: php, altText: "PHP", skillName: "PHP", fillPercentage: 40, level: 'Intermediário' },
+    { imgSrc: python, altText: "python", skillName: "PYTHON", fillPercentage: 50, level: 'Intermediário' },
+    { imgSrc: mysql, altText: "mysql", skillName: "MYSQL", fillPercentage: 75 , level: 'Bom'},
+    { imgSrc: mongodb, altText: "mongodb", skillName: "MONGODB", fillPercentage: 75, level: 'Bom' },
+    { imgSrc: powerbi, altText: "powerbi", skillName: "POWER BI", fillPercentage: 90, level: 'Avançado' },
+    { imgSrc: ps, altText: "Photoshop", skillName: "PHOTOSHOP", fillPercentage: 90, level: 'Avançado' },
+    { imgSrc: ai, altText: "Illustrator", skillName: "ILLUSTRATOR", fillPercentage: 70, level: 'Bom' },
+    { imgSrc: figma, altText: "Figma", skillName: "FIGMA", fillPercentage: 80 , level: 'Avançado'},
+    { imgSrc: blender, altText: "blender", skillName: "BLENDER", fillPercentage: 40 , level: 'Intermediário'},
     // Adicione outros dados de habilidades conforme necessário
   ];
 
@@ -51,6 +51,7 @@ export const Skills = () => {
                     altText={skill.altText}
                     skillName={skill.skillName}
                     fillPercentage={skill.fillPercentage || 0}
+                    level={skill.level}
                   />
                 ))}
               </div>

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
 
-const SkillItem = ({ imgSrc, altText, skillName, fillPercentage }) => {
+const SkillItem = ({ imgSrc, altText, skillName, fillPercentage, level }) => {
   const [hover, setHover] = useState(false);
   const controls = useAnimation();
 
@@ -14,7 +14,7 @@ const SkillItem = ({ imgSrc, altText, skillName, fillPercentage }) => {
     visible: {
       height: `${fillPercentage}%`,
       opacity: 1,
-      transition: { type: 'spring', damping: 15, stiffness: 100 }, // Adiciona um efeito de mola para a animação
+      transition: { type: 'spring', damping: 20, stiffness: 100 }, // Adiciona um efeito de mola para a animação
     },
   };
 
@@ -34,7 +34,6 @@ const SkillItem = ({ imgSrc, altText, skillName, fillPercentage }) => {
       onMouseLeave={() => handleHover(false)}
       style={{ overflow: 'hidden' }}
       whileHover={{scale:1.05}}
-      data-aos='fade-up'
     >
       <div className="img-holder">
         <img src={imgSrc} alt={altText} />
@@ -45,7 +44,7 @@ const SkillItem = ({ imgSrc, altText, skillName, fillPercentage }) => {
           initial="hidden"
           animate={controls}
         >
-          <h1>{fillPercentage}%</h1>
+          <h3>{level}</h3>
         </motion.div>
       </div>
       <h5>{skillName}</h5>

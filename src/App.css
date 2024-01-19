@@ -187,28 +187,29 @@ span.navbar-text {
   align-items: center;
   justify-content: center;
   line-height: 1;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   transition: all 0.5s;
 }
 
 .social-icon a:hover {
-  background: #e3f2ff;
-  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 0 10px #00E492, 0 0 40px #00E492, 0 0 80px #00E492;
   cursor: pointer;
+  border: solid 2px #00E492;
 }
 .social-icon a img {
   width: 50%;
   z-index: 1;
   transition: 0.3s ease-in-out;
 }
-.social-icon a:hover img {
+/* .social-icon a:hover img {
   filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%)
     hue-rotate(346deg) brightness(95%) contrast(86%);
-}
+} */
 .navbar-text button {
   font-weight: 700;
   color: #fff;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   padding: 0.5rem 1rem;
   font-size: 16px;
   position: relative;
@@ -220,12 +221,10 @@ span.navbar-text {
 }
 
 .navbar-text button:hover {
-  color: #121212;
-}
-.navbar-text button:hover {
-  background: #e3f2ff;
-  box-shadow: 0 0 10px #2196f3, 0 0 40px #2196f3, 0 0 80px #2196f3;
+  background: rgba(0, 0, 0, 0.4);;
+  box-shadow: 0 0 10px #00E492, 0 0 40px #00E492, 0 0 80px #00E492;
   cursor: pointer;
+  border: solid 2px #00E492;
 }
 nav.navbar .navbar-toggler:active,
 nav.navbar .navbar-toggler:focus {
@@ -447,7 +446,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #00E492; /* Cor do líquido */
+  background-color: rgba(0, 0, 0, 0.8); /* Cor do líquido */
+  border-top:solid 2px #00E492;
   transition: height 0.3s ease; /* Transição de preenchimento */
   opacity: 0.7; /* Opacidade do líquido */
   font-weight: 900;
