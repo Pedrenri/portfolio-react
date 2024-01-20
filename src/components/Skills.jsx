@@ -1,39 +1,39 @@
-import html from "../assets/img/html.png";
-import css from "../assets/img/css.png";
-import js from "../assets/img/js.png";
-import react from "../assets/img/react.png";
-import node from "../assets/img/node.png";
-import cs from "../assets/img/cs.png";
-import php from "../assets/img/php.png";
-import mysql from "../assets/img/mysql.png";
-import mongodb from "../assets/img/mongodb.png";
-import python from "../assets/img/python.png";
-import powerbi from "../assets/img/powerbi.png";
-import ps from "../assets/img/ps.png";
-import ai from "../assets/img/ai.png";
-import figma from "../assets/img/figma.png";
-import blender from "../assets/img/blender.png";
-import "react-multi-carousel/lib/styles.css";
-import SkillItem from "./SkillItem";
+import {React, memo} from 'react';
+import SkillItem from './SkillItem';
+import html from '../assets/img/html.png';
+import css from '../assets/img/css.png';
+import js from '../assets/img/js.png';
+import react from '../assets/img/react.png';
+import node from '../assets/img/node.png';
+import cs from '../assets/img/cs.png';
+import php from '../assets/img/php.png';
+import mysql from '../assets/img/mysql.png';
+import mongodb from '../assets/img/mongodb.png';
+import python from '../assets/img/python.png';
+import powerbi from '../assets/img/powerbi.png';
+import ps from '../assets/img/ps.png';
+import ai from '../assets/img/ai.png';
+import figma from '../assets/img/figma.png';
+import blender from '../assets/img/blender.png';
+import 'react-multi-carousel/lib/styles.css';
 
-export const Skills = () => {
+export const Skills = memo(() => {
   const skillsData = [
-    { imgSrc: html, altText: "HTML", skillName: "HTML", fillPercentage: 100, level: 'Avançado'},
-    { imgSrc: css, altText: "CSS", skillName: "CSS", fillPercentage: 100, level: 'Avançado' },
-    { imgSrc: js, altText: "JavaScript", skillName: "JAVASCRIPT", fillPercentage: 95, level: 'Avançado' },
-    { imgSrc: react, altText: "React JS", skillName: "REACT JS", fillPercentage: 90, level: 'Avançado' },
-    { imgSrc: node, altText: "Node Js", skillName: "NODE JS", fillPercentage: 85, level: 'Avançado' },
-    { imgSrc: cs, altText: "C#", skillName: "C#", fillPercentage: 60, level: 'Intermediário'},
-    { imgSrc: php, altText: "PHP", skillName: "PHP", fillPercentage: 40, level: 'Intermediário' },
-    { imgSrc: python, altText: "python", skillName: "PYTHON", fillPercentage: 50, level: 'Intermediário' },
-    { imgSrc: mysql, altText: "mysql", skillName: "MYSQL", fillPercentage: 75 , level: 'Bom'},
-    { imgSrc: mongodb, altText: "mongodb", skillName: "MONGODB", fillPercentage: 75, level: 'Bom' },
-    { imgSrc: powerbi, altText: "powerbi", skillName: "POWER BI", fillPercentage: 90, level: 'Avançado' },
-    { imgSrc: ps, altText: "Photoshop", skillName: "PHOTOSHOP", fillPercentage: 90, level: 'Avançado' },
-    { imgSrc: ai, altText: "Illustrator", skillName: "ILLUSTRATOR", fillPercentage: 70, level: 'Bom' },
-    { imgSrc: figma, altText: "Figma", skillName: "FIGMA", fillPercentage: 80 , level: 'Avançado'},
-    { imgSrc: blender, altText: "blender", skillName: "BLENDER", fillPercentage: 40 , level: 'Intermediário'},
-    // Adicione outros dados de habilidades conforme necessário
+    { imgSrc: html, altText: 'HTML', skillName: 'HTML', fillPercentage: 100, level: 'Avançado' },
+    { imgSrc: css, altText: 'CSS', skillName: 'CSS', fillPercentage: 100, level: 'Avançado' },
+    { imgSrc: js, altText: 'JavaScript', skillName: 'JAVASCRIPT', fillPercentage: 95, level: 'Avançado' },
+    { imgSrc: react, altText: 'React JS', skillName: 'REACT JS', fillPercentage: 90, level: 'Avançado' },
+    { imgSrc: node, altText: 'Node Js', skillName: 'NODE JS', fillPercentage: 85, level: 'Avançado' },
+    { imgSrc: cs, altText: 'C#', skillName: 'C#', fillPercentage: 60, level: 'Intermediário' },
+    { imgSrc: php, altText: 'PHP', skillName: 'PHP', fillPercentage: 40, level: 'Intermediário' },
+    { imgSrc: python, altText: 'python', skillName: 'PYTHON', fillPercentage: 50, level: 'Intermediário' },
+    { imgSrc: mysql, altText: 'mysql', skillName: 'MYSQL', fillPercentage: 75, level: 'Bom' },
+    { imgSrc: mongodb, altText: 'mongodb', skillName: 'MONGODB', fillPercentage: 75, level: 'Bom' },
+    { imgSrc: powerbi, altText: 'powerbi', skillName: 'POWER BI', fillPercentage: 90, level: 'Avançado' },
+    { imgSrc: ps, altText: 'Photoshop', skillName: 'PHOTOSHOP', fillPercentage: 90, level: 'Avançado' },
+    { imgSrc: ai, altText: 'Illustrator', skillName: 'ILLUSTRATOR', fillPercentage: 70, level: 'Bom' },
+    { imgSrc: figma, altText: 'Figma', skillName: 'FIGMA', fillPercentage: 80, level: 'Avançado' },
+    { imgSrc: blender, altText: 'blender', skillName: 'BLENDER', fillPercentage: 40, level: 'Intermediário' },
   ];
 
   return (
@@ -47,11 +47,7 @@ export const Skills = () => {
                 {skillsData.map((skill, index) => (
                   <SkillItem
                     key={index}
-                    imgSrc={skill.imgSrc}
-                    altText={skill.altText}
-                    skillName={skill.skillName}
-                    fillPercentage={skill.fillPercentage || 0}
-                    level={skill.level}
+                    {...skill}
                   />
                 ))}
               </div>
@@ -84,4 +80,4 @@ export const Skills = () => {
       </div>
     </section>
   );
-};
+});

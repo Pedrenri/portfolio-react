@@ -1,59 +1,49 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, memo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { motion } from "framer-motion";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { motion } from "framer-motion";
 
 AOS.init();
 
-export const Banner = () => {
+export const Banner = memo(() => {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 500);
-  const [index, setIndex] = useState(1);
-  const toRotate = [
-    "PEDRO HENRI",
-    "WEB DEVELOPER",
-    "DESIGNER",
-    "FULLSTACK",
-  ];
+  const toRotate = ["PEDRO HENRI", "WEB DEVELOPER", "DESIGNER", "FULLSTACK"];
   const period = 2000;
 
   useEffect(() => {
-    let ticker = setInterval(() => {
+    const ticker = setInterval(() => {
       tick();
     }, delta);
 
     return () => {
       clearInterval(ticker);
     };
-  }, [text]);
+  }, [text, delta]);
 
   const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting
+    const i = loopNum % toRotate.length;
+    const fullText = toRotate[i];
+    const updatedText = isDeleting
       ? fullText.substring(0, text.length - 1)
       : fullText.substring(0, text.length + 1);
 
     setText(updatedText);
 
     if (isDeleting) {
-      setDelta((prevDelta) => 100);
+      setDelta(100);
     }
 
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setIndex((prevIndex) => prevIndex - 1);
       setDelta(period);
+      setLoopNum((prevLoopNum) => prevLoopNum + 1);
     } else if (isDeleting && updatedText === "") {
       setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setIndex(1);
       setDelta(100);
-    } else {
-      setIndex((prevIndex) => prevIndex + 1);
     }
   };
 
@@ -67,7 +57,7 @@ export const Banner = () => {
                 initial={{ x: -50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 transition={{ delay: 0.1 }}
-                className="mb-80 text-6xl	md:text-8xl xl:text-9xl text-center"
+                className="mb-80 text-6xl md:text-8xl xl:text-9xl text-center"
               >
                 <span className="txt-rotate" dataperiod="1000">
                   <span className="wrap">{text}</span>
@@ -91,16 +81,18 @@ export const Banner = () => {
           </Col>
         </Row>
       </Container>
-      <div class="custom-shape-divider-bottom-1687571069">
+      <div className="custom-shape-divider-bottom-1687571069">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
         >
-          <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+          <path d="M1200 0L0 0 598.97 114.72 1200 0z" className="shape-fill"></path>
         </svg>
       </div>
     </section>
   );
-};
+});
+
+ 
