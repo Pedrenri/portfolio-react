@@ -17,7 +17,6 @@ export const NavBar = memo(() => {
     };
 
     window.addEventListener("scroll", onScroll);
-
     return () => {
       window.removeEventListener("scroll", onScroll);
     };

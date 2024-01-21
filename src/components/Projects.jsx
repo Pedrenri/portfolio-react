@@ -1,12 +1,8 @@
-import {React, memo} from 'react';
+import { React, memo } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
-import CoverD3 from "../assets/img/coverD3.png";
-import design31 from "../assets/img/design3-1.png";
-import design32 from "../assets/img/design3-2.png";
-import design33 from "../assets/img/design3-3.png";
 import CoverW1 from "../assets/img/CoverW1.png";
 import webd11 from "../assets/img/webdev1-1.png";
 import webd12 from "../assets/img/webdev1-2.png";
@@ -15,35 +11,34 @@ import CoverW2 from "../assets/img/coverW2.png";
 import webd21 from "../assets/img/webdev2-1.png";
 import webd22 from "../assets/img/webdev2-2.png";
 import webd23 from "../assets/img/webdev2-3.png";
+import port1 from "../assets/img/port1.png";
+import port2 from "../assets/img/port2.png";
+import port3 from "../assets/img/port3.png";
 
 AOS.init();
 
 const projectsData = [
   {
-    title: "Moda-Bela",
-    description: "Modelo conceitual para um site de Moda e Cuidados Pessoais",
-    imgUrl: CoverD3,
-    Car1: design31,
-    Car2: design32,
-    Car3: design33,
+    title: "Henri's",
+    description:
+      "Um dos primeiros projetos por mim desenvolvidos, com técnicas iniciantes. O trabalho deveria ser uma loja, contendo página de login, carrinho e suporte.",
+    carouselImages: [webd21, webd22, webd23],
+    hrefURL: "https://henrisgym.netlify.app",
   },
   {
     title: "Sigma",
-    description: "Modelo conceitual de um site para uma empresa de hardware.",
-    Car1: webd11,
-    Car2: webd12,
-    Car3: webd13,
-    imgUrl: CoverW1,
+    description:
+      "Projeto de escola em que precisávamos desenvolver um site contendo carrosséis, modo escuro e diversas páginas. Deveria ser uma simulação de uma loja ou fabricantes de peças de computadores. Foi meu primeiro projeto em React",
+    carouselImages: [webd11, webd12, webd13],
     hrefURL: "https://sigmahardware.netlify.app",
+    githubURL: "https://github.com/Pedrenri/sigma-hardware-site"
   },
   {
-    title: "Henri's",
-    description: "Modelo conceitual de um site para uma empresa de produtos esportivos.",
-    Car1: webd21,
-    Car2: webd22,
-    Car3: webd23,
-    imgUrl: CoverW2,
-    hrefURL: "https://henrisgym.netlify.app",
+    title: "Portfólio Pessoal",
+    description:
+      "Iniciado como um projeto de escola, o meu portfólio evoluiu para a página de profissional em que você se encontra agora! Foi meu segundo projeto em React e é um projeto que é aprimorado continuamente.",
+    carouselImages: [port1, port2, port3],
+    githubURL: "https://github.com/Pedrenri/portfolio-react",
   },
 ];
 
@@ -64,9 +59,8 @@ export const Projects = memo(() => {
           </Col>
         </Row>
       </Container>
-      {/* <img className="background-image-right" src={colorSharp2} alt="bg-img" /> */}
       <div class="custom-shape-divider-bottom-1688671486">
-      <svg
+        <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1200 120"
