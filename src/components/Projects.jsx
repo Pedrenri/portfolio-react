@@ -14,6 +14,10 @@ import webd23 from "../assets/img/webdev2-3.png";
 import port1 from "../assets/img/port1.png";
 import port2 from "../assets/img/port2.png";
 import port3 from "../assets/img/port3.png";
+import petmatch1 from "../assets/img/petmatch1.png"
+import petmatch2 from "../assets/img/petmatch2.png"
+import petmatch3 from "../assets/img/petmatch3.png"
+
 
 AOS.init();
 
@@ -39,6 +43,13 @@ const projectsData = [
       "Iniciado como um projeto de escola, o meu portfólio evoluiu para a página de profissional em que você se encontra agora! Foi meu segundo projeto em React e é um projeto que é aprimorado continuamente.",
     carouselImages: [port1, port2, port3],
     githubURL: "https://github.com/Pedrenri/portfolio-react",
+  },
+  {
+    title: "PetMatch",
+    description:
+      "Projeto de conclusão, feito com ReactJS e NodeJS, utilizando o banco de dados MongoDB, o PetMatch é essencialmente um Tinder feito para cachorros. Foi realizado em grupo no meu último ano de curso.",
+    carouselImages: [petmatch1, petmatch2, petmatch3],
+    githubURL: "https://github.com/Pedrenri/pit-projeto",
   },
 ];
 
