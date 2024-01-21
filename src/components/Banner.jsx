@@ -27,23 +27,28 @@ export const Banner = memo(() => {
   const tick = () => {
     const i = loopNum % toRotate.length;
     const fullText = toRotate[i];
+
+    // Verifica se o texto está sendo deletado e se já foi completamente deletado
+    if (isDeleting && text === "") {
+      setIsDeleting(false);
+      setLoopNum((prevLoopNum) => prevLoopNum + 1);
+      setDelta(300); // Ajuste conforme necessário
+      return;
+    }
+
+    // Calcula o próximo texto a ser exibido
     const updatedText = isDeleting
       ? fullText.substring(0, text.length - 1)
       : fullText.substring(0, text.length + 1);
 
     setText(updatedText);
 
-    if (isDeleting) {
-      setDelta(100);
-    }
+    // Ajusta o período de transição para criar uma animação mais suave
+    setDelta(isDeleting ? 100 : 200);
 
+    // Se o texto atual for igual ao texto completo, inicia a deleção
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
-      setDelta(period);
-      setLoopNum((prevLoopNum) => prevLoopNum + 1);
-    } else if (isDeleting && updatedText === "") {
-      setIsDeleting(false);
-      setDelta(100);
     }
   };
 
@@ -75,8 +80,7 @@ export const Banner = memo(() => {
                 href="#connect"
                 initial={{ y: 50, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
-              >
-              </motion.a>
+              ></motion.a>
             </div>
           </Col>
         </Row>
@@ -88,11 +92,12 @@ export const Banner = memo(() => {
           viewBox="0 0 1200 120"
           preserveAspectRatio="none"
         >
-          <path d="M1200 0L0 0 598.97 114.72 1200 0z" className="shape-fill"></path>
+          <path
+            d="M1200 0L0 0 598.97 114.72 1200 0z"
+            className="shape-fill"
+          ></path>
         </svg>
       </div>
     </section>
   );
 });
-
- 
