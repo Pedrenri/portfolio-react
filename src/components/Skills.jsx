@@ -31,9 +31,9 @@ export const Skills = memo(() => {
     { imgSrc: mongodb, altText: 'mongodb', skillName: 'MONGODB', fillPercentage: 75, level: 'Bom' },
     { imgSrc: powerbi, altText: 'powerbi', skillName: 'POWER BI', fillPercentage: 90, level: 'Avançado' },
     { imgSrc: ps, altText: 'Photoshop', skillName: 'PHOTOSHOP', fillPercentage: 90, level: 'Avançado' },
-    { imgSrc: ai, altText: 'Illustrator', skillName: 'ILLUSTRATOR', fillPercentage: 70, level: 'Bom' },
+    /* { imgSrc: ai, altText: 'Illustrator', skillName: 'ILLUSTRATOR', fillPercentage: 70, level: 'Bom' },
     { imgSrc: figma, altText: 'Figma', skillName: 'FIGMA', fillPercentage: 80, level: 'Avançado' },
-    { imgSrc: blender, altText: 'blender', skillName: 'BLENDER', fillPercentage: 40, level: 'Intermediário' },
+    { imgSrc: blender, altText: 'blender', skillName: 'BLENDER', fillPercentage: 40, level: 'Intermediário' }, */
   ];
 
   return (
