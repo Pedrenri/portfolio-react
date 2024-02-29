@@ -17,6 +17,13 @@ import port3 from "../assets/img/port3.png";
 import petmatch1 from "../assets/img/petmatch1.png"
 import petmatch2 from "../assets/img/petmatch2.png"
 import petmatch3 from "../assets/img/petmatch3.png"
+import adm1 from "../assets/img/admecommerce-1.png"
+import adm2 from "../assets/img/admecommerce-2.png"
+import adm3 from "../assets/img/admecommerce-3.png"
+import loja1 from "../assets/img/lojaecommerce-1.png"
+import loja2 from "../assets/img/lojaecommerce-2.png"
+import loja3 from "../assets/img/lojaecommerce-3.png"
+import loja4 from "../assets/img/lojaecommerce-4.png"
 
 
 AOS.init();
@@ -50,6 +57,20 @@ const projectsData = [
       "Projeto de conclusão, feito com ReactJS e NodeJS, utilizando o banco de dados MongoDB, o PetMatch é essencialmente um Tinder feito para cachorros. Foi realizado em grupo no meu último ano de curso.",
     carouselImages: [petmatch1, petmatch2, petmatch3],
     githubURL: "https://github.com/Pedrenri/pit-projeto",
+  },
+  {
+    title: "Ecommerce - Loja",
+    description:
+      "Projeto FullStack feito com NextJS com TypeScript, incorporando Tailwind, ShadCN e Stripe, com banco de dados MySQL.",
+    carouselImages: [loja1, loja2, loja3, loja4],
+    githubURL: "https://github.com/Pedrenri/ecommerce-store",
+  },
+  {
+    title: "Ecommerce - Admin",
+    description:
+      "ERP feito em NextJS com TypeScript do projeto de Ecommerce, oferecendo a gestão completa da loja. Foram utilizadas bibliotecas como Clerk, Cloudinary e ShadCN.",
+    carouselImages: [adm1, adm2, adm3],
+    githubURL: "https://github.com/Pedrenri/ecommerce-admin",
   },
 ];
 
