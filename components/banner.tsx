@@ -9,7 +9,7 @@ export function Banner() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 500);
-  const toRotate = ["PEDRO HENRI", "WEB DEVELOPER", "FULLSTACK", "DESIGNER"];
+  const toRotate = ["PEDRO HENRI", "WEB DEVELOPER", "FULLSTACK", "DESIGNER."];
 
   useEffect(() => {
     const ticker = setInterval(() => {
