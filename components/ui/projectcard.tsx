@@ -71,7 +71,7 @@ export function ProjectCard(props: ProjectCardProps) {
             close={() => setOpen(false)}
             slides={images}
             plugins={[Thumbnails]}
-            thumbnails={{ ref: thumbnailsRef }}
+            thumbnails={{ ref: thumbnailsRef.current }}
             on={{
               click: () => {
                 (thumbnailsRef.current?.current?.visible

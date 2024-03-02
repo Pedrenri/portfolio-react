@@ -133,3 +133,5 @@ export const Contact = memo(() => {
     </div>
   );
 });
+
+Contact.displayName = 'Contact';

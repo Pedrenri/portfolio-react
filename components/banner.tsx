@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { LampContainer } from "./ui/lamp";
-import Link from "next/link";
 import Socials from "./ui/socials";
 
 export function Banner() {
@@ -16,11 +15,11 @@ export function Banner() {
     const ticker = setInterval(() => {
       tick();
     }, delta);
-
+  
     return () => {
       clearInterval(ticker);
     };
-  }, [text, delta]);
+  }, [text, delta, loopNum]);
 
   const tick = () => {
     const i = loopNum % toRotate.length;
