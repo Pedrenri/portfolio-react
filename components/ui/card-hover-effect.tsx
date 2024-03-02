@@ -47,7 +47,7 @@ export const HoverEffect = ({
             )}
           </AnimatePresence>
           <Card>
-            <Image className="max-w-50" src={item.image} alt={item.title} />
+            <Image className="h-24 object-contain" src={item.image} alt={item.title} />
             <CardTitle>{item.title}</CardTitle>
           </Card>
         </div>
@@ -64,16 +64,18 @@ export const Card = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div
+    <motion.div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-gray-950 border border-transparent dark:border-gray-700/[0.2] group-hover:border-slate-700 relative z-20",
         className
       )}
+      initial={{ y: 100, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
     >
       <div className="relative z-50">
         <div className="p-6 flex flex-col items-center justify-center">{children}</div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 export const CardTitle = ({
