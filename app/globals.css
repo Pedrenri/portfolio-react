@@ -37,3 +37,41 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
+/** {
+  scrollbar-width: thin;
+  scrollbar-color: #8C00D6 #000000;
+}*/
+
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #000000;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background-color: #000000;
+}
+
+*::-webkit-scrollbar-track:active {
+  background-color: #252727;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #8C00D6;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #8C00D6;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #8C00D6;
+}
+

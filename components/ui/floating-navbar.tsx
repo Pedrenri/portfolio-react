@@ -32,7 +32,7 @@ export const FloatingNav = ({
       if (scrollYProgress.get() < 0.05) {
         setVisible(false);
       } else {
-        if (direction > 0) {
+        if (direction < 0) {
           setVisible(true);
         } else {
           setVisible(false);
@@ -56,7 +56,7 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border border-transparent dark:border-white/[0.2] rounded-full dark:bg-black bg-white z-[5000] px-16 py-4  items-center justify-center space-x-4",
+          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border-2 border-transparent dark:border-white/[0.2] rounded-full dark:bg-gray-950 bg-white z-[5000] px-16 py-4  items-center justify-center space-x-4",
           className
         )}
       >
@@ -65,7 +65,7 @@ export const FloatingNav = ({
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600  hover:text-neutral-500 transition-colors"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>

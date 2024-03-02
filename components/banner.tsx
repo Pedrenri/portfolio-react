@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { LampContainer } from "./ui/lamp";
+import Link from "next/link";
+import Socials from "./ui/socials";
 
 export function Banner() {
   const [loopNum, setLoopNum] = useState(0);
@@ -46,24 +48,30 @@ export function Banner() {
   return (
     <div id="home">
       <LampContainer>
-        <motion.h1
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.1 }}
-          className="text-4xl md:text-6xl xl:text-7xl text-center font-bold"
-        >
-          <span className="txt-rotate">
-            <span className="wrap">{text.length > 0 ? text : <>&nbsp;</>}</span>
-          </span>
-        </motion.h1>
-        <motion.p
-          initial={{ x: -50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ delay: 0.25 }}
-          className="text-2xl md:text-xl text-center banner-sub pt-2"
-        >
-          FULLSTACK DEVELOPER
-        </motion.p>
+        <div>
+          <motion.h1
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.1 }}
+            className="text-4xl md:text-6xl xl:text-8xl text-center font-bold"
+          >
+            <span className="txt-rotate">
+              <span className="wrap">
+                {text.length > 0 ? text : <>&nbsp;</>}
+              </span>
+            </span>
+          </motion.h1>
+          <motion.p
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            transition={{ delay: 0.25 }}
+            className="text-2xl md:text-xl text-center banner-sub"
+          >
+            FULLSTACK DEVELOPER
+          </motion.p>
+        </div>
+        <Socials email />
+
       </LampContainer>
     </div>
   );

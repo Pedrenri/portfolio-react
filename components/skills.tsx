@@ -19,7 +19,7 @@ import sql from "../assets/img/sql.png";
 
 export function Skills() {
   return (
-    <div style={{backgroundColor: "#06000d"}}>
+    <div style={{backgroundColor: "#06000d"}} className="mb-20 py-16">
       <TracingBeam>
       <h1 className="text-center pt-16 text-3xl font-bold" id="skills">
         HABILIDADES
