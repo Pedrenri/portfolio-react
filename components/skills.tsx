@@ -10,7 +10,7 @@ import python from "../assets/img/python.png";
 import powerbi from "../assets/img/powerbi.png";
 import ps from "../assets/img/ps.png";
 import ts from "../assets/img/ts.png";
-import next from "../assets/img/next.png";
+import next from "../assets/img/next.webp";
 import laravel from "../assets/img/laravel.png";
 import sql from "../assets/img/sql.png";
 import docker from "../assets/img/docker.png";
