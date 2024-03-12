@@ -1,12 +1,9 @@
 "use client";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { TracingBeam } from "./ui/tracing-beam";
-import html from "../assets/img/html.png";
-import css from "../assets/img/css.png";
 import js from "../assets/img/js.png";
 import react from "../assets/img/react.png";
 import node from "../assets/img/node.png";
-import cs from "../assets/img/cs.png";
 import php from "../assets/img/php.png";
 import mongodb from "../assets/img/mongodb.png";
 import python from "../assets/img/python.png";
@@ -16,14 +13,15 @@ import ts from "../assets/img/ts.png";
 import next from "../assets/img/next.png";
 import laravel from "../assets/img/laravel.png";
 import sql from "../assets/img/sql.png";
+import docker from "../assets/img/docker.png";
 
 export function Skills() {
   return (
-    <div style={{backgroundColor: "#06000d"}} className="mb-20 py-16">
+    <div style={{ backgroundColor: "#06000d" }} className="mb-20 py-16">
       <TracingBeam>
-      <h1 className="text-center pt-16 text-3xl font-bold" id="skills">
-        HABILIDADES
-      </h1>
+        <h1 className="text-center pt-16 text-3xl font-bold" id="skills">
+          HABILIDADES
+        </h1>
         <div className="max-w-5xl mx-auto px-8 ">
           <HoverEffect items={skills} />
         </div>
@@ -33,16 +31,16 @@ export function Skills() {
 }
 export const skills = [
   {
-    title: "HTML",
-    image: html,
-  },
-  {
-    title: "CSS",
-    image: css,
-  },
-  {
     title: "JavaScript",
     image: js,
+  },
+  {
+    title: "TypeScript",
+    image: ts,
+  },
+  {
+    title: "Next",
+    image: next,
   },
   {
     title: "React",
@@ -53,12 +51,16 @@ export const skills = [
     image: node,
   },
   {
-    title: "C#",
-    image: cs,
-  },
-  {
     title: "PHP",
     image: php,
+  },
+  {
+    title: "Laravel",
+    image: laravel,
+  },
+  {
+    title: "SQL",
+    image: sql,
   },
   {
     title: "MongoDB",
@@ -73,23 +75,7 @@ export const skills = [
     image: powerbi,
   },
   {
-    title: "Photoshop",
-    image: ps,
-  },
-  {
-    title: "TypeScript",
-    image: ts,
-  },
-  {
-    title: "Next",
-    image: next,
-  },
-  {
-    title: "Laravel",
-    image: laravel,
-  },
-  {
-    title: "SQL",
-    image: sql,
+    title: "Docker",
+    image: docker,
   },
 ];

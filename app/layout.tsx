@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Pedro Henri",
   description: "O portfólio de um profissional.",
   icons: {
-    icon: "/icon.png",
+    icon: "./icon.png",
   },
 };
 
@@ -20,6 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/icon.png" />
+      </head>
       <body className={inter.className}>
         {children}
         <SpeedInsights />
