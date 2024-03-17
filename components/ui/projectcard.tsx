@@ -44,7 +44,7 @@ export function ProjectCard(props: ProjectCardProps) {
 
   return (
     <>
-      <div className="relative shadow-xl bg-gray-900 border border-gray-800 px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col items-start">
+      <div className="relative shadow-xl bg-violet-950/[0.2] border border-violet-800/[0.2] px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col items-start">
         <div className="relative z-50 flex items-center">
           <button
             className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-transparent text-white cursor-pointer z-50 flex items-center"
