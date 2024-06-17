@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -21,58 +21,70 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
+  const [atTop, setAtTop] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 640);
+    }
+
+    handleResize();
+    
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  }, []);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
     if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+      let direction = current - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() < 0.05) {
-        setVisible(false);
+        setAtTop(true);
       } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
+        setAtTop(false);
       }
     }
   });
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence>
       <motion.div
         initial={{
           opacity: 1,
-          y: -100,
+          y: 0,
         }}
         animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
+          borderRadius: atTop || isMobile ? '0' : '50rem',
+          width: atTop || isMobile ? '100%' : '45%',
+          paddingTop: atTop || isMobile ? '2rem' : '1.5rem',
+          paddingBottom: atTop || isMobile ? '2rem' : '1.5rem',
+          y: !atTop && !isMobile ? 15 : 0,
         }}
         transition={{
           duration: 0.2,
         }}
+        
         className={cn(
-          "flex max-w-fit  fixed top-10 inset-x-0 mx-auto border-2 border-transparent dark:border-white/[0.2] rounded-full dark:bg-gray-950 bg-white z-[5000] px-16 py-4  items-center justify-center space-x-4",
-          className
+          "flex fixed inset-x-0 mx-auto border-b-1 border-slate-800 bg-slate-900/[0.7] backdrop-blur-md z-[5000] px-16 items-center justify-center space-x-4",
+          className, !atTop && !isMobile ? "border-2 border-white/[0.01]" : "",
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
+        {navItems.map((navItem, idx) => (
           <Link
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600  hover:text-neutral-500 transition-colors"
+              "relative text-neutral-50 items-center flex space-x-1 hover:text-neutral-500 transition-colors"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
             <span className="hidden sm:block text-md font-bold">{navItem.name}</span>
           </Link>
         ))}
-        
       </motion.div>
     </AnimatePresence>
   );

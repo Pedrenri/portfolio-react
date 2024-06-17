@@ -112,7 +112,7 @@ export const Contact = memo(() => {
                 value={toSend.message}
                 onChange={handleChange}
                 required
-                className="transition-all w-full p-2 border-gray-800 rounded-md focus:outline-none focus:border-purple-500 border-2 bg-gray-950 placeholder-gray-500"
+                className="transition-all w-full p-2 border-gray-800 rounded-md focus:outline-none focus:border-purple-500 border-2 bg-gray-950 placeholder-gray-500 h-[8rem]"
               ></textarea>
             </div>
             <div className="col-span-2  z-50">

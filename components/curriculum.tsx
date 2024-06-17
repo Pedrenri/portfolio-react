@@ -9,13 +9,13 @@ function Curriculum(props: Props) {
   const {} = props;
 
   return (
-    <div>
+    <div className="fixed bottom-0 left-0 mb-4 ml-4 z-[51]">
       <Tooltip
         content="Baixe meu currículo!"
         placement="right-start"
         showArrow
         classNames={{
-          base: ["before:bg-neutral-400 dark:before:bg-violet-950"],
+          base: ["before:bg-violet-950 fixed bottom-0 left-0 mb-7 ml-[4.5rem] z-[5000]"],
           content: [
             "py-2 px-4 shadow-xl",
             "text-white bg-violet-950/[0.7] rounded",
@@ -23,7 +23,7 @@ function Curriculum(props: Props) {
         }}
         closeDelay={0}
       >
-        <Button className="fixed bottom-0 left-0 mb-4 ml-4 rounded-full bg-slate-800">
+        <Button className=" rounded-full bg-slate-800 ">
           <Link
             href="/pdf/Curriculum.pdf"
             target="_blank"
