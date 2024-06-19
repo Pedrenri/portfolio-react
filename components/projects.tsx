@@ -1,10 +1,10 @@
 import { ProjectCard } from "./ui/projectcard";
-import { getProjects } from "@/components/project";
+import { GetProjects } from "@/components/project";
 import {useTranslations} from 'next-intl';
 
 const Projects = () => {
   const t = useTranslations('Projects');
-  const projects = getProjects();
+  const projects = GetProjects();
   return (
     <div className="pb-8">
       <h1 className="text-center text-3xl font-bold " id="projects">
