@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
+import {NextIntlClientProvider} from 'next-intl';
+import {getMessages} from 'next-intl/server';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,13 +15,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+  params: {locale}
+}: {
   children: React.ReactNode;
-}>) {
+  params: {locale: string};
+}) {
+
+  const messages = await getMessages();
+
   return (
-    <html lang="en">
+    <NextIntlClientProvider messages={messages}>
+    <html lang="pt">
       <head>
         <link rel="icon" href="icon.png" />
       </head>
@@ -28,5 +36,6 @@ export default function RootLayout({
         <SpeedInsights />
       </body>
     </html>
+    </NextIntlClientProvider>
   );
 }

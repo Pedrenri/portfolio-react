@@ -1,0 +1,48 @@
+{
+    "Navbar": {
+      "Home": "Accueil",
+      "Skills": "Compétences",
+      "Projects": "Projets",
+      "Contact": "Contact"
+    },
+    "Banner": {
+      "Description": "DÉVELOPPEUR FULL STACK",
+      "Dev": "DÉVELOPPEUR"
+    },
+    "Skills": {
+      "Title": "Compétences",
+      "Description": "Voici quelques-unes des compétences que je possède."
+    },
+    "Projects": {
+      "Title": "Projets",
+      "Description": "Voici quelques-uns des projets que j'ai développés.",
+      "Visit": "Voir le Projet",
+      "Github": "Voir sur Github",
+      "Title1": "Henri's",
+      "Description1": "L'un des premiers projets que j'ai développés, avec des techniques de débutant. Le travail devait être un magasin, contenant une page de connexion, un panier et un support.",
+      "Title2": "Sigma",
+      "Description2": "Projet scolaire dans lequel nous devions développer un site contenant des carrousels, un mode sombre et diverses pages. Cela devait être une simulation d'un magasin ou de fabricants de pièces d'ordinateurs. C'était mon premier projet en React.",
+      "Title3": "Premier Portfolio",
+      "Description3": "Commencé comme un projet scolaire, mon premier portfolio a évolué vers la page professionnelle où vous vous trouvez maintenant ! C'était mon deuxième projet en React pur.",
+      "Title4": "PetMatch",
+      "Description4": "Projet scolaire dans lequel nous devions développer un site contenant des carrousels, un mode sombre et diverses pages. Cela devait être une simulation d'un magasin ou de fabricants de pièces d'ordinateurs. C'était mon premier projet en React.",
+      "Title5": "E-commerce - Magasin",
+      "Description5": "Projet FullStack réalisé avec NextJS et TypeScript, incorporant Tailwind, ShadCN et Stripe, avec une base de données MySQL.",
+      "Title6": "E-commerce - Admin",
+      "Description6": "ERP réalisé en NextJS avec TypeScript pour le projet E-commerce, offrant une gestion complète du magasin. Des bibliothèques telles que Clerk, Cloudinary et ShadCN ont été utilisées."
+    },
+    "Contact": {
+      "Title": "Contactez-moi",
+      "Description": "Besoin d'un service ? Vous voulez m'embaucher ? Ou simplement discuter ? Remplissez le formulaire ci-dessous et envoyez-moi un message !",
+      "Name": "Nom",
+      "LastName": "Prénom",
+      "Email": "Email",
+      "Phone": "Téléphone (Optionnel)",
+      "Message": "Message",
+      "ButtonDefault": "Envoyer",
+      "ButtonSending": "Envoi en cours...",
+      "MessageSucess": "Message envoyé avec succès !",
+      "MessageError": "Erreur lors de l'envoi du message. Veuillez réessayer plus tard."
+    }
+  }
+  

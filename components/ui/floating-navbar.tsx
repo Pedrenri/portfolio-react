@@ -8,6 +8,10 @@ import {
 } from "framer-motion";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
+import br from "@/assets/img/br.svg";
+import en from "@/assets/img/us.svg";
+import fr from "@/assets/img/fr.svg";
+import Image from "next/image";
 
 export const FloatingNav = ({
   navItems,
@@ -27,15 +31,15 @@ export const FloatingNav = ({
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 640);
-    }
+    };
 
     handleResize();
-    
-    window.addEventListener('resize', handleResize);
+
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
-    }
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
@@ -58,19 +62,19 @@ export const FloatingNav = ({
           y: 0,
         }}
         animate={{
-          borderRadius: atTop || isMobile ? '0' : '50rem',
-          width: atTop || isMobile ? '100%' : '45%',
-          paddingTop: atTop || isMobile ? '2rem' : '1.5rem',
-          paddingBottom: atTop || isMobile ? '2rem' : '1.5rem',
+          borderRadius: atTop || isMobile ? "0" : "50rem",
+          width: atTop || isMobile ? "100%" : "45%",
+          paddingTop: atTop || isMobile ? "2rem" : "1.5rem",
+          paddingBottom: atTop || isMobile ? "2rem" : "1.5rem",
           y: !atTop && !isMobile ? 15 : 0,
         }}
         transition={{
           duration: 0.2,
         }}
-        
         className={cn(
           "flex fixed inset-x-0 mx-auto border-b-1 border-slate-800 bg-slate-900/[0.7] backdrop-blur-md z-[5000] px-16 items-center justify-center space-x-4",
-          className, !atTop && !isMobile ? "border-2 border-white/[0.01]" : "",
+          className,
+          !atTop && !isMobile ? "border-2 border-white/[0.01]" : ""
         )}
       >
         {navItems.map((navItem, idx) => (
@@ -82,9 +86,22 @@ export const FloatingNav = ({
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block text-md font-bold">{navItem.name}</span>
+            <span className="hidden sm:block text-md font-bold">
+              {navItem.name}
+            </span>
           </Link>
         ))}
+
+        <Link href="/pt">
+          <Image src={br} alt="pt" className="h-6 w-6" />
+        </Link>
+        <Link href="/en">
+          <Image src={en} alt="en" className="h-6 w-6" />
+        </Link>
+        <Link href="/fr">
+          <Image src={fr} alt="fr" className="h-6 w-6" />
+        </Link>
+       
       </motion.div>
     </AnimatePresence>
   );

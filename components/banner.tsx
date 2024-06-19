@@ -3,13 +3,15 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { LampContainer } from "./ui/lamp";
 import Socials from "./ui/socials";
+import {useTranslations} from 'next-intl';
 
 export function Banner() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 500);
-  const toRotate = ["PEDRO HENRI", "WEB DEVELOPER", "FULLSTACK", "DESIGNER."];
+  const t = useTranslations('Banner');
+  const toRotate = ["PEDRO HENRI", t("Dev"), "FULLSTACK", "DESIGNER"];
 
   useEffect(() => {
     const ticker = setInterval(() => {
@@ -66,7 +68,7 @@ export function Banner() {
             transition={{ delay: 0.25 }}
             className="text-2xl md:text-xl text-center banner-sub"
           >
-            FULLSTACK DEVELOPER
+            {t('Description')}
           </motion.p>
         </div>
         <Socials email />

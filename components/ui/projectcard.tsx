@@ -8,6 +8,7 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Link from "next/link";
+import {useTranslations} from 'next-intl';
 
 interface ProjectCardProps {
   title: string;
@@ -28,6 +29,7 @@ type ThumbnailRef = {
 export function ProjectCard(props: ProjectCardProps) {
   const { title, description, images, hrefURL, githubURL } = props;
   const [currentSlide, setCurrentSlide] = useState(0);
+  const t = useTranslations('Projects');
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
@@ -97,7 +99,7 @@ export function ProjectCard(props: ProjectCardProps) {
           {hrefURL && (
             <Link href={hrefURL} target="_blank">
               <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                Ver Projeto
+                {t('Visit')}
               </button>
             </Link>
           )}
@@ -127,7 +129,7 @@ export function ProjectCard(props: ProjectCardProps) {
                         fill="white"
                       />
                     </svg>
-                    Ver no Github
+                    {t('Github')}
                   </span>
                   <svg
                     fill="none"

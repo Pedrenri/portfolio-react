@@ -1,0 +1,48 @@
+{
+    "Navbar": {
+      "Home": "Home",
+      "Skills": "Skills",
+      "Projects": "Projects",
+      "Contact": "Contact"
+    },
+    "Banner": {
+      "Description": "FULL STACK DEVELOPER",
+      "Dev": "DEVELOPER"
+    },
+    "Skills": {
+      "Title": "Skills",
+      "Description": "Some of my skills."
+    },
+    "Projects": {
+      "Title": "Projects",
+      "Description": "Some projects I developed.",
+      "Visit": "View Project",
+      "Github": "View on Github",
+      "Title1": "Henri's",
+      "Description1": "One of the first projects I developed, using beginner techniques. The task was to create a store with a login page, cart, and support.",
+      "Title2": "Sigma",
+      "Description2": "A school project where we needed to develop a site with carousels, dark mode, and various pages. It was supposed to simulate a store or a computer parts manufacturer. It was my first React project.",
+      "Title3": "First Portfolio",
+      "Description3": "Started as a school project, my first portfolio evolved into the professional page you are on now! It was my second pure React project.",
+      "Title4": "PetMatch",
+      "Description4": "A school project where we needed to develop a site with carousels, dark mode, and various pages. It was supposed to simulate a store or a computer parts manufacturer. It was my first React project.",
+      "Title5": "E-commerce - Store",
+      "Description5": "FullStack project made with NextJS and TypeScript, incorporating Tailwind, ShadCN, and Stripe, with a MySQL database.",
+      "Title6": "E-commerce - Admin",
+      "Description6": "ERP made with NextJS and TypeScript for the E-commerce project, offering complete store management. Libraries such as Clerk, Cloudinary, and ShadCN were used."
+    },
+    "Contact": {
+      "Title": "Contact Me",
+      "Description": "Need a service? Want to hire me? Or just want to chat? Fill out the form below and send me a message!",
+      "Name": "First Name",
+      "LastName": "Last Name",
+      "Email": "Email",
+      "Phone": "Phone (Optional)",
+      "Message": "Message",
+      "ButtonDefault": "Send",
+      "ButtonSending": "Sending...",
+      "MessageSucess": "Message sent successfully!",
+      "MessageError": "Error sending message. Please try again later."
+    }
+  }
+  

@@ -1,4 +1,3 @@
-
 import webd11 from "../assets/img/webdev1-1.png";
 import webd12 from "../assets/img/webdev1-2.png";
 import webd13 from "../assets/img/webdev1-3.png";
@@ -19,51 +18,48 @@ import loja1 from "../assets/img/lojaecommerce-1.png";
 import loja2 from "../assets/img/lojaecommerce-2.png";
 import loja3 from "../assets/img/lojaecommerce-3.png";
 import loja4 from "../assets/img/lojaecommerce-4.png";
+import { useTranslations } from "next-intl";
 
-export const projects = [
+export const getProjects = () => {
+  const t = useTranslations("Projects");
+
+  return [
     {
-      title: "Henri's",
-      description:
-        "Um dos primeiros projetos por mim desenvolvidos, com técnicas iniciantes. O trabalho deveria ser uma loja, contendo página de login, carrinho e suporte.",
+      title: t("Title1"),
+      description: t("Description1"),
       images: [webd21, webd22, webd23],
       hrefURL: "https://henrisgym.netlify.app",
     },
     {
-      title: "Sigma",
-      description:
-        "Projeto de escola em que precisávamos desenvolver um site contendo carrosséis, modo escuro e diversas páginas. Deveria ser uma simulação de uma loja ou fabricantes de peças de computadores. Foi meu primeiro projeto em React",
+      title: t("Title2"),
+      description: t("Description2"),
       images: [webd11, webd12, webd13],
       hrefURL: "https://sigmahardware.netlify.app",
-      githubURL: "https://github.com/Pedrenri/sigma-hardware-site"
+      githubURL: "https://github.com/Pedrenri/sigma-hardware-site",
     },
     {
-      title: "Primeiro Portfólio Pessoal",
-      description:
-        "Iniciado como um projeto de escola, o meu primeiro portfólio evoluiu para a página de profissional em que você se encontra agora! Foi meu segundo projeto em React e é um projeto que é aprimorado continuamente.",
+      title: t("Title3"),
+      description: t("Description3"),
       images: [port1, port2, port3],
       githubURL: "https://github.com/Pedrenri/portfolio-react",
     },
     {
-      title: "PetMatch",
-      description:
-        "Projeto de conclusão, feito com ReactJS e NodeJS, utilizando o banco de dados MongoDB, o PetMatch é essencialmente um Tinder feito para cachorros. Foi realizado em grupo no meu último ano de curso.",
+      title: t("Title4"),
+      description: t("Description4"),
       images: [petmatch1, petmatch2, petmatch3],
-      githubURL: "https://github.com/Pedrenri/pit-projeto"
+      githubURL: "https://github.com/Pedrenri/pit-projeto",
     },
     {
-      title: "Ecommerce - Loja",
-      description:
-        "Projeto FullStack feito com NextJS com TypeScript, incorporando Tailwind, ShadCN e Stripe, com banco de dados MySQL.",
+      title: t("Title5"),
+      description: t("Description5"),
       images: [loja1, loja2, loja3, loja4],
       githubURL: "https://github.com/Pedrenri/ecommerce-store",
     },
     {
-      title: "Ecommerce - Admin",
-      description:
-        "ERP feito em NextJS com TypeScript do projeto de Ecommerce, oferecendo a gestão completa da loja. Foram utilizadas bibliotecas como Clerk, Cloudinary e ShadCN.",
+      title: t("Title6"),
+      description: t("Description6"),
       images: [adm1, adm2, adm3],
       githubURL: "https://github.com/Pedrenri/ecommerce-admin",
     },
   ];
-  
-  export default projects;
+};

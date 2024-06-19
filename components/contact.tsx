@@ -2,9 +2,11 @@
 import React, { useState, memo } from "react";
 import { BackgroundBeams } from "@/components/ui/background-beams";
 import emailjs from "emailjs-com";
+import {useTranslations} from 'next-intl';
 
 export const Contact = memo(() => {
-  const [buttonText, setButtonText] = useState("Enviar");
+  const t = useTranslations('Contact');
+  const [buttonText, setButtonText] = useState(t('ButtonDefault'));
   const [toReset] = useState({
     firstName: "",
     lastName: "",
@@ -25,7 +27,7 @@ export const Contact = memo(() => {
 
   const formSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    setButtonText("Enviando...");
+    setButtonText(t('ButtonSending'));
 
     try {
       const response = await emailjs.send(
@@ -35,13 +37,11 @@ export const Contact = memo(() => {
         "ysp9nvzNcXa5v9dqh"
       );
 
-      console.log("SUCCESS!", response.status, response.text);
-      setResult("Mensagem enviada!");
+      setResult(t('MessageSucess'));
     } catch (err) {
-      console.log("FAILED...", err);
-      setResult("Algo deu errado. Tente novamente mais tarde.");
+      setResult(t('MessageError'));
     } finally {
-      setButtonText("Enviar");
+      setButtonText(t('ButtonDefault'));
       setToSend(toReset);
     }
   };
@@ -54,18 +54,17 @@ export const Contact = memo(() => {
     <div className="h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
       <div className="max-w-2xl mx-auto p-4">
         <h1 id="contact" className="relative pb-4 z-10 text-lg md:text-7xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 text-center font-sans font-bold">
-          Fale Comigo
+          {t('Title')}
         </h1>
         <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10 pb-4">
-          Precisa de um serviço? Quer me contratar? Ou apenas bater um papo?
-          Preencha o formulário abaixo e me envie uma mensagem!
+         {t('Description')}
         </p>
         <form className="fade-down" onSubmit={formSubmit}>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div className="z-50 text-sm">
               <input
                 type="text"
-                placeholder="Nome"
+                placeholder={t('Name')}
                 name="firstName"
                 value={toSend.firstName}
                 onChange={handleChange}
@@ -76,7 +75,7 @@ export const Contact = memo(() => {
             <div className="z-50 text-sm">
               <input
                 type="text"
-                placeholder="Sobrenome"
+                placeholder={t('LastName')}
                 name="lastName"
                 value={toSend.lastName}
                 onChange={handleChange}
@@ -87,7 +86,7 @@ export const Contact = memo(() => {
             <div className="z-50 text-sm">
               <input
                 type="email"
-                placeholder="Email"
+                placeholder={t('Email')}
                 name="email"
                 value={toSend.email}
                 onChange={handleChange}
@@ -98,7 +97,7 @@ export const Contact = memo(() => {
             <div className="z-50 text-sm">
               <input
                 type="tel"
-                placeholder="No. de Telefone (Opcional)"
+                placeholder={t('Phone')}
                 name="phone"
                 value={toSend.phone}
                 onChange={handleChange}
@@ -107,7 +106,7 @@ export const Contact = memo(() => {
             </div>
             <div className="col-span-2  z-50 text-sm">
               <textarea
-                placeholder="Mensagem"
+                placeholder={t('Message')}
                 name="message"
                 value={toSend.message}
                 onChange={handleChange}
