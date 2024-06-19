@@ -20,7 +20,7 @@ import loja3 from "../assets/img/lojaecommerce-3.png";
 import loja4 from "../assets/img/lojaecommerce-4.png";
 import { useTranslations } from "next-intl";
 
-export const getProjects = () => {
+export const GetProjects = () => {
   const t = useTranslations("Projects");
 
   return [
