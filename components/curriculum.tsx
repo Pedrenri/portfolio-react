@@ -23,7 +23,7 @@ function Curriculum(props: Props) {
         }}
         closeDelay={0}
       >
-        <Button className=" rounded-full bg-slate-800 ">
+        <Button className=" rounded-full bg-slate-800 p-0">
           <Link
             href="/pdf/Curriculum.pdf"
             target="_blank"

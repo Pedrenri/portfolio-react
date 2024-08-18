@@ -12,6 +12,15 @@ import br from "@/assets/img/br.svg";
 import en from "@/assets/img/us.svg";
 import fr from "@/assets/img/fr.svg";
 import Image from "next/image";
+import { GrLanguage } from "react-icons/gr";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 export const FloatingNav = ({
   navItems,
@@ -91,17 +100,30 @@ export const FloatingNav = ({
             </span>
           </Link>
         ))}
-
-        <Link href="/pt">
-          <Image src={br} alt="pt" className="h-6 w-6" />
-        </Link>
-        <Link href="/en">
-          <Image src={en} alt="en" className="h-6 w-6" />
-        </Link>
-        <Link href="/fr">
-          <Image src={fr} alt="fr" className="h-6 w-6" />
-        </Link>
-       
+        
+        <DropdownMenu modal={false}>
+          <DropdownMenuTrigger className="border-2 border-slate-700 p-1 rounded-lg text-slate-400 hover:text-white hover:border-slate-600 transition-all">
+            <GrLanguage />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="z-[100000]">
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>
+              <Link href="/pt">
+                <Image src={br} alt="pt" className="h-6 w-6" />
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link href="/en">
+                <Image src={en} alt="en" className="h-6 w-6" />
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuItem>
+              <Link href="/fr">
+                <Image src={fr} alt="fr" className="h-6 w-6" />
+              </Link>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
       </motion.div>
     </AnimatePresence>
   );
