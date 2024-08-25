@@ -1,18 +1,11 @@
 import { ProjectCard } from "./ui/projectcard";
 import { GetProjects } from "@/components/project";
-import {useTranslations} from 'next-intl';
 
 const Projects = () => {
-  const t = useTranslations('Projects');
   const projects = GetProjects();
   return (
-    <div className="pb-8">
-      <h1 className="text-center text-3xl font-bold " id="projects">
-        {t('Title')}
-      </h1>
-      <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10 pb-4">
-        {t('Description')}</p>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 px-8 xl:px-[300px] pt-10">
+    <div className="pb-8  bg-gradient-to-br from-slate-900 to-purple-950 p-10 rounded-2xl">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10">
         {projects.map((project, index) => (
           <ProjectCard
             key={index}
