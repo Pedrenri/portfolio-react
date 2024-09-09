@@ -20,10 +20,13 @@ import loja3 from "../assets/img/lojaecommerce-3.png";
 import loja4 from "../assets/img/lojaecommerce-4.png";
 import { useTranslations } from "next-intl";
 
-export const GetProjects = () => {
-  const t = useTranslations("Projects");
+// 3D
 
-  return [
+
+export const GetProjects = (tab: any) => {
+  const t = useTranslations(`Projects.${tab.tab}`);
+
+  const web = [
     {
       title: t("Title1"),
       description: t("Description1"),
@@ -62,4 +65,21 @@ export const GetProjects = () => {
       githubURL: "https://github.com/Pedrenri/ecommerce-admin",
     },
   ];
+
+  const _3d = [
+    {
+      title: t("Title1"),
+      images: [CoverW2],
+      hrefURL: "https://sigmahardware.netlify.app",
+    }
+  ]
+
+  if (tab.tab == 'web') {
+    return web;
+  } else if (tab.tab == '3D') {
+    return _3d;
+  } else {
+    return [];
+  }
+
 };

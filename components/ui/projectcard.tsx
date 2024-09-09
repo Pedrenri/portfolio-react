@@ -8,14 +8,15 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/styles.css";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Link from "next/link";
-import {useTranslations} from 'next-intl';
+import { useTranslations } from "next-intl";
 
 interface ProjectCardProps {
   title: string;
-  description: string;
+  description?: string;
   images: StaticImageData[];
   hrefURL?: string;
   githubURL?: string;
+  tab: any;
 }
 
 type ThumbnailRef = {
@@ -29,7 +30,7 @@ type ThumbnailRef = {
 export function ProjectCard(props: ProjectCardProps) {
   const { title, description, images, hrefURL, githubURL } = props;
   const [currentSlide, setCurrentSlide] = useState(0);
-  const t = useTranslations('Projects');
+  const t = useTranslations(`Projects.${props.tab}`);
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
@@ -88,18 +89,18 @@ export function ProjectCard(props: ProjectCardProps) {
           <h1 className="font-bold text-xl text-white mb-2 relative z-50">
             {title}
           </h1>
-
-          <p className="font-normal text-base text-slate-500 mb-4 relative z-50 text-justify">
-            {description}
-          </p>
-          
+          {description && (
+            <p className="font-normal text-base text-slate-500 mb-4 relative z-50 text-justify">
+              {description}
+            </p>
+          )}
         </div>
 
         <div className="mt-auto flex flex-row justify-between w-full">
           {hrefURL && (
             <Link href={hrefURL} target="_blank">
               <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-                {t('Visit')}
+                {t("Visit")}
               </button>
             </Link>
           )}
@@ -129,7 +130,7 @@ export function ProjectCard(props: ProjectCardProps) {
                         fill="white"
                       />
                     </svg>
-                    {t('Github')}
+                    {t("Github")}
                   </span>
                   <svg
                     fill="none"
@@ -152,8 +153,6 @@ export function ProjectCard(props: ProjectCardProps) {
             </Link>
           )}
         </div>
-
-        
 
         {/* Meaty part - Meteor effect */}
         <Meteors number={20} />

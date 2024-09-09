@@ -7,23 +7,18 @@ interface Props {}
 
 function Projects_tabs(props: Props) {
   const {} = props;
-  const t = useTranslations("Projects");
+  const t = useTranslations(`Projects`);
 
   const tabs = [
     {
-      title: "Web",
+      title: "Dev",
       value: "web",
-      content: <Projects />,
+      content: <Projects tab="web" />,
     },
     {
       title: "3D",
       value: "3D",
-      content: (
-        <div className="w-full overflow-hidden relative rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-tl from-slate-900 to-purple-950">
-          <h1>Ops...</h1>
-          <span>Não há nada aqui ainda...</span>
-        </div>
-      ),
+      content: <Projects tab="3D" />,
     },
   ];
 
