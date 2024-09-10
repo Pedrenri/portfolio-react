@@ -31,7 +31,7 @@ const Projects = (tab: any) => {
               </div>
             )}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-10">
-            {projects.map((project, index) => (
+            {projects.map((project : any, index : any) => (
               <ProjectCard
                 key={index}
                 title={project.title}
