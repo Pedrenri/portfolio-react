@@ -14,6 +14,8 @@
     "Description": "Aqui estão algumas das habilidades que possuo."
   },
   "Projects": {
+    "Title": "Projetos",
+    "Description": "Aqui estão alguns dos meus projetos.",
     "web": {
       "Title": "Desenvolvimento",
       "Description": "Aqui estão alguns dos projetos que desenvolvi.",
@@ -38,7 +40,19 @@
     "3D": {
       "Visit": "Entre em contato",
       "Title": "Modelos e impressões 3D",
-      "Title1":"Gato Bebê"
+      "Description": "Todos os modelos que não são de minha autoria são licenciados e têm a venda permitida.",
+      "Title1": "Gatinho Bebê",
+      "Title2": "Coelho Bebê",
+      "Title3": "Urso Bebê",
+      "Title4": "Triceratops Bebê",
+      "Title5": "Gecko Bebê",
+      "Title6": "Golfinho Bebê",
+      "Title7": "Cavalo Bebê",
+      "Title8": "Foca Bebê",
+      "Title9": "Tubarão Bebê",
+      "Title10": "Aranha Bebê",
+      "Title11": "Camaleão Bebê",
+      "Title12": "Polvo Bebê"
     }
   },
   "Contact": {

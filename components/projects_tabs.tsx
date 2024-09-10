@@ -2,7 +2,7 @@ import React from "react";
 import { Tabs } from "./ui/tabs";
 import Projects from "./projects";
 import { useTranslations } from "next-intl";
-
+import zou from "../assets/img/zou.png";
 interface Props {}
 
 function Projects_tabs(props: Props) {
@@ -11,15 +11,16 @@ function Projects_tabs(props: Props) {
 
   const tabs = [
     {
-      title: "Dev",
-      value: "web",
-      content: <Projects tab="web" />,
-    },
-    {
       title: "3D",
       value: "3D",
       content: <Projects tab="3D" />,
     },
+    {
+      title: "Dev",
+      value: "web",
+      content: <Projects tab="web" />,
+    },
+    
   ];
 
   return (
@@ -30,7 +31,7 @@ function Projects_tabs(props: Props) {
       <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
         {t("Description")}
       </p>
-      <div className="h-[210rem] sm:h-[220rem] md:h-[110rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start my-20">
+      <div className="h-[395rem] sm:h-[425rem] md:h-[180rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start my-20">
         <Tabs tabs={tabs} />
       </div>
     </>

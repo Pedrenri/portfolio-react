@@ -22,6 +22,18 @@ import { useTranslations } from "next-intl";
 
 // 3D
 
+import bunny from "../assets/img/3d/baby_bunny.jpg"
+import cat from "../assets/img/3d/baby_cat.png"
+import bear from "../assets/img/3d/baby_bear.png"
+import trike from "../assets/img/3d/baby_trike.png"
+import gecko from "../assets/img/3d/baby_gecko.jpg"
+import dolphin from "../assets/img/3d/baby_dolphin.png"
+import horse from "../assets/img/3d/baby_horse.jpg"
+import seal from "../assets/img/3d/baby_seal.png"
+import shark from "../assets/img/3d/baby_shark.png"
+import spider from "../assets/img/3d/baby_spider.jpg"
+import chameleon from "../assets/img/3d/baby_chameleon.png"
+import octopus from "../assets/img/3d/baby_octopus.png"
 
 export const GetProjects = (tab: any) => {
   const t = useTranslations(`Projects.${tab.tab}`);
@@ -69,9 +81,64 @@ export const GetProjects = (tab: any) => {
   const _3d = [
     {
       title: t("Title1"),
-      images: [CoverW2],
-      hrefURL: "https://sigmahardware.netlify.app",
-    }
+      images: [cat],
+      hrefURL: "#contact",
+    },
+    {
+      title: t("Title2"),
+      images: [bunny],
+      hrefURL: "#contact",
+    },
+    {
+      title: t("Title3"),
+      images: [bear],
+      hrefURL: "#contact",
+    },
+    {
+      title: t("Title4"),
+      images: [trike],
+      hrefURL: "#contact",
+    },
+    {
+      title: t("Title5"),
+      images: [gecko],
+      hrefURL: "#contact",
+    },
+    {
+      title: t("Title6"),
+      images: [dolphin],
+      hrefURL: "#contact",
+    },
+    {
+      title: t("Title7"),
+      images: [horse],
+      hrefURL: "#contact",
+    },
+    {
+      title: t("Title8"),
+      images: [seal],
+      hrefURL: "#contact",
+    },
+    {
+      title: t("Title9"),
+      images: [shark],
+      hrefURL: "#contact",
+    },
+    {
+      title: t("Title10"),
+      images: [spider],
+      hrefURL: "#contact",
+    },
+    {
+      title: t("Title11"),
+      images: [chameleon],
+      hrefURL: "#contact",
+    },
+    {
+      title: t("Title12"),
+      images: [octopus],
+      hrefURL: "#contact",
+    },
   ]
 
   if (tab.tab == 'web') {
