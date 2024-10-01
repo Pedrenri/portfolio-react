@@ -20,7 +20,6 @@ function Projects_tabs(props: Props) {
       value: "web",
       content: <Projects tab="web" />,
     },
-    
   ];
 
   return (
@@ -31,7 +30,7 @@ function Projects_tabs(props: Props) {
       <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
         {t("Description")}
       </p>
-      <div className="h-[395rem] sm:h-[425rem] md:h-[180rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start my-20">
+      <div className="h-[245rem] xsm:h-[265rem] msm:h-[275rem] lgsm:h-[285rem] 2lgsm:h-[300rem] 3lgsm:h-[325rem] 4lgsm:h-[350rem] 5lgsm:h-[380rem] sm:h-[425rem] md:h-[180rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full items-start justify-start my-20">
         <Tabs tabs={tabs} />
       </div>
     </>

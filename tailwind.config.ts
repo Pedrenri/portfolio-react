@@ -14,6 +14,16 @@ const config: Config = {
   ],
   theme: {
     extend: {
+        screens: {
+          'xsm': '320px',
+          'msm': '375px',
+          'lgsm': '400px',
+          '2lgsm': '430px',
+          '3lgsm': '470px',
+          '4lgsm': '530px',
+          '5lgsm': '580px',
+          '3xl': '1600px',
+        },
       animation: {
         "meteor-effect": "meteor 5s linear infinite",
         shimmer: "shimmer 2s linear infinite",
