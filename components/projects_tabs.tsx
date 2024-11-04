@@ -23,7 +23,7 @@ function Projects_tabs(props: Props) {
   ];
 
   return (
-    <div>
+    <>
       <h1 className="text-center text-3xl font-bold">
         {t("Title")}
       </h1>
