@@ -9,7 +9,7 @@ const Projects = (tab: any) => {
   const t = useTranslations(`Projects.${tab.tab}`);
 
   return (
-    <div className="pb-8  bg-gradient-to-br from-slate-900 to-purple-950 p-10 rounded-2xl" id="projects">
+    <div className="pb-8  bg-gradient-to-br from-slate-900 to-purple-950 p-10 rounded-2xl" >
       {projects.length == 0 && (
         <div className="font-bold text-white text-4xl">Oops...</div>
       )}
