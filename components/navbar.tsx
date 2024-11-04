@@ -26,6 +26,11 @@ const NavBar = () => {
       link: "#projects",
       icon: <GrProjects className="h-5 w-5 text-neutral-500 dark:text-white" />,
     },
+    {
+      name: t('Contact'),
+      link: "#contact",
+      icon: <GrProjects className="h-5 w-5 text-neutral-500 dark:text-white" />,
+    },
   ];
 
   return <FloatingNav navItems={navItems} />;
