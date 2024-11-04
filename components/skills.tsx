@@ -7,9 +7,9 @@ import {useTranslations} from 'next-intl';
 export function Skills() {
   const t = useTranslations('Skills');
   return (
-    <div style={{ backgroundColor: "#06000d" }} className="mb-20 py-16">
+    <div style={{ backgroundColor: "#06000d" }} className="mb-20 py-16" id="skills">
       <TracingBeam>
-        <h1 className="text-center pt-16 text-3xl font-bold" id="skills">
+        <h1 className="text-center pt-16 text-3xl font-bold" >
         {t('Title')}
         </h1>
         <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10 pb-4">
