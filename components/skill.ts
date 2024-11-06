@@ -16,50 +16,62 @@ export const skills = [
     {
       title: "JavaScript",
       image: js,
+      desc: "Web (FrontEnd & Backend)"
     },
     {
       title: "TypeScript",
       image: ts,
+      desc : "Web (FrontEnd & Backend)"
     },
     {
       title: "Next",
       image: next,
+      desc: "Web (FrontEnd & Backend)"
     },
     {
       title: "React",
       image: react,
+      desc: "Native & Web"
     },
     {
       title: "Node",
       image: node,
+      desc: "Web (Backend)"
     },
     {
       title: "PHP",
       image: php,
+      desc: "Web (Backend)"
     },
     {
       title: "Laravel",
       image: laravel,
+      desc: "Web (Backend)"
     },
     {
       title: "SQL",
       image: sql,
+      desc: "DB"
     },
     {
       title: "MongoDB",
       image: mongodb,
+      desc: "DB"
     },
     {
       title: "Python",
       image: python,
+      desc: ""
     },
     {
       title: "PowerBI",
       image: powerbi,
+      desc: ""
     },
     {
       title: "Docker",
       image: docker,
+      desc: "Containerization"
     },
   ];
 
