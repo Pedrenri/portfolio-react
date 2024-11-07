@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+//import { Inter } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 import {NextIntlClientProvider} from 'next-intl';
@@ -7,7 +7,6 @@ import {getMessages} from 'next-intl/server';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Pedro Henri",
@@ -33,7 +32,7 @@ export default async function RootLayout({
       <head>
         <link rel="icon" href="icon.png" />
       </head>
-      <body className={inter.className}>
+      <body>
         {children}
         <SpeedInsights />
       </body>

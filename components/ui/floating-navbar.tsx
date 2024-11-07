@@ -72,7 +72,7 @@ export const FloatingNav = ({
         }}
         animate={{
           borderRadius: atTop || isMobile ? "0" : "50rem",
-          width: atTop || isMobile ? "100%" : "45%",
+          width: atTop || isMobile ? "100%" : "58%",
           paddingTop: atTop || isMobile ? "2rem" : "1.5rem",
           paddingBottom: atTop || isMobile ? "2rem" : "1.5rem",
           y: !atTop && !isMobile ? 15 : 0,
@@ -81,7 +81,7 @@ export const FloatingNav = ({
           duration: 0.2,
         }}
         className={cn(
-          "flex fixed inset-x-0 mx-auto border-b-1 border-slate-800 bg-slate-900/[0.7] backdrop-blur-md z-[5000] px-16 items-center justify-center space-x-4",
+          "flex fixed inset-x-0 mx-auto border-b-1 border-slate-800 bg-gray-900/[0.7] backdrop-blur-md z-[5000] px-16 items-center justify-center space-x-4",
           className,
           !atTop && !isMobile ? "border-2 border-white/[0.01]" : ""
         )}
@@ -100,7 +100,7 @@ export const FloatingNav = ({
             </span>
           </Link>
         ))}
-        
+
         <DropdownMenu modal={false}>
           <DropdownMenuTrigger className="border-2 border-slate-700 p-1 rounded-lg text-slate-400 hover:text-white hover:border-slate-600 transition-all">
             <GrLanguage />
@@ -109,17 +109,23 @@ export const FloatingNav = ({
             <DropdownMenuSeparator />
             <DropdownMenuItem>
               <Link href="/pt">
-                <Image src={br} alt="pt" className="h-6 w-6" />
+                {/*                 <Image src={br} alt="pt" className="h-6 w-6" />
+                 */}{" "}
+                🇧🇷
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <Link href="/en">
-                <Image src={en} alt="en" className="h-6 w-6" />
+                {/*                 <Image src={en} alt="en" className="h-6 w-6" />
+                 */}{" "}
+                🇺🇸{" "}
               </Link>
             </DropdownMenuItem>
             <DropdownMenuItem>
               <Link href="/fr">
-                <Image src={fr} alt="fr" className="h-6 w-6" />
+                {/*                 <Image src={fr} alt="fr" className="h-6 w-6" />
+                 */}{" "}
+                🇫🇷{" "}
               </Link>
             </DropdownMenuItem>
           </DropdownMenuContent>

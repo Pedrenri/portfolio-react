@@ -20,6 +20,16 @@
   }
 }
 
+@font-face {
+  font-family: "EquipSlab W03 Medium";
+  src: url("https://db.onlinewebfonts.com/t/990f36d7dc0e9bf3a4c73ea00831644e.eot");
+  src: url("https://db.onlinewebfonts.com/t/990f36d7dc0e9bf3a4c73ea00831644e.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/990f36d7dc0e9bf3a4c73ea00831644e.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/990f36d7dc0e9bf3a4c73ea00831644e.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/990f36d7dc0e9bf3a4c73ea00831644e.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/990f36d7dc0e9bf3a4c73ea00831644e.svg#EquipSlab W03 Medium")format("svg");
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -48,10 +58,21 @@ html {
   scrollbar-color: #8C00D6 #000000;
 }*/
 
+.slick-track {
+  display: flex !important;
+  align-items: center;
+}
+.slick-track .slick-slide {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Chrome, Edge and Safari */
 *::-webkit-scrollbar {
   height: 4px;
-  width: 4px;
+  width: 2px;
 }
 *::-webkit-scrollbar-track {
   border-radius: 5px;
@@ -68,14 +89,14 @@ html {
 
 *::-webkit-scrollbar-thumb {
   border-radius: 5px;
-  background-color: #8C00D6;
+  background-color: #FFF;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background-color: #8C00D6;
+  background-color: #FFF;
 }
 
 *::-webkit-scrollbar-thumb:active {
-  background-color: #8C00D6;
+  background-color: #FFF;
 }
 

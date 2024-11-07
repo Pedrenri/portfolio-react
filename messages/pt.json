@@ -6,8 +6,13 @@
     "Contact": "Contato"
   },
   "Banner": {
-    "Description": "DESENVOLVEDOR FULL STACK",
-    "Dev": "DESENVOLVEDOR"
+    "Description": "DEV & DESIGNER",
+    "design": "prototipo",
+    "dev": "desenvolvo",
+    "proj": "projeto",
+    "fix": "corrijo",
+    "Hello": "Olá!🦇 Eu ",
+    "systems": "soluções e sistemas."
   },
   "Skills": {
     "Title": "Habilidades",

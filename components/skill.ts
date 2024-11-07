@@ -11,6 +11,7 @@ import next from "../assets/img/next.webp";
 import laravel from "../assets/img/laravel.png";
 import sql from "../assets/img/sql.png";
 import docker from "../assets/img/docker.png";
+import vue from "../assets/img/vue.png";
 
 export const skills = [
     {
@@ -29,14 +30,19 @@ export const skills = [
       desc: "Web (FrontEnd & Backend)"
     },
     {
-      title: "React",
-      image: react,
-      desc: "Native & Web"
-    },
-    {
       title: "Node",
       image: node,
       desc: "Web (Backend)"
+    },
+    {
+      title: "Vue",
+      image: vue,
+      desc: "Web (FrontEnd & Backend)"
+    },
+    {
+      title: "React",
+      image: react,
+      desc: "Native & Web"
     },
     {
       title: "PHP",
@@ -49,6 +55,11 @@ export const skills = [
       desc: "Web (Backend)"
     },
     {
+      title: "Python",
+      image: python,
+      desc: ""
+    },
+    {
       title: "SQL",
       image: sql,
       desc: "DB"
@@ -57,12 +68,7 @@ export const skills = [
       title: "MongoDB",
       image: mongodb,
       desc: "DB"
-    },
-    {
-      title: "Python",
-      image: python,
-      desc: ""
-    },
+    }, 
     {
       title: "PowerBI",
       image: powerbi,
@@ -72,6 +78,11 @@ export const skills = [
       title: "Docker",
       image: docker,
       desc: "Containerization"
+    },
+    {
+      title: "Photoshop",
+      image: ps,
+      desc: "Design"
     },
   ];
 

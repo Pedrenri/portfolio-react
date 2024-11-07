@@ -3,49 +3,17 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { LampContainer } from "./ui/lamp";
 import Socials from "./ui/socials";
-import {useTranslations} from 'next-intl';
+import { useTranslations } from "next-intl";
+import { FlipWords } from "./ui/flip-words";
 
 export function Banner() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 500);
-  const t = useTranslations('Banner');
-  const toRotate = ["PEDRO HENRI", t("Dev"), "FULLSTACK", "DESIGNER"];
+  const t = useTranslations("Banner");
+  const toRotate = [t("design"), t("dev"), t("proj"), t("fix")];
 
-  useEffect(() => {
-    const ticker = setInterval(() => {
-      tick();
-    }, delta);
-  
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text, delta, loopNum]);
-
-  const tick = () => {
-    const i = loopNum % toRotate.length;
-    const fullText = toRotate[i];
-
-    if (isDeleting && text === "") {
-      setIsDeleting(false);
-      setLoopNum((prevLoopNum) => prevLoopNum + 1);
-      setDelta(300);
-      return;
-    }
-
-    const updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    setDelta(isDeleting ? 100 : 200);
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-    }
-  };
   return (
     <div id="home">
       <LampContainer>
@@ -54,25 +22,24 @@ export function Banner() {
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl xl:text-8xl text-center font-bold"
+            className="text-4xl md:text-6xl xl:text-8xl text-center font-bold select-none"
           >
-            <span className="txt-rotate">
-              <span className="wrap">
-                {text.length > 0 ? text : <>&nbsp;</>}
-              </span>
-            </span>
+            {t('Hello')}
+            <FlipWords words={toRotate} /> 
+            <br />
+            {t('systems')}
           </motion.h1>
           <motion.p
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ delay: 0.25 }}
-            className="text-2xl md:text-xl text-center banner-sub"
+            className="text-xl md:text-xl text-center banner-sub mt-4"
+            id="skills"
           >
-            {t('Description')}
+            {t("Description")}
           </motion.p>
         </div>
         <Socials email />
-
       </LampContainer>
     </div>
   );
