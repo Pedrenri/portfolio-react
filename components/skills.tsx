@@ -1,6 +1,4 @@
 "use client";
-import { HoverEffect } from "@/components/ui/card-hover-effect";
-import { TracingBeam } from "./ui/tracing-beam";
 import skills from "@/components/skill";
 import { useTranslations } from "next-intl";
 import Slider from "react-slick";
