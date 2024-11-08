@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div className="h-40 flex items-center justify-evenly">
       <h1 className="text-2xl">
-        PEDRO<span className="text-purple-600">|</span><span className="font-bold">HENRI</span>
+        PEDRO<span className="text-orange-500">|</span><span className="font-bold">HENRI</span>
       </h1>
       <Curriculum />
       <Socials email={false} />
