@@ -49,7 +49,7 @@ export function Skills() {
   return (
     <div className="pb-32">
       
-      <div className="max-w-[100rem] m-auto mt-12">
+      <div className="max-w-[100rem] m-auto mt-12" id="projects">
         <Slider {...settings}>
           {skills.map((skill, index) => (
             <motion.div

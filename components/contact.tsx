@@ -91,7 +91,7 @@ export const Contact = memo(() => {
             <div className="col-span-2  z-50">
               <div id="status" className="flex items-center justify-between">
                 <button
-                id="projects"
+                
                   type="submit"
                   className="py-2 px-4 border-gray-500 text-gray-500 hover:border-orange-500 hover:text-gray-300 border-2 transition-all"
                 >
