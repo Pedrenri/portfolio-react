@@ -36,117 +36,60 @@ import chameleon from "../assets/img/3d/baby_chameleon.png"
 import octopus from "../assets/img/3d/baby_octopus.png"
 
 export const GetProjects = (tab: any) => {
-  const t = useTranslations(`Projects.${tab.tab}`);
+  const t = useTranslations(`Projects.web`);
 
-  const web = [
+
+  const cards = [
     {
       title: t("Title1"),
-      description: t("Description1"),
-      images: [webd21, webd22, webd23],
-      hrefURL: "https://henrisgym.netlify.app",
-    },
+      description: t("Language1"),
+      src: webd21, // Assumindo que "src" deve ser uma imagem
+      ctaText: "Visitar",
+      ctaLink: "https://henrisgym.netlify.app",
+      fullDesc: t("Description1"),
+    }, 
     {
       title: t("Title2"),
-      description: t("Description2"),
-      images: [webd11, webd12, webd13],
-      hrefURL: "https://sigmahardware.netlify.app",
-      githubURL: "https://github.com/Pedrenri/sigma-hardware-site",
+      description: t("Language2"),
+      src: webd11, // Escolhendo uma imagem como principal
+      ctaText: "Visitar",
+      ctaLink: "https://sigmahardware.netlify.app",
+      fullDesc: t("Description2"),
+
     },
     {
       title: t("Title3"),
-      description: t("Description3"),
-      images: [port1, port2, port3],
-      githubURL: "https://github.com/Pedrenri/portfolio-react",
+      description: t("Language3"),
+      src: port1, // Escolhendo uma imagem como principal
+      ctaText: "Visitar",
+      ctaLink: "https://github.com/Pedrenri/portfolio-react",
+      fullDesc: t("Description3"),
     },
     {
       title: t("Title4"),
-      description: t("Description4"),
-      images: [petmatch1, petmatch2, petmatch3],
-      githubURL: "https://github.com/Pedrenri/pit-projeto",
+      description: t("Language4"),
+      src: petmatch1, // Escolhendo uma imagem como principal
+      ctaText: "Visitar",
+      ctaLink: "https://github.com/Pedrenri/pit-projeto",
+      fullDesc: t("Description4"),
     },
     {
       title: t("Title5"),
-      description: t("Description5"),
-      images: [loja1, loja2, loja3, loja4],
-      githubURL: "https://github.com/Pedrenri/ecommerce-store",
+      description: t("Language5"),
+      src: loja1, // Escolhendo uma imagem como principal
+      ctaText: "Visitar",
+      ctaLink: "https://github.com/Pedrenri/ecommerce-store",
+      fullDesc: t("Description5"),
     },
     {
       title: t("Title6"),
-      description: t("Description6"),
-      images: [adm1, adm2, adm3],
-      githubURL: "https://github.com/Pedrenri/ecommerce-admin",
+      description: t("Language6"),
+      src: adm1, // Escolhendo uma imagem como principal
+      ctaText: "Visitar",
+      ctaLink: "https://github.com/Pedrenri/ecommerce-admin",
+      fullDesc: t("Description6"),
     },
   ];
 
-  const _3d = [
-    {
-      title: t("Title1"),
-      images: [cat],
-      hrefURL: "#contact",
-    },
-    {
-      title: t("Title2"),
-      images: [bunny],
-      hrefURL: "#contact",
-    },
-    {
-      title: t("Title3"),
-      images: [bear],
-      hrefURL: "#contact",
-    },
-    {
-      title: t("Title4"),
-      images: [trike],
-      hrefURL: "#contact",
-    },
-    {
-      title: t("Title5"),
-      images: [gecko],
-      hrefURL: "#contact",
-    },
-    {
-      title: t("Title6"),
-      images: [dolphin],
-      hrefURL: "#contact",
-    },
-    {
-      title: t("Title7"),
-      images: [horse],
-      hrefURL: "#contact",
-    },
-    {
-      title: t("Title8"),
-      images: [seal],
-      hrefURL: "#contact",
-    },
-    {
-      title: t("Title9"),
-      images: [shark],
-      hrefURL: "#contact",
-    },
-    {
-      title: t("Title10"),
-      images: [spider],
-      hrefURL: "#contact",
-    },
-    {
-      title: t("Title11"),
-      images: [chameleon],
-      hrefURL: "#contact",
-    },
-    {
-      title: t("Title12"),
-      images: [octopus],
-      hrefURL: "#contact",
-    },
-  ]
-
-  if (tab.tab == 'web') {
-    return web;
-  } else if (tab.tab == '3D') {
-    return _3d;
-  } else {
-    return [];
-  }
-
+  return cards
 };

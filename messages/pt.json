@@ -27,19 +27,25 @@
       "Visit": "Ver Projeto",
       "Github": "Ver no Github",
       "Title1": "Henri's",
+      "Language1": "HTML, CSS, JS",
       "Description1": "Um dos primeiros projetos por mim desenvolvidos, com técnicas iniciantes. O trabalho deveria ser uma loja, contendo página de login, carrinho e suporte.",
       "Title2": "Sigma",
+      "Language2": "React",
       "Description2": "Projeto de escola em que precisávamos desenvolver um site contendo carrosséis, modo escuro e diversas páginas. Deveria ser uma simulação de uma loja ou fabricantes de peças de computadores. Foi meu primeiro projeto em React",
       "Title3": "Primeiro Portfólio",
+      "Language3": "React",
       "Description3": "Iniciado como um projeto de escola, o meu primeiro portfólio evoluiu para a página de profissional em que você se encontra agora! Foi meu segundo projeto em React puro.",
 
       "Title4": "PetMatch",
+      "Language4": "React, NodeJs e MongoDB",
       "Description4": "Projeto de escola em que precisávamos desenvolver um site contendo carrosséis, modo escuro e diversas páginas. Deveria ser uma simulação de uma loja ou fabricantes de peças de computadores. Foi meu primeiro projeto em React",
 
       "Title5": "E-commerce - Loja",
+      "Language5": "NextJS, TypeScript",
       "Description5": "Projeto FullStack feito com NextJS com TypeScript, incorporando Tailwind, ShadCN e Stripe, com banco de dados MySQL.",
 
       "Title6": "Ecommerce - Admin",
+      "Language6": "NextJS, TypeScript",
       "Description6": "ERP feito em NextJS com TypeScript do projeto de Ecommerce, oferecendo a gestão completa da loja. Foram utilizadas bibliotecas como Clerk, Cloudinary e ShadCN."
     },
     "3D": {
