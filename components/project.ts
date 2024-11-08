@@ -1,23 +1,9 @@
 import webd11 from "../assets/img/webdev1-1.png";
-import webd12 from "../assets/img/webdev1-2.png";
-import webd13 from "../assets/img/webdev1-3.png";
-import CoverW2 from "../assets/img/coverW2.png";
 import webd21 from "../assets/img/webdev2-1.png";
-import webd22 from "../assets/img/webdev2-2.png";
-import webd23 from "../assets/img/webdev2-3.png";
 import port1 from "../assets/img/port1.png";
-import port2 from "../assets/img/port2.png";
-import port3 from "../assets/img/port3.png";
 import petmatch1 from "../assets/img/petmatch1.png";
-import petmatch2 from "../assets/img/petmatch2.png";
-import petmatch3 from "../assets/img/petmatch3.png";
 import adm1 from "../assets/img/admecommerce-1.png";
-import adm2 from "../assets/img/admecommerce-2.png";
-import adm3 from "../assets/img/admecommerce-3.png";
 import loja1 from "../assets/img/lojaecommerce-1.png";
-import loja2 from "../assets/img/lojaecommerce-2.png";
-import loja3 from "../assets/img/lojaecommerce-3.png";
-import loja4 from "../assets/img/lojaecommerce-4.png";
 import { useTranslations } from "next-intl";
 
 // 3D

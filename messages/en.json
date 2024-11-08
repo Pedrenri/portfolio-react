@@ -14,10 +14,6 @@
     "Hello": "Hi!🦇 I ",
     "systems": "solutions and systems."
   },
-  "Skills": {
-    "Title": "Skills",
-    "Description": "Some of my skills."
-  },
   "Projects": {
     "Title": "Projects",
     "Description": "Here are some of my projects.",
@@ -27,16 +23,22 @@
       "Visit": "View Project",
       "Github": "View on Github",
       "Title1": "Henri's",
+      "Language1": "HTML + CSS + JS",
       "Description1": "One of the first projects I developed, using beginner techniques. The task was to create a store, with a login page, shopping cart, and support.",
       "Title2": "Sigma",
+      "Language2": "ReactJs",
       "Description2": "School project where we had to develop a site with carousels, dark mode, and several pages. It was supposed to simulate a store or computer parts manufacturer. It was my first React project.",
       "Title3": "First Portfolio",
+      "Language3": "ReactJS + TailwindCSS",
       "Description3": "Started as a school project, my first portfolio evolved into the professional page you're on right now! It was my second pure React project.",
       "Title4": "PetMatch",
+      "Language4": "React + NodeJs + MongoDB",
       "Description4": "School project where we had to develop a site with carousels, dark mode, and several pages. It was supposed to simulate a store or computer parts manufacturer. It was my first React project.",
       "Title5": "E-commerce - Store",
+      "Language5": "NextJS + TypeScript + TailwindCSS",
       "Description5": "FullStack project made with NextJS and TypeScript, incorporating Tailwind, ShadCN, and Stripe, with a MySQL database.",
       "Title6": "Ecommerce - Admin",
+      "Language6": "NextJS + TypeScript + NodeUI",
       "Description6": "ERP made with NextJS and TypeScript for the E-commerce project, offering complete store management. Libraries like Clerk, Cloudinary, and ShadCN were used."
     },
     "3D": {

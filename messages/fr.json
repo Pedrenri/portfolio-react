@@ -14,10 +14,6 @@
     "Hello": "Salut!🦇 Je ",
     "systems": "solutions et systèmes."
   },
-  "Skills": {
-    "Title": "Compétences",
-    "Description": "Voici quelques-unes des compétences que je possède."
-  },
   "Projects": {
     "Title": "Projets",
     "Description": "Voici quelques-uns de mes projets.",
@@ -27,16 +23,22 @@
       "Visit": "Voir le projet",
       "Github": "Voir sur Github",
       "Title1": "Henri's",
+      "Language1": "HTML + CSS + JS",
       "Description1": "L'un des premiers projets que j'ai développés, utilisant des techniques de débutant. Le travail devait être un magasin avec une page de connexion, un panier et un support.",
       "Title2": "Sigma",
+      "Language2": "ReactJs",
       "Description2": "Projet scolaire dans lequel nous devions développer un site avec des carrousels, un mode sombre et plusieurs pages. Cela devait simuler un magasin ou un fabricant de pièces d'ordinateurs. C'était mon premier projet en React.",
       "Title3": "Premier Portfolio",
+      "Language3": "ReactJS + TailwindCSS",
       "Description3": "Commencé comme un projet scolaire, mon premier portfolio a évolué vers la page professionnelle sur laquelle vous vous trouvez maintenant ! C'était mon deuxième projet en React pur.",
       "Title4": "PetMatch",
+      "Language4": "React + NodeJs + MongoDB",
       "Description4": "Projet scolaire dans lequel nous devions développer un site avec des carrousels, un mode sombre et plusieurs pages. Cela devait simuler un magasin ou un fabricant de pièces d'ordinateurs. C'était mon premier projet en React.",
       "Title5": "E-commerce - Boutique",
+      "Language5": "NextJS + TypeScript + TailwindCSS",
       "Description5": "Projet FullStack réalisé avec NextJS et TypeScript, incorporant Tailwind, ShadCN et Stripe, avec une base de données MySQL.",
       "Title6": "Ecommerce - Admin",
+      "Language6": "NextJS + TypeScript + NodeUI",
       "Description6": "ERP réalisé en NextJS avec TypeScript pour le projet d'E-commerce, offrant une gestion complète de la boutique. Des bibliothèques telles que Clerk, Cloudinary et ShadCN ont été utilisées."
     },
     "3D": {

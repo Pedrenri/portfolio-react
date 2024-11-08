@@ -7,7 +7,7 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
 import { GetProjects } from "../project";
 
 export function ExpandableCardDemo() {
-    const cards = GetProjects("web");
+  const cards = GetProjects("web");
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
     null
   );
@@ -48,36 +48,14 @@ export function ExpandableCardDemo() {
       <AnimatePresence>
         {active && typeof active === "object" ? (
           <div className="fixed inset-0  grid place-items-center z-[100]">
-            <motion.button
-              key={`button-${active.title}-${id}`}
-              layout
-              initial={{
-                opacity: 0,
-              }}
-              animate={{
-                opacity: 1,
-              }}
-              exit={{
-                opacity: 0,
-                transition: {
-                  duration: 0.05,
-                },
-              }}
-              className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6"
-              onClick={() => setActive(null)}
-            >
-              <CloseIcon />
-            </motion.button>
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
               className="w-full max-w-[500px]  h-2/4 md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden"
             >
-              <motion.div layoutId={`image-${active.title}-${id}`}>
+              <motion.div layoutId={`image-${active.title}-${id}`} >
                 <Image
                   priority
-                  width={200}
-                  height={200}
                   src={active.src}
                   alt={active.title}
                   className="w-full  sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
@@ -105,10 +83,11 @@ export function ExpandableCardDemo() {
                     layoutId={`button-${active.title}-${id}`}
                     href={active.ctaLink}
                     target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    className="px-4 py-3 text-sm rounded-full font-bold bg-orange-500 text-white"
                   >
                     {active.ctaText}
                   </motion.a>
+                  
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
@@ -132,13 +111,12 @@ export function ExpandableCardDemo() {
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50 dark:hover:bg-neutral-800 rounded-xl cursor-pointer"
+            className="p-4 flex flex-col md:flex-row justify-between items-center hover:bg-neutral-50  rounded-xl cursor-pointer"
           >
-            <div className="flex gap-4 flex-col md:flex-row ">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
+            <div className="flex gap-4 flex-col md:flex-row">
+              <motion.div layoutId={`image-${card.title}-${id}`} className="flex justify-center md:block">
                 <Image
-                  width={100}
-                  height={100}
+                  
                   src={card.src}
                   alt={card.title}
                   className="h-40 w-40 md:h-14 md:w-14 rounded-lg object-cover object-top"
@@ -147,13 +125,13 @@ export function ExpandableCardDemo() {
               <div className="">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-center md:text-left"
+                  className="font-medium text-neutral-800  text-center md:text-left"
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-center md:text-left"
+                  className="text-neutral-600 text-center md:text-left"
                 >
                   {card.description}
                 </motion.p>
@@ -161,7 +139,7 @@ export function ExpandableCardDemo() {
             </div>
             <motion.button
               layoutId={`button-${card.title}-${id}`}
-              className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-green-500 hover:text-white text-black mt-4 md:mt-0"
+              className="px-4 py-2 text-sm rounded-full font-bold bg-gray-800 hover:bg-orange-500 text-white mt-4 md:mt-0"
             >
               {card.ctaText}
             </motion.button>
@@ -173,7 +151,6 @@ export function ExpandableCardDemo() {
 }
 
 export const CloseIcon = () => {
-
   return (
     <motion.svg
       initial={{
@@ -205,5 +182,3 @@ export const CloseIcon = () => {
     </motion.svg>
   );
 };
-
-
