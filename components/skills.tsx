@@ -45,7 +45,6 @@ export function Skills() {
     ],
   };
 
-  const t = useTranslations("Skills");
   return (
     <div className="pb-32">
       

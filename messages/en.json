@@ -72,5 +72,9 @@
     "ButtonSending": "Sending...",
     "MessageSucess": "Message sent successfully!",
     "MessageError": "Error sending message. Please try again later."
+  },
+
+  "CV": {
+    "Download": "Download my resume!"
   }
 }
