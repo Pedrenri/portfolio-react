@@ -12,7 +12,7 @@ export function Skills() {
     adaptativeHeight: true,
     dots: false,
     infinite: true,
-    speed: 3000,
+    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
