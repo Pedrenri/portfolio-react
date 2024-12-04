@@ -20,7 +20,7 @@ export const Contact = memo(() => {
   });
 
   const [result, setResult] = useState("");
-
+ //TODO: adicionar reCaptcha
   const formSubmit = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
     setButtonText(t('ButtonSending'));
