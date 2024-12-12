@@ -2,6 +2,7 @@ import { Banner } from "@/components/banner";
 import { Contact } from "@/components/contact";
 import Footer from "@/components/footer";
 import NavBar from "@/components/navbar";
+import Products from "@/components/products";
 import Projects from "@/components/projects";
 import Projects_tabs from "@/components/projects_tabs";
 import { Skills } from "@/components/skills";
@@ -14,6 +15,7 @@ export default function Home() {
       <Banner />
       <Skills />
       <Projects />
+      <Products />
       <Contact />
       <Footer />
     </div>
