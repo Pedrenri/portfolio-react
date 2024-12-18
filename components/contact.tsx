@@ -75,8 +75,8 @@ export const Contact = memo(() => {
       id="contact"
       className="h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased"
     >
-      <div className="max-w-2xl mx-auto p-4">
-        <h1 className="relative pb-4 z-10 text-3xl md:text-5xl bg-clip-text text-transparent bg-white text-center font-bold">
+      <div className="w-[20rem] sm:w-[30rem] p-4">
+        <h1 className="relative pb-4 z-10 text-3xl md:text-5xl bg-clip-text text-transparent bg-white text-center font-bold w-full">
           {t("Title")}
         </h1>
 
