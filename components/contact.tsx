@@ -46,6 +46,7 @@ export const Contact = memo(() => {
       const response = await emailjs.send(
         "service_h3l8ux1",
         "template_xlxhazk",
+        //@ts-ignore
         toSend,
         "ysp9nvzNcXa5v9dqh"
       );
