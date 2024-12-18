@@ -73,9 +73,13 @@
     "ButtonDefault": "Enviar",
     "ButtonSending": "Enviando...",
     "MessageSucess": "Mensagem enviada com sucesso!",
-    "MessageError": "Erro ao enviar mensagem. Tente novamente mais tarde."
+    "MessageError": "Erro ao enviar mensagem. Tente novamente mais tarde.",
+    "MessageRecaptcha": "Por favor, marque a caixa de verificação."
   },
-
+  "AbMe": {
+    "Title": "Sobre Mim",
+    "Description": "Olá! Me"
+  },
   "CV": {
     "Download": "Baixe meu currículo!"
   }

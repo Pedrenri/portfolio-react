@@ -71,9 +71,13 @@
     "ButtonDefault": "Envoyer",
     "ButtonSending": "Envoi en cours...",
     "MessageSucess": "Message envoyé avec succès !",
-    "MessageError": "Erreur lors de l'envoi du message. Veuillez réessayer plus tard."
+    "MessageError": "Erreur lors de l'envoi du message. Veuillez réessayer plus tard.",
+    "MessageRecaptcha": "Veuillez confirmer que vous n'êtes pas un robot."
   },
-
+  "AbMe": {
+    "Title": "Sobre Mim",
+    "Description": "Olá! Me"
+  },
   "CV": {
     "Download": "Téléchargez mon CV!"
   }

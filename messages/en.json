@@ -71,9 +71,13 @@
     "ButtonDefault": "Send",
     "ButtonSending": "Sending...",
     "MessageSucess": "Message sent successfully!",
-    "MessageError": "Error sending message. Please try again later."
+    "MessageError": "Error sending message. Please try again later.",
+    "MessageRecaptcha": "Please confirm that you are not a robot."
   },
-
+  "AbMe": {
+    "Title": "Sobre Mim",
+    "Description": "Olá! Me"
+  },
   "CV": {
     "Download": "Download my resume!"
   }
