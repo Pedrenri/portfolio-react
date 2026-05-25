@@ -1,79 +1,75 @@
 "use client";
+
 import skills from "@/components/skill";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
-import Slider from "react-slick";
-import React from "react";
-import Image, { StaticImageData } from "next/image";
-import { motion } from "framer-motion";
 
 export function Skills() {
-  const settings = {
-    arrows: false,
-    adaptativeHeight: true,
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    cssEase: "linear",
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
+  const t = useTranslations("Navbar");
 
   return (
-    <div className="pb-32">
-      
-      <div className="max-w-[100rem] m-auto mt-12" id="projects">
-        <Slider {...settings}>
-          {skills.map((skill, index) => (
-            <motion.div
-              key={index}
-              className="px-2 m-auto flex items-center justify-center"
-              whileTap={{
-                scale: 0.95,
-              }}
+    <section
+      id="skills"
+      className="mt-24 xl:mt-52"
+    >
+      <div className="mx-auto max-w-6xl ">
+        <div className="grid gap-16 md:grid-cols-[220px_1fr]">
+          <div>
+            <p
+              className="
+                text-sm
+                font-medium
+                uppercase
+                tracking-[0.25em]
+                text-white/80
+              "
             >
-              <div className="flex gap-x-2 object-contain justify-center items-center">
+              {t("Skills")}
+            </p>
+          </div>
+
+          <div
+            className="
+              grid
+              grid-cols-2
+              gap-x-8
+              gap-y-6
+              sm:grid-cols-3
+              md:grid-cols-4
+            "
+          >
+            {skills.map((skill, index) => (
+              <div
+                key={index}
+                className="
+                  flex items-center gap-3
+                  border-b border-black/5
+                  pb-3
+                  dark:border-white/5
+                "
+              >
                 <Image
                   src={skill.image}
                   alt={skill.title}
-                   className="w-[50px] sm:w-[65px] md:w-[80px] object-contain"
+                  width={18}
+                  height={18}
+                  className="object-contain opacity-80"
                 />
-                <div className="flex flex-col justify-center">
-                  <h3 style={{ color: "white" }} className="text-3xl font-bold">
-                    {skill.title}
-                  </h3>
-                </div>
+
+                <span
+                  className="
+                    text-sm
+                    text-neutral-700
+                    dark:text-neutral-300
+                  "
+                >
+                  {skill.title}
+                </span>
               </div>
-            </motion.div>
-          ))}
-        </Slider>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

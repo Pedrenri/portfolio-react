@@ -27,28 +27,28 @@ function Curriculum(props: Props) {
   };
 
   return (
-    <div className="fixed bottom-0 left-0 mb-4 ml-4 z-[51]">
+    <div className="fixed bottom-0 left-0 mb-4 ml-4 z-[51] ">
       <Tooltip
         content={t('Download')}
         placement="right-start"
         showArrow
         classNames={{
-          base: ["before:bg-orange-950 fixed bottom-0 left-0 mb-7 ml-[4.5rem] z-[5000]"],
+          base: ["before:bg-blue-950 fixed bottom-0 left-0 mb-7 ml-[4.5rem] z-[5000] "],
           content: [
             "py-2 px-4 shadow-xl",
-            "text-white bg-orange-950/[0.7] rounded",
+            "text-white bg-blue-950/[0.7] rounded",
           ],
         }}
         closeDelay={0}
       >
-        <Button className=" rounded-full bg-neutral-800 p-0">
+        <Button className=" rounded-full bg-neutral-300 p-0 border-white">
           <Link
             href={getPdfPath()}
             target="_blank"
             rel="noopener noreferrer"
             download
           >
-            <IoMdDownload className="rounded-full bg-neutral-800 h-8 w-8 m-2" />
+            <IoMdDownload className="text-black/80 rounded-full bg-neutral-300 h-8 w-8 m-2" />
           </Link>
         </Button>
       </Tooltip>

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 * {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth
 }
 
 :root {
@@ -49,14 +49,14 @@ body {
 }
 
 html {
-  scroll-behavior: smooth;
+  
 }
 
 /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
-/** {
+/*  {
   scrollbar-width: thin;
   scrollbar-color: #8C00D6 #000000;
-}*/
+} */
 
 .slick-track {
   display: flex !important;

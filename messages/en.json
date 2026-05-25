@@ -6,17 +6,18 @@
     "Contact": "Contact"
   },
   "Banner": {
-    "Description": "DEV & DESIGNER",
+    "Description": "Building modern digital systems, interfaces, and experiences with a focus on performance, simplicity, and scalability.",
     "design": "prototype",
     "dev": "develop",
     "proj": "project",
     "fix": "fix",
-    "Hello": "Hi! I ",
+    "Hello": "Pedro Henri",
+    "Role": "Fullstack Developer & More",
     "systems": "solutions and systems."
   },
   "Projects": {
     "Title": "Projects",
-    "Description": "Here are some of my projects.",
+    "Description": "Here are some of the projects I've developed.",
     "web": {
       "Title": "Development",
       "Description": "Here are some of the projects I've developed.",

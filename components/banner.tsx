@@ -1,46 +1,79 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { LampContainer } from "./ui/lamp";
+
+import { Skills } from "./skills";
 import Socials from "./ui/socials";
 import { useTranslations } from "next-intl";
-import { FlipWords } from "./ui/flip-words";
 
 export function Banner() {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState("");
-  const [delta, setDelta] = useState(300 - Math.random() * 500);
   const t = useTranslations("Banner");
-  const toRotate = [t("design"), t("dev"), t("proj"), t("fix")];
 
   return (
-    <div id="home">
-      <LampContainer>
-        <div>
-          <motion.h1
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-6xl xl:text-8xl text-center font-bold select-none"
+    <section
+      id="home"
+      className="
+        flex min-h-screen items-center
+        border-b 
+        border-white/10
+        bg-[#0f0f10]
+      "
+    >
+      <div className="mx-auto w-full max-w-6xl px-6">
+        <div className="max-w-4xl">
+          <p
+            className="
+              mb-6
+              text-sm
+              font-medium
+              uppercase
+              tracking-[0.25em]
+              text-neutral-500
+            "
           >
-            {t('Hello')}
-            <FlipWords words={toRotate} /> 
-            <br />
-            {t('systems')}
-          </motion.h1>
-          <motion.p
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ delay: 0.25 }}
-            className="text-xl md:text-xl text-center banner-sub mt-4"
-            id="skills"
+            {t("Role")}
+          </p>
+
+          <h1
+            className="
+              text-5xl
+              font-semibold
+              leading-none
+              tracking-tight
+              text-white
+              sm:text-6xl
+              md:text-7xl
+              xl:text-8xl
+            "
+          >
+            {t("Hello")}
+          </h1>
+
+          <div
+            className="
+              mt-8
+              h-px
+              w-24
+              bg-blue-600
+            "
+          />
+
+          <p
+            className="
+              mt-8
+              max-w-2xl
+              text-base
+              leading-7
+              text-neutral-400
+            "
           >
             {t("Description")}
-          </motion.p>
+          </p>
+
+          <div className="mt-10">
+            <Socials email />
+          </div>
         </div>
-        <Socials email />
-      </LampContainer>
-    </div>
+        <Skills  />
+      </div>
+    </section>
   );
 }
